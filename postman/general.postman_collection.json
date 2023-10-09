@@ -1,0 +1,501 @@
+{
+	"info": {
+		"_postman_id": "16dc335f-2186-446c-b038-0271ed1f27f5",
+		"name": "general",
+		"description": "Musee REST API for accessing / modifying Musee App student information",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4550880",
+		"_collection_link": "https://musee-api.postman.co/workspace/musee-api-workspace~a9e7eaee-32c6-4ff3-a935-378cb5a6b5ab/collection/4550880-16dc335f-2186-446c-b038-0271ed1f27f5?action=share&source=collection_link&creator=4550880"
+	},
+	"item": [
+		{
+			"name": "/oauth/get-token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "MUSEE",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "FFA46ACCEB16E156E0530818000AE7ED",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"grant_type\":\"client_credentials\"}"
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/oauth/get-token",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"oauth",
+						"get-token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/oauth/get-token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"grant_type\":\"client_credentials\"}"
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/oauth/get-token",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"oauth",
+								"get-token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:49:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\"access_token\":\"0653602794c24cd8e0630818000a80570653602794c34cd8e0630818000a8057\",\"refresh_token\":\"0653602794c44cd8e0630818000a8057\",\"token_type\":\"bearer\",\"expires_in\":3600}\n"
+				}
+			]
+		},
+		{
+			"name": "/user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfddd54680ac1e0630818000ab00f059cfddd54690ac1e0630818000ab00f"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/user",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfddd54680ac1e0630818000ab00f059cfddd54690ac1e0630818000ab00f"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/user",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:49:18 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "0653602794C54CD8E0630818000A8057"
+						},
+						{
+							"key": "ETag",
+							"value": "\"k+drhoZXuYIJ5GAU/ObMngw7RR4xgbe0EIThlC19yqsR7CDWcQr12NMWXEXdLCqhG5Z09lAVcsOKML0CmQmsAA==\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"userId\": \"MUSEE\",\n    \"userName\": \"Musee\",\n    \"roles\": [\n        {\n            \"roleId\": \"ADMIN\",\n            \"roleDescription\": \"Administrator\"\n        },\n        {\n            \"roleId\": \"TEACHER\",\n            \"roleDescription\": \"Teacher\"\n        },\n        {\n            \"roleId\": \"THERAPIST\",\n            \"roleDescription\": \"Therapists who will work with the child\"\n        },\n        {\n            \"roleId\": \"PARENT\",\n            \"roleDescription\": \"Parent of the child\"\n        },\n        {\n            \"roleId\": \"DOCTOR\",\n            \"roleDescription\": \"Doctor who is being consulted by the child's parents\"\n        },\n        {\n            \"roleId\": \"AGENCIES\",\n            \"roleDescription\": \"Agencies who generate Psycho Educational Assessment reports\"\n        },\n        {\n            \"roleId\": \"COUNSELOR\",\n            \"roleDescription\": \"Counselor\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/general/tuples/orgInfo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/2023.5.8"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/general/tuples/orgInfo",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"general",
+						"tuples",
+						"orgInfo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/general/tuples/orgInfo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/2023.5.8"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/general/tuples/orgInfo",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"general",
+								"tuples",
+								"orgInfo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:49:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "065365F3E3154CE4E0630818000A4C12"
+						},
+						{
+							"key": "ETag",
+							"value": "\"X9M6Z88WFCpaodKFsK9cs6eUiVReElBdZ7DfJHakCc2aRm+tOCl0ukUdIrHZ/laWmRvyBsEN2+G7xaG0T0TpiA==\""
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"org.about.us\",\n        \"value\": \"Harmony Learning Center is a warm and welcoming haven for students with diverse learning needs. Our passionate team of educators is dedicated to providing a nurturing environment where every child can thrive. With a focus on personalized learning and holistic development, we empower our students to unlock their full potential.\"\n    },\n    {\n        \"name\": \"org.address\",\n        \"value\": \"123 Learning Lane, Serenity Gardens, 486060, Singapore\"\n    },\n    {\n        \"name\": \"org.contacts.email\",\n        \"value\": \"info@harmonylearningcenter.org\"\n    },\n    {\n        \"name\": \"org.contacts.facebook\",\n        \"value\": \"@HarmonyLearningCenter\"\n    },\n    {\n        \"name\": \"org.contacts.instagram\",\n        \"value\": \"@harmony_learning\"\n    },\n    {\n        \"name\": \"org.contacts.person\",\n        \"value\": \"Ms. Emily Anderson, Director\"\n    },\n    {\n        \"name\": \"org.contacts.phone\",\n        \"value\": \"(555) 555-5555\"\n    },\n    {\n        \"name\": \"org.contacts.twitter\",\n        \"value\": \"@HarmonyEdu\"\n    },\n    {\n        \"name\": \"org.mission.statement\",\n        \"value\": \"At Harmony Learning Center, we believe that every child deserves an education tailored to their unique strengths and challenges. Our mission is to create an inclusive and supportive community where students with special needs can flourish academically, socially, and emotionally\"\n    },\n    {\n        \"name\": \"org.name\",\n        \"value\": \"Harmony Learning Center\"\n    },\n    {\n        \"name\": \"org.opening.hours.info\",\n        \"value\": \"Monday - Friday: 8:00 AM - 4:00 PM\\r\\nSaturday: 9:00 AM - 1:00 PM\\r\\nSunday: Closed\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/general/tuples/notesType",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/2023.5.8"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/general/tuples/notesType",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"general",
+						"tuples",
+						"notesType"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/general/tuples/notesType",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/2023.5.8"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/general/tuples/notesType",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"general",
+								"tuples",
+								"notesType"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:50:09 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "065365F3E3164CE4E0630818000A4C12"
+						},
+						{
+							"key": "ETag",
+							"value": "\"KXLhCNDBx75/H/pHxB2znmd0d6jnjtasGEqVOrPFXmx9l/wcetkHvqU6rmnlWs88hzgyPb0IySg/YTUaEnm8vA==\""
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"Action Items\",\n        \"value\": \"Action Items\"\n    },\n    {\n        \"name\": \"Concerns\",\n        \"value\": \"Concerns Notes\"\n    },\n    {\n        \"name\": \"Incidents\",\n        \"value\": \"Incidents Notes\"\n    },\n    {\n        \"name\": \"Monthly Observations\",\n        \"value\": \"Monthly Observations Notes\"\n    },\n    {\n        \"name\": \"PTM\",\n        \"value\": \"Parent Teacher Meeting Notes\"\n    },\n    {\n        \"name\": \"Weekly Observations\",\n        \"value\": \"Weekly Observations Notes\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/emailNotification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfddd54680ac1e0630818000ab00f059cfddd54690ac1e0630818000ab00f"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"to\": \"cv.ranjith@gmail.com\",\n    \"subject\" : \"Test Notification from Musee\",\n    \"bodyHtml\" : \"<b> Hello There </b> <br> Have a Nice Day <br> Regards, Musee App\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/emailNotification",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"emailNotification"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/example-email-send",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfddd54680ac1e0630818000ab00f059cfddd54690ac1e0630818000ab00f"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"to\": \"cv.ranjith@gmail.com\",\n    \"subject\" : \"Test Notification from Musee\",\n    \"bodyHtml\" : \"<b> Hello There </b> <br> Have a Nice Day <br> Regards, Musee App\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/emailNotification",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"emailNotification"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 03:14:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "requestId",
+							"value": "064F9884498BB475E0630818000A19BC"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"transactionid\": \"b0176435-3b05-0147-e035-6451008f5495\",\n        \"messageid\": \"QUlLJOhFlD7KSFmpfYhSiQ2\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "calendarId",
+			"value": "053F379C37E9A63EE0630818000A8F45"
+		},
+		{
+			"key": "checkListId",
+			"value": "F34DA26A34086169E0530918000ADE57",
+			"type": "string"
+		}
+	]
+}

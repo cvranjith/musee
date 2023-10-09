@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "29820ab8-3c39-4a82-b97b-d04acabeafc4",
+		"name": "ieplist",
+		"description": "Musee REST API for accessing / modifying Musee App student information",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4550880",
+		"_collection_link": "https://musee-api.postman.co/workspace/musee-api-workspace~a9e7eaee-32c6-4ff3-a935-378cb5a6b5ab/collection/4550880-29820ab8-3c39-4a82-b97b-d04acabeafc4?action=share&source=collection_link&creator=4550880"
+	},
+	"item": [
+		{
+			"name": "/ieplist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f1b0aace0630818000a020e059cfdd55f1c0aace0630818000a020e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/ieplist",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"ieplist"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/ieplist",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f1b0aace0630818000a020e059cfdd55f1c0aace0630818000a020e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/ieplist",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"ieplist"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:50:31 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "0653677CCCB8287CE0630818000A44E2"
+						},
+						{
+							"key": "ETag",
+							"value": "\"9rg4Kq+5D+R6VzZBWjj3Y7eoPMTuUMhwXPttFnu8j+xXOPOCbaSY4NEcEPaDEwJMYJb/yeAHe+bHmTj4Q2X46Q==\""
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"029E7C6230B175B9E0630818000A4E6B\",\n        \"section\": \"IEP\",\n        \"sectionName\": null,\n        \"name\": \"Motor Skills\",\n        \"ord\": 1,\n        \"items\": [\n            {\n                \"itemId\": \"029E92B46E5EB91DE0630818000A144A\",\n                \"text\": \"Fine Motor\",\n                \"ord\": 1\n            },\n            {\n                \"itemId\": \"029E92B46E5FB91DE0630818000A144A\",\n                \"text\": \"Gross Motor\",\n                \"ord\": 2\n            }\n        ]\n    },\n    {\n        \"id\": \"029E7C6230B275B9E0630818000A4E6B\",\n        \"section\": \"IEP\",\n        \"sectionName\": null,\n        \"name\": \"Academic Skills - Mathematics\",\n        \"ord\": 2,\n        \"items\": [\n            {\n                \"itemId\": \"02F443184DEB4C3BE0630818000ACA11\",\n                \"text\": \"Number Recognition\",\n                \"ord\": 1\n            },\n            {\n                \"itemId\": \"029E92B46E62B91DE0630818000A144A\",\n                \"text\": \"Numbers Writing\",\n                \"ord\": 2\n            },\n            {\n                \"itemId\": \"029E92B46E63B91DE0630818000A144A\",\n                \"text\": \"Number Sequencing\",\n                \"ord\": 3\n            },\n            {\n                \"itemId\": \"029E92B46E60B91DE0630818000A144A\",\n                \"text\": \"Addition\",\n                \"ord\": 4\n            },\n            {\n                \"itemId\": \"029E92B46E64B91DE0630818000A144A\",\n                \"text\": \"Subtraction\",\n                \"ord\": 5\n            },\n            {\n                \"itemId\": \"029E92B46E61B91DE0630818000A144A\",\n                \"text\": \"Multiplication\",\n                \"ord\": 6\n            }\n        ]\n    },\n    {\n        \"id\": \"029E7C6230B375B9E0630818000A4E6B\",\n        \"section\": \"IEP\",\n        \"sectionName\": null,\n        \"name\": \"Social Skills - Communication\",\n        \"ord\": 3,\n        \"items\": [\n            {\n                \"itemId\": \"029E92B46E65B91DE0630818000A144A\",\n                \"text\": \"Expressive Language\",\n                \"ord\": 1\n            },\n            {\n                \"itemId\": \"029E92B46E66B91DE0630818000A144A\",\n                \"text\": \"Non-Verbal\",\n                \"ord\": 2\n            },\n            {\n                \"itemId\": \"029E92B46E67B91DE0630818000A144A\",\n                \"text\": \"Peer Group Interaction\",\n                \"ord\": 3\n            },\n            {\n                \"itemId\": \"029E92B46E68B91DE0630818000A144A\",\n                \"text\": \"Receptive Language\",\n                \"ord\": 4\n            },\n            {\n                \"itemId\": \"029E92B46E69B91DE0630818000A144A\",\n                \"text\": \"Teacher Interaction\",\n                \"ord\": 5\n            },\n            {\n                \"itemId\": \"029E92B46E6AB91DE0630818000A144A\",\n                \"text\": \"Verbal\",\n                \"ord\": 6\n            }\n        ]\n    },\n    {\n        \"id\": \"029E7C6230B475B9E0630818000A4E6B\",\n        \"section\": \"IEP\",\n        \"sectionName\": null,\n        \"name\": \"Social Skills - Behaviour\",\n        \"ord\": 4,\n        \"items\": [\n            {\n                \"itemId\": \"02F4697BF4CBAA6EE0630818000A2D5B\",\n                \"text\": \"Attention\",\n                \"ord\": 1\n            },\n            {\n                \"itemId\": \"029E92B46E6BB91DE0630818000A144A\",\n                \"text\": \"Classroom Independence\",\n                \"ord\": 2\n            },\n            {\n                \"itemId\": \"029E92B46E6CB91DE0630818000A144A\",\n                \"text\": \"Conflict Resolution\",\n                \"ord\": 3\n            },\n            {\n                \"itemId\": \"029E92B46E6DB91DE0630818000A144A\",\n                \"text\": \"Following Rules\",\n                \"ord\": 4\n            },\n            {\n                \"itemId\": \"029E92B46E6EB91DE0630818000A144A\",\n                \"text\": \"Sitting Tolerance\",\n                \"ord\": 5\n            },\n            {\n                \"itemId\": \"029E92B46E6FB91DE0630818000A144A\",\n                \"text\": \"Task Completion\",\n                \"ord\": 6\n            },\n            {\n                \"itemId\": \"029E92B46E70B91DE0630818000A144A\",\n                \"text\": \"Turn Taking\",\n                \"ord\": 7\n            }\n        ]\n    },\n    {\n        \"id\": \"029E7C6230B575B9E0630818000A4E6B\",\n        \"section\": \"IEP\",\n        \"sectionName\": null,\n        \"name\": \"Academic Skills - Language\",\n        \"ord\": 5,\n        \"items\": [\n            {\n                \"itemId\": \"02F4697BF4C9AA6EE0630818000A2D5B\",\n                \"text\": \"Letter Recognition Capital\",\n                \"ord\": 1\n            },\n            {\n                \"itemId\": \"02F4697BF4CAAA6EE0630818000A2D5B\",\n                \"text\": \"Letter Recognition Small\",\n                \"ord\": 2\n            },\n            {\n                \"itemId\": \"029E92B46E71B91DE0630818000A144A\",\n                \"text\": \"Phonics\",\n                \"ord\": 3\n            },\n            {\n                \"itemId\": \"029E92B46E73B91DE0630818000A144A\",\n                \"text\": \"Slight Words\",\n                \"ord\": 4\n            },\n            {\n                \"itemId\": \"029E92B46E72B91DE0630818000A144A\",\n                \"text\": \"Reading\",\n                \"ord\": 5\n            },\n            {\n                \"itemId\": \"029E92B46E74B91DE0630818000A144A\",\n                \"text\": \"Spelling\",\n                \"ord\": 5\n            },\n            {\n                \"itemId\": \"029E92B46E75B91DE0630818000A144A\",\n                \"text\": \"Writing\",\n                \"ord\": 6\n            }\n        ]\n    },\n    {\n        \"id\": \"05882A749B131044E0630818000ADBE6\",\n        \"section\": \"IEP\",\n        \"sectionName\": null,\n        \"name\": \"Social Emotional Learning\",\n        \"ord\": 6,\n        \"items\": [\n            {\n                \"itemId\": \"058824F71EE1EA5DE0630818000A72E8\",\n                \"text\": \"Conflict Resolution\",\n                \"ord\": 1\n            },\n            {\n                \"itemId\": \"058824F71EE2EA5DE0630818000A72E8\",\n                \"text\": \"Expression of Anger\",\n                \"ord\": 2\n            },\n            {\n                \"itemId\": \"058824F71EE3EA5DE0630818000A72E8\",\n                \"text\": \"Cooperative Play\",\n                \"ord\": 3\n            },\n            {\n                \"itemId\": \"058824F71EE4EA5DE0630818000A72E8\",\n                \"text\": \"Following Rules\",\n                \"ord\": 4\n            },\n            {\n                \"itemId\": \"058824F71EE5EA5DE0630818000A72E8\",\n                \"text\": \"Maintaining Space & Boundaries\",\n                \"ord\": 5\n            },\n            {\n                \"itemId\": \"058824F71EE6EA5DE0630818000A72E8\",\n                \"text\": \"Communication of Needs\",\n                \"ord\": 6\n            },\n            {\n                \"itemId\": \"058824F71EE7EA5DE0630818000A72E8\",\n                \"text\": \"Identify Emotions\",\n                \"ord\": 7\n            },\n            {\n                \"itemId\": \"058824F71EE8EA5DE0630818000A72E8\",\n                \"text\": \"Coping with Frustration\",\n                \"ord\": 8\n            },\n            {\n                \"itemId\": \"058824F71EE9EA5DE0630818000A72E8\",\n                \"text\": \"Identifying signs of Anxiety & Stress\",\n                \"ord\": 9\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/ieplist/{{iepListId}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfddd54470ac1e0630818000ab00f059cfddd54480ac1e0630818000ab00f"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/ieplist/{{iepListId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"ieplist",
+						"{{iepListId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/ieplist/{{iepListId}}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfddd54470ac1e0630818000ab00f059cfddd54480ac1e0630818000ab00f"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/ieplist/{{iepListId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"ieplist",
+								"{{iepListId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:50:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "0653602794C64CD8E0630818000A8057"
+						},
+						{
+							"key": "ETag",
+							"value": "\"eR8nTf0RWCciMR60+GSNSsEfAuwdX5SDJYF4W3/N2QYYoWlqtWvlJ+P2y3pOrVCWIV8eHGFTvhC9dnW9bqN9yQ==\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"029E7C6230B175B9E0630818000A4E6B\",\n    \"section\": \"IEP\",\n    \"sectionName\": null,\n    \"name\": \"Motor Skills\",\n    \"ord\": 1,\n    \"items\": [\n        {\n            \"itemId\": \"029E92B46E5EB91DE0630818000A144A\",\n            \"text\": \"Fine Motor\",\n            \"ord\": 1\n        },\n        {\n            \"itemId\": \"029E92B46E5FB91DE0630818000A144A\",\n            \"text\": \"Gross Motor\",\n            \"ord\": 2\n        }\n    ]\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "iepListId",
+			"value": "029E7C6230B175B9E0630818000A4E6B"
+		}
+	]
+}

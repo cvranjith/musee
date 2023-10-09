@@ -1,0 +1,503 @@
+{
+	"info": {
+		"_postman_id": "628a7202-a2fc-4b54-9a32-19cfc8837924",
+		"name": "observations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4550880",
+		"_collection_link": "https://musee-api.postman.co/workspace/musee-api-workspace~a9e7eaee-32c6-4ff3-a935-378cb5a6b5ab/collection/4550880-628a7202-a2fc-4b54-9a32-19cfc8837924?action=share&source=collection_link&creator=4550880"
+	},
+	"item": [
+		{
+			"name": "/student/{{studentId}}/observations",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfde86c8c0bd6e0630818000a9a2e059cfde86c8d0bd6e0630818000a9a2e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/observations",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"observations"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/observations",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfde86c8c0bd6e0630818000a9a2e059cfde86c8d0bd6e0630818000a9a2e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/observations",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"observations"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 05:29:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "06516384B6D520A4E0630818000A2CDE"
+						},
+						{
+							"key": "ETag",
+							"value": "\"nT4noL3iG/VLRrmJyEoiQOdmjgdjZ+MOXBrARfPbD2811K4iXi1vDsXp/2ee8B0kApK+o3Ny06FhmLNGmIWZ/A==\""
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"06516384B6D320A4E0630818000A2CDE\",\n        \"section\": \"C\",\n        \"remarks\": {\n            \"title\": \"Counselor Observations\",\n            \"type\": null,\n            \"text\": \"Test Observation\"\n        },\n        \"files\": [\n            {\n                \"fileId\": \"024D0E5022735E77E0630818000AE833\",\n                \"fileName\": \"test.txt\",\n                \"contentType\": \"image/png\",\n                \"auditLog\": {\n                    \"createdBy\": \"MUSEE\",\n                    \"createdOn\": \"2023-08-21T09:13:32\",\n                    \"lastUpdatedBy\": \"MUSEE\",\n                    \"lastUpdatedOn\": \"2023-08-21T09:13:32\"\n                }\n            }\n        ],\n        \"auditLog\": {\n            \"createdBy\": \"MUSEE\",\n            \"createdOn\": \"2023-09-27T05:29:26\",\n            \"lastUpdatedBy\": \"MUSEE\",\n            \"lastUpdatedOn\": \"2023-09-27T05:29:25\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/observations/{{observationId}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfde86c8f0bd6e0630818000a9a2e059cfde86c900bd6e0630818000a9a2e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/observations/{{observationId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"observations",
+						"{{observationId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/observations/{{observationId}}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfde86c8f0bd6e0630818000a9a2e059cfde86c900bd6e0630818000a9a2e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/observations/{{observationId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"observations",
+								"{{observationId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 05:31:01 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "06516384B6D620A4E0630818000A2CDE"
+						},
+						{
+							"key": "ETag",
+							"value": "\"H4tDf9WH4zHPzplRVZFbIwh+3yIMHm0g2BCyTn0p7kKc1GjsYjqIRMzjotrMuVby39XGYRx45I2aaqgUlpd3HQ==\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"06516384B6D320A4E0630818000A2CDE\",\n    \"section\": \"C\",\n    \"remarks\": {\n        \"title\": \"Counselor Observations\",\n        \"type\": null,\n        \"text\": \"Test Observation\"\n    },\n    \"files\": [\n        {\n            \"fileId\": \"024D0E5022735E77E0630818000AE833\",\n            \"fileName\": \"test.txt\",\n            \"contentType\": \"image/png\",\n            \"auditLog\": {\n                \"createdBy\": \"MUSEE\",\n                \"createdOn\": \"2023-08-21T09:13:32\",\n                \"lastUpdatedBy\": \"MUSEE\",\n                \"lastUpdatedOn\": \"2023-08-21T09:13:32\"\n            }\n        }\n    ],\n    \"auditLog\": {\n        \"createdBy\": \"MUSEE\",\n        \"createdOn\": \"2023-09-27T05:29:26\",\n        \"lastUpdatedBy\": \"MUSEE\",\n        \"lastUpdatedOn\": \"2023-09-27T05:29:25\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/observations/new",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f360aace0630818000a020e059cfdd55f370aace0630818000a020e"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"section\": \"C\",\n  \"remarks\": {\n    \"title\": \"Counselor Observations\",\n    \"text\": \"Test Observation\"\n  },\n  \"files\": [\n    {\n      \"fileId\": \"024D0E5022735E77E0630818000AE833\",\n      \"fileName\": \"test.txt\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/observations/new",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"observations",
+						"new"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/observations/new",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f360aace0630818000a020e059cfdd55f370aace0630818000a020e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"section\": \"C\",\n  \"remarks\": {\n    \"title\": \"Counselor Observations\",\n    \"text\": \"Test Observation\"\n  },\n  \"files\": [\n    {\n      \"fileId\": \"024D0E5022735E77E0630818000AE833\",\n      \"fileName\": \"test.txt\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/observations/new",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"observations",
+								"new"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 05:29:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "06516384B6D220A4E0630818000A2CDE"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"06516384B6D320A4E0630818000A2CDE\",\n    \"section\": \"C\",\n    \"remarks\": {\n        \"title\": \"Counselor Observations\",\n        \"type\": null,\n        \"text\": \"Test Observation\"\n    },\n    \"files\": [\n        {\n            \"fileId\": \"024D0E5022735E77E0630818000AE833\",\n            \"fileName\": \"test.txt\",\n            \"contentType\": \"image/png\",\n            \"auditLog\": {\n                \"createdBy\": \"MUSEE\",\n                \"createdOn\": \"2023-08-21T09:13:32\",\n                \"lastUpdatedBy\": \"MUSEE\",\n                \"lastUpdatedOn\": \"2023-08-21T09:13:32\"\n            }\n        }\n    ],\n    \"auditLog\": {\n        \"createdBy\": \"MUSEE\",\n        \"createdOn\": \"2023-09-27T05:29:26\",\n        \"lastUpdatedBy\": \"MUSEE\",\n        \"lastUpdatedOn\": \"2023-09-27T05:29:25\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/observations/{{observationId}}",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfddd545c0ac1e0630818000ab00f059cfddd545d0ac1e0630818000ab00f"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"section\": \"C\",\n  \"remarks\": {\n    \"title\": \"Counselor Observations\",\n    \"text\": \"Test Observation\"\n  },\n  \"files\": [\n    {\n      \"fileId\": \"024D0E5022735E77E0630818000AE833\",\n      \"fileName\": \"test.txt\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/observations/{{observationId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"observations",
+						"{{observationId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/observations/{{observationId}}",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfddd545c0ac1e0630818000ab00f059cfddd545d0ac1e0630818000ab00f"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"section\": \"C\",\n  \"remarks\": {\n    \"title\": \"Counselor Observations\",\n    \"text\": \"Test Observation\"\n  },\n  \"files\": [\n    {\n      \"fileId\": \"024D0E5022735E77E0630818000AE833\",\n      \"fileName\": \"test.txt\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/observations/{{observationId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"observations",
+								"{{observationId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 05:31:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "065176792D0BDAE4E0630818000A0DCE"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"06516384B6D320A4E0630818000A2CDE\",\n    \"section\": \"C\",\n    \"remarks\": {\n        \"title\": \"Counselor Observations\",\n        \"type\": null,\n        \"text\": \"Test Observation\"\n    },\n    \"files\": [\n        {\n            \"fileId\": \"024D0E5022735E77E0630818000AE833\",\n            \"fileName\": \"test.txt\",\n            \"contentType\": \"image/png\",\n            \"auditLog\": {\n                \"createdBy\": \"MUSEE\",\n                \"createdOn\": \"2023-08-21T09:13:32\",\n                \"lastUpdatedBy\": \"MUSEE\",\n                \"lastUpdatedOn\": \"2023-08-21T09:13:32\"\n            }\n        }\n    ],\n    \"auditLog\": {\n        \"createdBy\": \"MUSEE\",\n        \"createdOn\": \"2023-09-27T05:29:26\",\n        \"lastUpdatedBy\": \"MUSEE\",\n        \"lastUpdatedOn\": \"2023-09-27T05:31:28\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/observations/{{observationId}}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f330aace0630818000a020e059cfdd55f340aace0630818000a020e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/observations/{{observationId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"observations",
+						"{{observationId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/observations/{{observationId}}",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f330aace0630818000a020e059cfdd55f340aace0630818000a020e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/observations/{{observationId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"observations",
+								"{{observationId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 05:31:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "observationId",
+			"value": "06516384B6D320A4E0630818000A2CDE",
+			"type": "string"
+		}
+	]
+}

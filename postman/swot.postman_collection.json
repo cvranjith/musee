@@ -1,0 +1,519 @@
+{
+	"info": {
+		"_postman_id": "e77f3553-ef7a-4ac7-8ec6-7fe992b45475",
+		"name": "swot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4550880",
+		"_collection_link": "https://musee-api.postman.co/workspace/musee-api-workspace~a9e7eaee-32c6-4ff3-a935-378cb5a6b5ab/collection/4550880-e77f3553-ef7a-4ac7-8ec6-7fe992b45475?action=share&source=collection_link&creator=4550880"
+	},
+	"item": [
+		{
+			"name": "/student/{{studentId}}/swot",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f270aace0630818000a020e059cfdd55f280aace0630818000a020e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/swot",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"swot"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/swot",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f270aace0630818000a020e059cfdd55f280aace0630818000a020e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/swot",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"swot"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 09:04:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "065463B1BE17117CE0630818000A73A6"
+						},
+						{
+							"key": "ETag",
+							"value": "\"9Jlwrtp2JHhOb5Tx/Nj8mT0J1pM7GmDKVKwH0k2eFuZDOdnE5hLa2pHkrpucDz6PbJkdPU8dmh0cKlb9YmM21g==\""
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"06546B1502C24C61E0630818000AC176\",\n        \"section\": \"O\",\n        \"remarks\": {\n            \"title\": \"test\",\n            \"type\": null,\n            \"text\": \"tests\"\n        },\n        \"files\": [],\n        \"auditLog\": {\n            \"createdBy\": \"MUSEE\",\n            \"createdOn\": \"2023-09-27T09:04:24\",\n            \"lastUpdatedBy\": \"MUSEE\",\n            \"lastUpdatedOn\": \"2023-09-27T09:04:24\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/swot/{{swotId}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f300aace0630818000a020e059cfdd55f310aace0630818000a020e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/swot/{{swotId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"swot",
+						"{{swotId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/swot/{{swotId}}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f300aace0630818000a020e059cfdd55f310aace0630818000a020e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/swot/{{swotId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"swot",
+								"{{swotId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 09:05:04 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "065463B1BE18117CE0630818000A73A6"
+						},
+						{
+							"key": "ETag",
+							"value": "\"hlvMRaoyeLIQP6uUQs8OtOl0hm9JmDNuSdhL0c3RAfTubahNh319weyWfRHrEQrywScx5zFZdFBubNXnVr6kaA==\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"06546B1502C24C61E0630818000AC176\",\n    \"section\": \"O\",\n    \"remarks\": {\n        \"title\": \"test\",\n        \"type\": null,\n        \"text\": \"tests\"\n    },\n    \"files\": [],\n    \"auditLog\": {\n        \"createdBy\": \"MUSEE\",\n        \"createdOn\": \"2023-09-27T09:04:24\",\n        \"lastUpdatedBy\": \"MUSEE\",\n        \"lastUpdatedOn\": \"2023-09-27T09:04:24\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/swot/new",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfde86c890bd6e0630818000a9a2e059cfde86c8a0bd6e0630818000a9a2e"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"section\": \"O\",\n  \"remarks\": {\n    \"title\": \"test\",\n    \"text\": \"tests\"\n  }\n}"
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/swot/new",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"swot",
+						"new"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/swot/new",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfde86c890bd6e0630818000a9a2e059cfde86c8a0bd6e0630818000a9a2e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"section\": \"O\",\n  \"remarks\": {\n    \"title\": \"test\",\n    \"text\": \"tests\"\n  }\n}"
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/swot/new",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"swot",
+								"new"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 09:04:24 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "06546B1502C14C61E0630818000AC176"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"06546B1502C24C61E0630818000AC176\",\n    \"section\": \"O\",\n    \"remarks\": {\n        \"title\": \"test\",\n        \"type\": null,\n        \"text\": \"tests\"\n    },\n    \"files\": [],\n    \"auditLog\": {\n        \"createdBy\": \"MUSEE\",\n        \"createdOn\": \"2023-09-27T09:04:24\",\n        \"lastUpdatedBy\": \"MUSEE\",\n        \"lastUpdatedOn\": \"2023-09-27T09:04:24\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/swot/{{swotId}}",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfddd54590ac1e0630818000ab00f059cfddd545a0ac1e0630818000ab00f"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"section\": \"O\",\n  \"remarks\": {\n    \"title\": \"test\",\n    \"text\": \"tests\"\n  }\n}"
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/swot/{{swotId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"swot",
+						"{{swotId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/swot/{{swotId}}",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfddd54590ac1e0630818000ab00f059cfddd545a0ac1e0630818000ab00f"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"section\": \"O\",\n  \"remarks\": {\n    \"title\": \"test\",\n    \"text\": \"tests\"\n  }\n}"
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/swot/{{swotId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"swot",
+								"{{swotId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 09:06:04 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "065463B1BE19117CE0630818000A73A6"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"06546B1502C24C61E0630818000AC176\",\n    \"section\": \"O\",\n    \"remarks\": {\n        \"title\": \"test\",\n        \"type\": null,\n        \"text\": \"tests\"\n    },\n    \"files\": [],\n    \"auditLog\": {\n        \"createdBy\": \"MUSEE\",\n        \"createdOn\": \"2023-09-27T09:04:24\",\n        \"lastUpdatedBy\": \"MUSEE\",\n        \"lastUpdatedOn\": \"2023-09-27T09:06:04\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/swot/{{swotId}}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfddd54590ac1e0630818000ab00f059cfddd545a0ac1e0630818000ab00f"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"section\": \"O\",\n  \"remarks\": {\n    \"title\": \"test\",\n    \"text\": \"tests\"\n  }\n}"
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/swot/{{swotId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"swot",
+						"{{swotId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/swot/{{swotId}}",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfddd54590ac1e0630818000ab00f059cfddd545a0ac1e0630818000ab00f"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"section\": \"O\",\n  \"remarks\": {\n    \"title\": \"test\",\n    \"text\": \"tests\"\n  }\n}"
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/swot/{{swotId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"swot",
+								"{{swotId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 09:07:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "swotId",
+			"value": "06546B1502C64C61E0630818000AC176",
+			"type": "string"
+		}
+	]
+}

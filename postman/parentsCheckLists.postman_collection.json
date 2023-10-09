@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "889595d9-ea91-4343-b490-975e8516e3a2",
+		"name": "parentsCheckLists",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4550880",
+		"_collection_link": "https://musee-api.postman.co/workspace/musee-api-workspace~a9e7eaee-32c6-4ff3-a935-378cb5a6b5ab/collection/4550880-889595d9-ea91-4343-b490-975e8516e3a2?action=share&source=collection_link&creator=4550880"
+	},
+	"item": [
+		{
+			"name": "/student/{{studentId}}/parentsCheckLists",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f3c0aace0630818000a020e059cfdd55f3d0aace0630818000a020e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/parentsCheckLists",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"parentsCheckLists"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/parentsCheckLists",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f3c0aace0630818000a020e059cfdd55f3d0aace0630818000a020e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/parentsCheckLists",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"parentsCheckLists"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 05:27:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "065151622B409981E0630818000A7049"
+						},
+						{
+							"key": "ETag",
+							"value": "\"BQv4fgqV0rUIzTy92qD6I8014SexXoW5sCjgpAkSRrj/xUsyF4S6clXBkvUcyaR8upI0HFBGnwi4161B5PMJqA==\""
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"F34DC29DE6EB4F3BE0530918000AFCCC\",\n        \"checkListName\": \"Parent Checklist\",\n        \"ord\": 1,\n        \"checkLists\": [\n            {\n                \"itemId\": \"F34DF640928B480EE0530918000A3213\",\n                \"ord\": 1,\n                \"text\": \"Behaviour\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"F34DF640928C480EE0530918000A3213\",\n                \"ord\": 2,\n                \"text\": \"Social\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C94763FD4009BE0630818000AB2D6\",\n                \"ord\": 3,\n                \"text\": \"Emotional\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C94763FD5009BE0630818000AB2D6\",\n                \"ord\": 4,\n                \"text\": \"Routine\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C94763FD6009BE0630818000AB2D6\",\n                \"ord\": 5,\n                \"text\": \"Sleep\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C94763FD7009BE0630818000AB2D6\",\n                \"ord\": 6,\n                \"text\": \"Diet\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C94763FD8009BE0630818000AB2D6\",\n                \"ord\": 7,\n                \"text\": \"Task Completion\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C94763FD9009BE0630818000AB2D6\",\n                \"ord\": 8,\n                \"text\": \"Language & Communication\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C94763FDA009BE0630818000AB2D6\",\n                \"ord\": 9,\n                \"text\": \"Sensory\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C94763FDB009BE0630818000AB2D6\",\n                \"ord\": 10,\n                \"text\": \"Family Background\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C94763FDC009BE0630818000AB2D6\",\n                \"ord\": 11,\n                \"text\": \"Medical Case History\",\n                \"checked\": false\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/parentsCheckLists/{{checkListId}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f390aace0630818000a020e059cfdd55f3a0aace0630818000a020e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/parentsCheckLists/{{checkListId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"parentsCheckLists",
+						"{{checkListId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/parentsCheckLists/{{checkListId}}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f390aace0630818000a020e059cfdd55f3a0aace0630818000a020e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/parentsCheckLists/{{checkListId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"parentsCheckLists",
+								"{{checkListId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 05:27:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "065151622B419981E0630818000A7049"
+						},
+						{
+							"key": "ETag",
+							"value": "\"J/qw6L8c0VO9wKf0NSHgZXltllio7as9hDJilRLHzkX+Ey6uAo+WFMQZyMmwiGA2kBwESBIT4QEpNtvs80jc4Q==\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"F34DC29DE6EB4F3BE0530918000AFCCC\",\n    \"checkListName\": \"Parent Checklist\",\n    \"ord\": 1,\n    \"checkLists\": [\n        {\n            \"itemId\": \"F34DF640928B480EE0530918000A3213\",\n            \"ord\": 1,\n            \"text\": \"Behaviour\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"F34DF640928C480EE0530918000A3213\",\n            \"ord\": 2,\n            \"text\": \"Social\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FD4009BE0630818000AB2D6\",\n            \"ord\": 3,\n            \"text\": \"Emotional\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FD5009BE0630818000AB2D6\",\n            \"ord\": 4,\n            \"text\": \"Routine\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FD6009BE0630818000AB2D6\",\n            \"ord\": 5,\n            \"text\": \"Sleep\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FD7009BE0630818000AB2D6\",\n            \"ord\": 6,\n            \"text\": \"Diet\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FD8009BE0630818000AB2D6\",\n            \"ord\": 7,\n            \"text\": \"Task Completion\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FD9009BE0630818000AB2D6\",\n            \"ord\": 8,\n            \"text\": \"Language & Communication\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FDA009BE0630818000AB2D6\",\n            \"ord\": 9,\n            \"text\": \"Sensory\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FDB009BE0630818000AB2D6\",\n            \"ord\": 10,\n            \"text\": \"Family Background\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FDC009BE0630818000AB2D6\",\n            \"ord\": 11,\n            \"text\": \"Medical Case History\",\n            \"checked\": false\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/parentsCheckLists/{{checkListId}}",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f3f0aace0630818000a020e059cfdd55f400aace0630818000a020e"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"remarks\": {\n    \"title\": \"title hdr\",\n    \"text\": \"check list remarks hdr\"\n  },\n  \"checkLists\": [\n    {\n      \"itemId\": \"F34DF6409289480EE0530918000A3213\",\n      \"checked\": true,\n      \"remarks\": {\n        \"title\": \"title1\",\n        \"text\": \"check list remarks1\"\n      },\n      \"files\": [\n        {\n          \"fileId\": \"024C9D11EC22BE07E0630818000A8BE4\",\n          \"fileName\": \"tst.jpg\"\n        }\n      ]\n    },\n    {\n      \"itemId\": \"F34DF640928A480EE0530918000A3213\",\n      \"checked\": true,\n      \"remarks\": {\n        \"title\": \"item title2\",\n        \"text\": \"check list item remarks2\"\n      }\n    }\n  ],\n  \"files\": [\n    {\n      \"fileId\": \"024C9D11EC22BE07E0630818000A8BE4\",\n      \"fileName\": \"b.jpg\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/parentsCheckLists/{{checkListId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"parentsCheckLists",
+						"{{checkListId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/parentsCheckLists/{{checkListId}}",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f3f0aace0630818000a020e059cfdd55f400aace0630818000a020e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"remarks\": {\n    \"title\": \"title hdr\",\n    \"text\": \"check list remarks hdr\"\n  },\n  \"checkLists\": [\n    {\n      \"itemId\": \"F34DF6409289480EE0530918000A3213\",\n      \"checked\": true,\n      \"remarks\": {\n        \"title\": \"title1\",\n        \"text\": \"check list remarks1\"\n      },\n      \"files\": [\n        {\n          \"fileId\": \"024C9D11EC22BE07E0630818000A8BE4\",\n          \"fileName\": \"tst.jpg\"\n        }\n      ]\n    },\n    {\n      \"itemId\": \"F34DF640928A480EE0530918000A3213\",\n      \"checked\": true,\n      \"remarks\": {\n        \"title\": \"item title2\",\n        \"text\": \"check list item remarks2\"\n      }\n    }\n  ],\n  \"files\": [\n    {\n      \"fileId\": \"024C9D11EC22BE07E0630818000A8BE4\",\n      \"fileName\": \"b.jpg\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/parentsCheckLists/{{checkListId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"parentsCheckLists",
+								"{{checkListId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 05:27:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "06516384B6CB20A4E0630818000A2CDE"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"F34DC29DE6EB4F3BE0530918000AFCCC\",\n    \"checkListName\": \"Parent Checklist\",\n    \"ord\": 1,\n    \"remarks\": {\n        \"title\": \"title hdr\",\n        \"type\": null,\n        \"text\": \"check list remarks hdr\"\n    },\n    \"files\": [],\n    \"auditLog\": {\n        \"createdBy\": \"MUSEE\",\n        \"createdOn\": \"2023-09-27T05:27:49\",\n        \"lastUpdatedBy\": \"MUSEE\",\n        \"lastUpdatedOn\": \"2023-09-27T05:27:49\"\n    },\n    \"checkLists\": [\n        {\n            \"itemId\": \"F34DF640928B480EE0530918000A3213\",\n            \"ord\": 1,\n            \"text\": \"Behaviour\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"F34DF640928C480EE0530918000A3213\",\n            \"ord\": 2,\n            \"text\": \"Social\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FD4009BE0630818000AB2D6\",\n            \"ord\": 3,\n            \"text\": \"Emotional\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FD5009BE0630818000AB2D6\",\n            \"ord\": 4,\n            \"text\": \"Routine\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FD6009BE0630818000AB2D6\",\n            \"ord\": 5,\n            \"text\": \"Sleep\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FD7009BE0630818000AB2D6\",\n            \"ord\": 6,\n            \"text\": \"Diet\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FD8009BE0630818000AB2D6\",\n            \"ord\": 7,\n            \"text\": \"Task Completion\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FD9009BE0630818000AB2D6\",\n            \"ord\": 8,\n            \"text\": \"Language & Communication\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FDA009BE0630818000AB2D6\",\n            \"ord\": 9,\n            \"text\": \"Sensory\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FDB009BE0630818000AB2D6\",\n            \"ord\": 10,\n            \"text\": \"Family Background\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C94763FDC009BE0630818000AB2D6\",\n            \"ord\": 11,\n            \"text\": \"Medical Case History\",\n            \"checked\": false\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/parentsCheckLists/{{checkListId}}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfde86c980bd6e0630818000a9a2e059cfde86c990bd6e0630818000a9a2e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/parentsCheckLists/{{checkListId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"parentsCheckLists",
+						"{{checkListId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/parentsCheckLists/{{checkListId}}",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfde86c980bd6e0630818000a9a2e059cfde86c990bd6e0630818000a9a2e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/parentsCheckLists/{{checkListId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"parentsCheckLists",
+								"{{checkListId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 05:28:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "checkListId",
+			"value": "F34DC29DE6EB4F3BE0530918000AFCCC",
+			"type": "string"
+		}
+	]
+}

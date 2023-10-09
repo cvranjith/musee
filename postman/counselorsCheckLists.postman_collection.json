@@ -1,0 +1,402 @@
+{
+	"info": {
+		"_postman_id": "d27de108-579a-495e-a81b-4b2f42366da4",
+		"name": "counselorsCheckLists",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4550880",
+		"_collection_link": "https://musee-api.postman.co/workspace/musee-api-workspace~a9e7eaee-32c6-4ff3-a935-378cb5a6b5ab/collection/4550880-d27de108-579a-495e-a81b-4b2f42366da4?action=share&source=collection_link&creator=4550880"
+	},
+	"item": [
+		{
+			"name": "/student/{{studentId}}/counselorsCheckLists",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfde86c7d0bd6e0630818000a9a2e059cfde86c7e0bd6e0630818000a9a2e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/counselorsCheckLists",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"counselorsCheckLists"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/counselorsCheckLists",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfde86c7d0bd6e0630818000a9a2e059cfde86c7e0bd6e0630818000a9a2e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/counselorsCheckLists",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"counselorsCheckLists"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:40:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "0653273E71EB9572E0630818000A5F25"
+						},
+						{
+							"key": "ETag",
+							"value": "\"Ayx6n52+tPxOU0/+DBUOxaYjfdNoGHbK2K6S1YRXZWS4dJ3CEYGdLCmFHC78h9gAaizJzAW7FmI7ufPmDsBzug==\""
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"F362974CB0A90F74E0530918000AAE07\",\n        \"checkListName\": \"Counselor Checklist 1\",\n        \"ord\": 1,\n        \"remarks\": {\n            \"title\": \"title1\",\n            \"type\": null,\n            \"text\": \"remarks3\"\n        },\n        \"files\": [],\n        \"auditLog\": {\n            \"createdBy\": \"MUSEE\",\n            \"createdOn\": \"2023-09-27T01:15:28\",\n            \"lastUpdatedBy\": \"MUSEE\",\n            \"lastUpdatedOn\": \"2023-09-27T01:22:29\"\n        },\n        \"checkLists\": [\n            {\n                \"itemId\": \"F362750C5112D6DCE0530918000AE8EE\",\n                \"ord\": 1,\n                \"text\": \"Intellectual Disability\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"F362750C5113D6DCE0530918000AE8EE\",\n                \"ord\": 2,\n                \"text\": \"Communication Disability\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C684ABDDC5EA4E0630818000AACB6\",\n                \"ord\": 3,\n                \"text\": \"Autism Spectrum Disorder (ASD)\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C684ABDDD5EA4E0630818000AACB6\",\n                \"ord\": 4,\n                \"text\": \"Attention Deficit Hyperactivity Disorder(ADHD)\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C684ABDDE5EA4E0630818000AACB6\",\n                \"ord\": 5,\n                \"text\": \"Social Pragmatic/Learning Disorder\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C684ABDDF5EA4E0630818000AACB6\",\n                \"ord\": 6,\n                \"text\": \"Motor Disorder(Tic)\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C684ABDE05EA4E0630818000AACB6\",\n                \"ord\": 7,\n                \"text\": \"Other Neurodevelopment Disorder\",\n                \"checked\": false\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/counselorsCheckLists/{{checkListId}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f1e0aace0630818000a020e059cfdd55f1f0aace0630818000a020e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/counselorsCheckLists/{{checkListId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"counselorsCheckLists",
+						"{{checkListId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/counselorsCheckLists/{{checkListId}}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f1e0aace0630818000a020e059cfdd55f1f0aace0630818000a020e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/counselorsCheckLists/{{checkListId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"counselorsCheckLists",
+								"{{checkListId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:40:34 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "0653273E71EC9572E0630818000A5F25"
+						},
+						{
+							"key": "ETag",
+							"value": "\"GUuu61mBjiB+SWnxC7HAqMeVwYaOtKLOyX4OFlE5psIHjFxjJDpaPJXZVy5IBHrXq/u/6n1jRrkk19+0s6mTbw==\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"F362974CB0A90F74E0530918000AAE07\",\n    \"checkListName\": \"Counselor Checklist 1\",\n    \"ord\": 1,\n    \"remarks\": {\n        \"title\": \"title1\",\n        \"type\": null,\n        \"text\": \"remarks3\"\n    },\n    \"files\": [],\n    \"auditLog\": {\n        \"createdBy\": \"MUSEE\",\n        \"createdOn\": \"2023-09-27T01:15:28\",\n        \"lastUpdatedBy\": \"MUSEE\",\n        \"lastUpdatedOn\": \"2023-09-27T01:22:29\"\n    },\n    \"checkLists\": [\n        {\n            \"itemId\": \"F362750C5112D6DCE0530918000AE8EE\",\n            \"ord\": 1,\n            \"text\": \"Intellectual Disability\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"F362750C5113D6DCE0530918000AE8EE\",\n            \"ord\": 2,\n            \"text\": \"Communication Disability\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C684ABDDC5EA4E0630818000AACB6\",\n            \"ord\": 3,\n            \"text\": \"Autism Spectrum Disorder (ASD)\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C684ABDDD5EA4E0630818000AACB6\",\n            \"ord\": 4,\n            \"text\": \"Attention Deficit Hyperactivity Disorder(ADHD)\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C684ABDDE5EA4E0630818000AACB6\",\n            \"ord\": 5,\n            \"text\": \"Social Pragmatic/Learning Disorder\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C684ABDDF5EA4E0630818000AACB6\",\n            \"ord\": 6,\n            \"text\": \"Motor Disorder(Tic)\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C684ABDE05EA4E0630818000AACB6\",\n            \"ord\": 7,\n            \"text\": \"Other Neurodevelopment Disorder\",\n            \"checked\": false\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/counselorsCheckLists/{{checkListId}}",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfde86c800bd6e0630818000a9a2e059cfde86c810bd6e0630818000a9a2e"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"remarks\": {\n    \"title\": \"title1\",\n    \"text\": \"remarks3\"\n  },\n\"checkLists\": [\n        {\n            \"itemId\": \"F362750C5112D6DCE0530918000AE8EE\",\n            \"ord\": 1,\n            \"text\": \"Intellectual Disability\",\n            \"checked\": true\n        }\n      ]\n}"
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/counselorsCheckLists/{{checkListId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"counselorsCheckLists",
+						"{{checkListId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/counselorsCheckLists/{{checkListId}}",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfde86c800bd6e0630818000a9a2e059cfde86c810bd6e0630818000a9a2e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"remarks\": {\n    \"title\": \"title1\",\n    \"text\": \"remarks3\"\n  },\n\"checkLists\": [\n        {\n            \"itemId\": \"F362750C5112D6DCE0530918000AE8EE\",\n            \"ord\": 1,\n            \"text\": \"Intellectual Disability\",\n            \"checked\": true\n        }\n      ]\n}"
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/counselorsCheckLists/{{checkListId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"counselorsCheckLists",
+								"{{checkListId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:45:30 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "0653602794BF4CD8E0630818000A8057"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"F362974CB0A90F74E0530918000AAE07\",\n    \"checkListName\": \"Counselor Checklist 1\",\n    \"ord\": 1,\n    \"remarks\": {\n        \"title\": \"title1\",\n        \"type\": null,\n        \"text\": \"remarks3\"\n    },\n    \"files\": [],\n    \"auditLog\": {\n        \"createdBy\": \"MUSEE\",\n        \"createdOn\": \"2023-09-27T01:15:28\",\n        \"lastUpdatedBy\": \"MUSEE\",\n        \"lastUpdatedOn\": \"2023-09-27T07:45:30\"\n    },\n    \"checkLists\": [\n        {\n            \"itemId\": \"F362750C5112D6DCE0530918000AE8EE\",\n            \"ord\": 1,\n            \"text\": \"Intellectual Disability\",\n            \"checked\": true,\n            \"remarks\": {},\n            \"files\": [],\n            \"auditLog\": {\n                \"createdBy\": \"MUSEE\",\n                \"createdOn\": \"2023-09-27T07:45:30\",\n                \"lastUpdatedBy\": \"MUSEE\",\n                \"lastUpdatedOn\": \"2023-09-27T07:45:30\"\n            }\n        },\n        {\n            \"itemId\": \"F362750C5113D6DCE0530918000AE8EE\",\n            \"ord\": 2,\n            \"text\": \"Communication Disability\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C684ABDDC5EA4E0630818000AACB6\",\n            \"ord\": 3,\n            \"text\": \"Autism Spectrum Disorder (ASD)\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C684ABDDD5EA4E0630818000AACB6\",\n            \"ord\": 4,\n            \"text\": \"Attention Deficit Hyperactivity Disorder(ADHD)\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C684ABDDE5EA4E0630818000AACB6\",\n            \"ord\": 5,\n            \"text\": \"Social Pragmatic/Learning Disorder\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C684ABDDF5EA4E0630818000AACB6\",\n            \"ord\": 6,\n            \"text\": \"Motor Disorder(Tic)\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C684ABDE05EA4E0630818000AACB6\",\n            \"ord\": 7,\n            \"text\": \"Other Neurodevelopment Disorder\",\n            \"checked\": false\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/counselorsCheckLists/{{checkListId}}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfddd544d0ac1e0630818000ab00f059cfddd544e0ac1e0630818000ab00f"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/counselorsCheckLists/{{checkListId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"counselorsCheckLists",
+						"{{checkListId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/counselorsCheckLists/{{checkListId}}",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfddd544d0ac1e0630818000ab00f059cfddd544e0ac1e0630818000ab00f"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/counselorsCheckLists/{{checkListId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"counselorsCheckLists",
+								"{{checkListId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:47:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "checkListId",
+			"value": "F362974CB0A90F74E0530918000AAE07",
+			"type": "string"
+		}
+	]
+}

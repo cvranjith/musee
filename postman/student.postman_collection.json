@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "89574cab-ade8-461c-89e4-12002f6016f5",
+		"name": "student",
+		"description": "Musee REST API for accessing / modifying Musee App student information",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4550880",
+		"_collection_link": "https://musee-api.postman.co/workspace/musee-api-workspace~a9e7eaee-32c6-4ff3-a935-378cb5a6b5ab/collection/4550880-89574cab-ade8-461c-89e4-12002f6016f5?action=share&source=collection_link&creator=4550880"
+	},
+	"item": [
+		{
+			"name": "/students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/students?pagenum=1&numrows=100",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"students"
+					],
+					"query": [
+						{
+							"key": "pagenum",
+							"value": "1"
+						},
+						{
+							"key": "studentId",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "numrows",
+							"value": "100"
+						}
+					]
+				},
+				"description": "This request gets a list of students available for the current user."
+			},
+			"response": [
+				{
+					"name": "/students",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/students?pagenum=1&numrows=100",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"students"
+							],
+							"query": [
+								{
+									"key": "pagenum",
+									"value": "1"
+								},
+								{
+									"key": "studentId",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "numrows",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 05:18:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "065151622B3E9981E0630818000A7049"
+						},
+						{
+							"key": "ETag",
+							"value": "\"WQ3VjRd+NOqdnhb39aWmmb3lvxMUXfEw9DcboUd+dYuKyNkJ95JLvrkT371MpgW3Cmpyokbn73kBtTQ3V/x+fQ==\""
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"F10F72C1EDA2A3B3E0530918000A6ACA\",\n        \"studentId\": 1,\n        \"studentName\": \"John Maxwell\",\n        \"class\": \"3\",\n        \"division\": \"A\",\n        \"dob\": \"2017-05-08T00:00:00\",\n        \"classTeacher\": \"MUSEE\",\n        \"specialInstructor\": \"cv.ranjith@gmail.com\",\n        \"parentName\": \"Richard Benson\",\n        \"consular\": \"COUNSI\",\n        \"doctor\": \"DOC\",\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2016-11-10T00:00:00\",\n        \"photoId\": \"03DE67983CF87862E0630818000A3175\"\n    },\n    {\n        \"id\": \"F10F74484B8FC27BE0530918000AE8E3\",\n        \"studentId\": 2,\n        \"studentName\": \"Lorraine Morris\",\n        \"class\": \"2\",\n        \"division\": \"B\",\n        \"dob\": \"2015-07-14T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"MUSEE\",\n        \"parentName\": \"Esther Mattis\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2019-12-12T00:00:00\",\n        \"photoId\": \"03DE4D1E56607552E0630818000A3B7B\"\n    },\n    {\n        \"id\": \"F2648ECF75EAB976E0530818000AA6D8\",\n        \"studentId\": 3,\n        \"studentName\": \"Peter Pan\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2016-08-15T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"Pan Thomas\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2020-06-01T00:00:00\",\n        \"photoId\": \"03DE4D1E565F7552E0630818000A3B7B\"\n    },\n    {\n        \"id\": \"043077B29A0EB6B2E0630818000A4B74\",\n        \"studentId\": 4,\n        \"studentName\": \"Emily Johnson\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2016-08-15T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"Michael Johnson\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2020-06-01T00:00:00\",\n        \"photoId\": \"05B1CE44B57E54F0E0630818000A95CD\"\n    },\n    {\n        \"id\": \"043077B29A0FB6B2E0630818000A4B74\",\n        \"studentId\": 5,\n        \"studentName\": \"Daniel Martinez\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2016-08-15T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"Sarah Martinez\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2020-06-01T00:00:00\",\n        \"photoId\": \"05B1CE4F7A20DB8DE0630818000A5F2B\"\n    },\n    {\n        \"id\": \"043077B29A10B6B2E0630818000A4B74\",\n        \"studentId\": 6,\n        \"studentName\": \"Olivia Thompson\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2016-08-15T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"David Thompson\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2020-06-01T00:00:00\",\n        \"photoId\": \"05B1D26BC3D6F8C7E0630818000ACF2A\"\n    },\n    {\n        \"id\": \"043077B29A11B6B2E0630818000A4B74\",\n        \"studentId\": 7,\n        \"studentName\": \"Liam Anderson\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2016-08-15T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"Jennifer Anderson\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2020-06-01T00:00:00\",\n        \"photoId\": \"05B1CE44B58554F0E0630818000A95CD\"\n    },\n    {\n        \"id\": \"043077B29A12B6B2E0630818000A4B74\",\n        \"studentId\": 8,\n        \"studentName\": \"Sophia Clark\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2016-08-15T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"William Clark\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2020-06-01T00:00:00\",\n        \"photoId\": \"05B1CE44B58B54F0E0630818000A95CD\"\n    },\n    {\n        \"id\": \"043077B29A13B6B2E0630818000A4B74\",\n        \"studentId\": 9,\n        \"studentName\": \"Ethan Rodriguez\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2016-08-15T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"Linda Rodriguez\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2020-06-01T00:00:00\",\n        \"photoId\": \"05B1CE4F4FD7DC14E0630818000A7296\"\n    },\n    {\n        \"id\": \"043077B29A14B6B2E0630818000A4B74\",\n        \"studentId\": 10,\n        \"studentName\": \"Ava Wright\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2016-08-15T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"Christopher Wright\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2020-06-01T00:00:00\",\n        \"photoId\": \"03DE4D1E565F7552E0630818000A3B7B\"\n    },\n    {\n        \"id\": \"043077B29A15B6B2E0630818000A4B74\",\n        \"studentId\": 11,\n        \"studentName\": \"Noah Mitchell\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2016-08-15T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"Karen Mitchell\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2020-06-01T00:00:00\",\n        \"photoId\": \"03DE4D1E565F7552E0630818000A3B7B\"\n    },\n    {\n        \"id\": \"043077B29A16B6B2E0630818000A4B74\",\n        \"studentId\": 12,\n        \"studentName\": \"Isabella Parker\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2016-08-15T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"Matthew Parker\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2020-06-01T00:00:00\",\n        \"photoId\": \"03DE4D1E565F7552E0630818000A3B7B\"\n    },\n    {\n        \"id\": \"043077B29A17B6B2E0630818000A4B74\",\n        \"studentId\": 13,\n        \"studentName\": \"Aiden Turner\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2016-08-15T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"Laura Turner\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2020-06-01T00:00:00\",\n        \"photoId\": \"03DE4D1E565F7552E0630818000A3B7B\"\n    },\n    {\n        \"id\": \"043077B29A18B6B2E0630818000A4B74\",\n        \"studentId\": 14,\n        \"studentName\": \"Mia Lewis\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2016-08-15T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"John Lewis\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2020-06-01T00:00:00\",\n        \"photoId\": \"03DE4D1E565F7552E0630818000A3B7B\"\n    },\n    {\n        \"id\": \"043077B29A19B6B2E0630818000A4B74\",\n        \"studentId\": 15,\n        \"studentName\": \"James White\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2016-08-15T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"Mary White\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2020-06-01T00:00:00\",\n        \"photoId\": \"03DE4D1E565F7552E0630818000A3B7B\"\n    },\n    {\n        \"id\": \"043077B29A1AB6B2E0630818000A4B74\",\n        \"studentId\": 16,\n        \"studentName\": \"Harper Adams\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2016-08-15T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"Richard Adams\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2020-06-01T00:00:00\",\n        \"photoId\": \"03DE4D1E565F7552E0630818000A3B7B\"\n    },\n    {\n        \"id\": \"043077B29A1BB6B2E0630818000A4B74\",\n        \"studentId\": 17,\n        \"studentName\": \"Benjamin Hall\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2016-08-15T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"Elizabeth Hall\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2020-06-01T00:00:00\",\n        \"photoId\": \"03DE4D1E565F7552E0630818000A3B7B\"\n    },\n    {\n        \"id\": \"043077B29A1CB6B2E0630818000A4B74\",\n        \"studentId\": 18,\n        \"studentName\": \"Charlotte Garcia\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2016-08-15T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"Robert Garcia\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2020-06-01T00:00:00\",\n        \"photoId\": \"03DE4D1E565F7552E0630818000A3B7B\"\n    },\n    {\n        \"id\": \"050566D814F57ADDE0630818000A3857\",\n        \"studentId\": 19,\n        \"studentName\": \"Peter D Test\",\n        \"class\": \"1\",\n        \"division\": \"A\",\n        \"dob\": \"2018-09-11T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"TEACHER\",\n        \"parentName\": \"Test Parent\",\n        \"consular\": null,\n        \"doctor\": null,\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2022-09-11T00:00:00\",\n        \"photoId\": null\n    },\n    {\n        \"id\": \"063E9669D4EF2EF9E0630818000AB690\",\n        \"studentId\": 20,\n        \"studentName\": \"Histesh Joshi\",\n        \"class\": \"3\",\n        \"division\": \"B\",\n        \"dob\": \"2017-05-08T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"SPECI\",\n        \"parentName\": \"Gautham Joshi\",\n        \"consular\": \"COUNSI\",\n        \"doctor\": \"DOC\",\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2016-12-10T00:00:00\",\n        \"photoId\": null\n    },\n    {\n        \"id\": \"06407EB90E0D0552E0630818000AA4A8\",\n        \"studentId\": 21,\n        \"studentName\": \"Chinchu PK\",\n        \"class\": \"3\",\n        \"division\": \"B\",\n        \"dob\": \"2017-05-08T00:00:00\",\n        \"classTeacher\": \"TEACHER\",\n        \"specialInstructor\": \"SPECI\",\n        \"parentName\": \"Kuttappan PP\",\n        \"consular\": \"COUNSI\",\n        \"doctor\": \"DOC\",\n        \"agency\": null,\n        \"specialEducator\": null,\n        \"therapist\": null,\n        \"studentSince\": \"2016-12-10T00:00:00\",\n        \"photoId\": \"03DE67983CF87862E0630818000A3175\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/basicInfo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfde86c7a0bd6e0630818000a9a2e059cfde86c7b0bd6e0630818000a9a2e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/basicInfo",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"basicInfo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/basicInfo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfde86c7a0bd6e0630818000a9a2e059cfde86c7b0bd6e0630818000a9a2e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/basicInfo",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"basicInfo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 05:17:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "06514E36A6487C9EE0630818000AD96A"
+						},
+						{
+							"key": "ETag",
+							"value": "\"3gBN4RAR2Zv38KaVXyCiF0nXAMB4/IfT/Are9TwXQB3g48WrpX+dR0IQRqrv4z9c3aaRHjdiQkk+5WhzdCqITg==\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"06407EB90E0D0552E0630818000AA4A8\",\n    \"studentId\": 21,\n    \"studentName\": \"Chinchu PK\",\n    \"class\": \"3\",\n    \"division\": \"B\",\n    \"dob\": \"2017-05-08T00:00:00\",\n    \"classTeacher\": \"TEACHER\",\n    \"specialInstructor\": \"SPECI\",\n    \"parentName\": \"Kuttappan PP\",\n    \"consular\": \"COUNSI\",\n    \"doctor\": \"DOC\",\n    \"agency\": null,\n    \"specialEducator\": null,\n    \"therapist\": null,\n    \"studentSince\": \"2016-12-10T00:00:00\",\n    \"photoId\": \"03DE67983CF87862E0630818000A3175\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfddd544a0ac1e0630818000ab00f059cfddd544b0ac1e0630818000ab00f"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfddd544a0ac1e0630818000ab00f059cfddd544b0ac1e0630818000ab00f"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 05:17:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "06514E36A6477C9EE0630818000AD96A"
+						},
+						{
+							"key": "ETag",
+							"value": "\"HvQZTIQBnXh+ZKOR1lgrf27hElYInHRr7H3I0Rjq2c9+pkWskcNsyuAImSFKZJOJCWuWk1QoJ60P/uSyMerfKw==\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"06407EB90E0D0552E0630818000AA4A8\",\n    \"studentId\": 21,\n    \"studentName\": \"Chinchu PK\",\n    \"class\": \"3\",\n    \"division\": \"B\",\n    \"dob\": \"2017-05-08T00:00:00\",\n    \"classTeacher\": \"TEACHER\",\n    \"specialInstructor\": \"SPECI\",\n    \"parentName\": \"Kuttappan PP\",\n    \"consular\": \"COUNSI\",\n    \"doctor\": \"DOC\",\n    \"agency\": null,\n    \"specialEducator\": null,\n    \"therapist\": null,\n    \"studentSince\": \"2016-12-10T00:00:00\",\n    \"photoId\": \"03DE67983CF87862E0630818000A3175\",\n    \"teachersCheckLists\": [\n        {\n            \"id\": \"F34DA26A34086169E0530918000ADE57\",\n            \"checkListName\": \"Teachers Checklist 1\",\n            \"ord\": 1,\n            \"checkLists\": [\n                {\n                    \"itemId\": \"F34DF6409289480EE0530918000A3213\",\n                    \"ord\": 1,\n                    \"text\": \"Classroom Behaviour\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"F34DF640928A480EE0530918000A3213\",\n                    \"ord\": 2,\n                    \"text\": \"Social Skills\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C94763FD0009BE0630818000AB2D6\",\n                    \"ord\": 3,\n                    \"text\": \"Reading\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C94763FD1009BE0630818000AB2D6\",\n                    \"ord\": 4,\n                    \"text\": \"Writing\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C94763FD2009BE0630818000AB2D6\",\n                    \"ord\": 5,\n                    \"text\": \"Sitting Tolerance\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C94763FD3009BE0630818000AB2D6\",\n                    \"ord\": 6,\n                    \"text\": \"Speech/ Language Communication\",\n                    \"checked\": false\n                }\n            ]\n        }\n    ],\n    \"specialEducatorsCheckLists\": [\n        {\n            \"id\": \"F34DFB09A07222E1E0530918000AFF82\",\n            \"checkListName\": \"Special Educator Checklist 1\",\n            \"ord\": 1,\n            \"checkLists\": [\n                {\n                    \"itemId\": \"F34DFB09A07322E1E0530918000AFF82\",\n                    \"ord\": 1,\n                    \"text\": \"Present Level Of Performance (PLOP)\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"F34DFB09A07422E1E0530918000AFF82\",\n                    \"ord\": 2,\n                    \"text\": \"Attention Span\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"F34DFB09A07522E1E0530918000AFF82\",\n                    \"ord\": 3,\n                    \"text\": \"Sitting Tolerance\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C8E47801CD827E0630818000A3161\",\n                    \"ord\": null,\n                    \"text\": \"Fine Motor\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C8E47801DD827E0630818000A3161\",\n                    \"ord\": null,\n                    \"text\": \"Gross Motor\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C8E47801ED827E0630818000A3161\",\n                    \"ord\": null,\n                    \"text\": \"Speech & Communication\",\n                    \"checked\": false\n                }\n            ]\n        }\n    ],\n    \"counselorsCheckLists\": [\n        {\n            \"id\": \"F362974CB0A90F74E0530918000AAE07\",\n            \"checkListName\": \"Counselor Checklist 1\",\n            \"ord\": 1,\n            \"remarks\": {\n                \"title\": \"title1\",\n                \"type\": null,\n                \"text\": \"remarks3\"\n            },\n            \"files\": [],\n            \"auditLog\": {\n                \"createdBy\": \"MUSEE\",\n                \"createdOn\": \"2023-09-27T01:15:28\",\n                \"lastUpdatedBy\": \"MUSEE\",\n                \"lastUpdatedOn\": \"2023-09-27T01:22:29\"\n            },\n            \"checkLists\": [\n                {\n                    \"itemId\": \"F362750C5112D6DCE0530918000AE8EE\",\n                    \"ord\": 1,\n                    \"text\": \"Intellectual Disability\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"F362750C5113D6DCE0530918000AE8EE\",\n                    \"ord\": 2,\n                    \"text\": \"Communication Disability\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C684ABDDC5EA4E0630818000AACB6\",\n                    \"ord\": 3,\n                    \"text\": \"Autism Spectrum Disorder (ASD)\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C684ABDDD5EA4E0630818000AACB6\",\n                    \"ord\": 4,\n                    \"text\": \"Attention Deficit Hyperactivity Disorder(ADHD)\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C684ABDDE5EA4E0630818000AACB6\",\n                    \"ord\": 5,\n                    \"text\": \"Social Pragmatic/Learning Disorder\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C684ABDDF5EA4E0630818000AACB6\",\n                    \"ord\": 6,\n                    \"text\": \"Motor Disorder(Tic)\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C684ABDE05EA4E0630818000AACB6\",\n                    \"ord\": 7,\n                    \"text\": \"Other Neurodevelopment Disorder\",\n                    \"checked\": false\n                }\n            ]\n        }\n    ],\n    \"parentsCheckLists\": [\n        {\n            \"id\": \"F34DC29DE6EB4F3BE0530918000AFCCC\",\n            \"checkListName\": \"Parent Checklist\",\n            \"ord\": 1,\n            \"checkLists\": [\n                {\n                    \"itemId\": \"F34DF640928B480EE0530918000A3213\",\n                    \"ord\": 1,\n                    \"text\": \"Behaviour\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"F34DF640928C480EE0530918000A3213\",\n                    \"ord\": 2,\n                    \"text\": \"Social\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C94763FD4009BE0630818000AB2D6\",\n                    \"ord\": 3,\n                    \"text\": \"Emotional\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C94763FD5009BE0630818000AB2D6\",\n                    \"ord\": 4,\n                    \"text\": \"Routine\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C94763FD6009BE0630818000AB2D6\",\n                    \"ord\": 5,\n                    \"text\": \"Sleep\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C94763FD7009BE0630818000AB2D6\",\n                    \"ord\": 6,\n                    \"text\": \"Diet\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C94763FD8009BE0630818000AB2D6\",\n                    \"ord\": 7,\n                    \"text\": \"Task Completion\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C94763FD9009BE0630818000AB2D6\",\n                    \"ord\": 8,\n                    \"text\": \"Language & Communication\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C94763FDA009BE0630818000AB2D6\",\n                    \"ord\": 9,\n                    \"text\": \"Sensory\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C94763FDB009BE0630818000AB2D6\",\n                    \"ord\": 10,\n                    \"text\": \"Family Background\",\n                    \"checked\": false\n                },\n                {\n                    \"itemId\": \"023C94763FDC009BE0630818000AB2D6\",\n                    \"ord\": 11,\n                    \"text\": \"Medical Case History\",\n                    \"checked\": false\n                }\n            ]\n        }\n    ],\n    \"individualisedEducationPlan\": [],\n    \"notes\": [],\n    \"observations\": [],\n    \"swot\": [],\n    \"photo\": [\n        {\n            \"fileId\": \"03DE67983CF87862E0630818000A3175\",\n            \"fileName\": \"photo.png\",\n            \"contentType\": \"image/png\",\n            \"auditLog\": {\n                \"createdBy\": \"COUNSI\",\n                \"createdOn\": \"2023-08-27T04:39:11\",\n                \"lastUpdatedBy\": \"COUNSI\",\n                \"lastUpdatedOn\": \"2023-08-27T04:39:11\"\n            }\n        }\n    ],\n    \"auditLog\": {\n        \"createdBy\": \"COUNSI\",\n        \"createdOn\": \"2023-09-26T11:38:03\",\n        \"lastUpdatedBy\": \"COUNSI\",\n        \"lastUpdatedOn\": \"2023-09-26T11:38:03\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/new",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfddd544a0ac1e0630818000ab00f059cfddd544b0ac1e0630818000ab00f"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"studentId\": 21,\n    \"studentName\": \"Chinchu PK\",\n    \"class\": \"3\",\n    \"division\": \"B\",\n    \"dob\": \"2017-05-08T00:00:00\",\n    \"classTeacher\": \"TEACHER\",\n    \"specialInstructor\": \"SPECI\",\n    \"parentName\": \"Kuttappan PP\",\n    \"consular\": \"COUNSI\",\n    \"doctor\": \"DOC\",\n    \"agency\": null,\n    \"specialEducator\": null,\n    \"therapist\": null,\n    \"studentSince\": \"2016-12-10T00:00:00\",\n    \"photoId\": \"03DE67983CF87862E0630818000A3175\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/new",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"new"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/new",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfddd544a0ac1e0630818000ab00f059cfddd544b0ac1e0630818000ab00f"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"studentId\": 21,\n    \"studentName\": \"Chinchu PK\",\n    \"class\": \"3\",\n    \"division\": \"B\",\n    \"dob\": \"2017-05-08T00:00:00\",\n    \"classTeacher\": \"TEACHER\",\n    \"specialInstructor\": \"SPECI\",\n    \"parentName\": \"Kuttappan PP\",\n    \"consular\": \"COUNSI\",\n    \"doctor\": \"DOC\",\n    \"agency\": null,\n    \"specialEducator\": null,\n    \"therapist\": null,\n    \"studentSince\": \"2016-12-10T00:00:00\",\n    \"photoId\": \"03DE67983CF87862E0630818000A3175\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/new",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"new"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 05:18:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "06514E36A6497C9EE0630818000AD96A"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Student Id 21 already exists\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfddd544a0ac1e0630818000ab00f059cfddd544b0ac1e0630818000ab00f"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"studentId\": 21,\n    \"studentName\": \"Chinchu PK\",\n    \"class\": \"3\",\n    \"division\": \"B\",\n    \"dob\": \"2017-05-08T00:00:00\",\n    \"classTeacher\": \"TEACHER\",\n    \"specialInstructor\": \"SPECI\",\n    \"parentName\": \"Kuttappan PP\",\n    \"consular\": \"COUNSI\",\n    \"doctor\": \"DOC\",\n    \"agency\": null,\n    \"specialEducator\": null,\n    \"therapist\": null,\n    \"studentSince\": \"2016-12-10T00:00:00\",\n    \"photoId\": \"03DE67983CF87862E0630818000A3175\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfddd544a0ac1e0630818000ab00f059cfddd544b0ac1e0630818000ab00f"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"studentId\": 21,\n    \"studentName\": \"Chinchu PK\",\n    \"class\": \"3\",\n    \"division\": \"B\",\n    \"dob\": \"2017-05-08T00:00:00\",\n    \"classTeacher\": \"TEACHER\",\n    \"specialInstructor\": \"SPECI\",\n    \"parentName\": \"Kuttappan PP\",\n    \"consular\": \"COUNSI\",\n    \"doctor\": \"DOC\",\n    \"agency\": null,\n    \"specialEducator\": null,\n    \"therapist\": null,\n    \"studentSince\": \"2016-12-10T00:00:00\",\n    \"photoId\": \"03DE67983CF87862E0630818000A3175\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 05:20:51 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "06514E36A64C7C9EE0630818000AD96A"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"06407EB90E0D0552E0630818000AA4A8\",\n    \"studentId\": 21,\n    \"studentName\": \"Chinchu PK\",\n    \"class\": \"3\",\n    \"division\": \"B\",\n    \"dob\": \"2017-05-08T00:00:00\",\n    \"classTeacher\": \"TEACHER\",\n    \"specialInstructor\": \"SPECI\",\n    \"parentName\": \"Kuttappan PP\",\n    \"consular\": \"COUNSI\",\n    \"doctor\": \"DOC\",\n    \"agency\": null,\n    \"specialEducator\": null,\n    \"therapist\": null,\n    \"studentSince\": \"2016-12-10T00:00:00\",\n    \"photoId\": \"03DE67983CF87862E0630818000A3175\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "calendarId",
+			"value": "053F379C37E9A63EE0630818000A8F45"
+		},
+		{
+			"key": "checkListId",
+			"value": "F34DA26A34086169E0530918000ADE57",
+			"type": "string"
+		}
+	]
+}

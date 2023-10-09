@@ -1,0 +1,356 @@
+{
+	"info": {
+		"_postman_id": "819db157-a49f-4da6-9de4-4627cd3ec470",
+		"name": "individualisedEducationPlan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4550880",
+		"_collection_link": "https://musee-api.postman.co/workspace/musee-api-workspace~a9e7eaee-32c6-4ff3-a935-378cb5a6b5ab/collection/4550880-819db157-a49f-4da6-9de4-4627cd3ec470?action=share&source=collection_link&creator=4550880"
+	},
+	"item": [
+		{
+			"name": "/student/{{studentId}}/individualisedEducationPlan",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f210aace0630818000a020e059cfdd55f220aace0630818000a020e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/individualisedEducationPlan",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"individualisedEducationPlan"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/individualisedEducationPlan",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f210aace0630818000a020e059cfdd55f220aace0630818000a020e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/individualisedEducationPlan",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"individualisedEducationPlan"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:52:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "0653602794E14CD8E0630818000A8057"
+						},
+						{
+							"key": "ETag",
+							"value": "\"P4cBYOJlMui5uyKHXtUrRYO8zOlEM8UzeRPC2sfTqeePh53ByyNAsbjb/RUthEJQzQg+qy89ZgLTPUMdoz/9eg==\""
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"058824F71EE1EA5DE0630818000A72E8\",\n        \"subject\": \"Conflict Resolution\",\n        \"category\": \"Social Emotional Learning\",\n        \"remarks\": {\n            \"title\": \"rem title1\",\n            \"type\": \"IEP Type1\",\n            \"text\": \"rem text1\"\n        },\n        \"objectives\": [\n            {\n                \"objectiveType\": \"L\",\n                \"objectiveNum\": 1,\n                \"pctProgress\": 0,\n                \"status\": \"O\",\n                \"remarks\": {},\n                \"startDate\": \"2023-08-26T00:00:00\",\n                \"plannedEndDate\": \"2023-08-26T00:00:00\",\n                \"actualEndDate\": null\n            },\n            {\n                \"objectiveType\": \"L\",\n                \"objectiveNum\": 2,\n                \"pctProgress\": 0,\n                \"status\": \"O\",\n                \"remarks\": {\n                    \"title\": \"obj rem title\",\n                    \"type\": null,\n                    \"text\": \"obj rem text\"\n                },\n                \"startDate\": \"2023-08-26T00:00:00\",\n                \"plannedEndDate\": \"2023-08-26T00:00:00\",\n                \"actualEndDate\": null\n            },\n            {\n                \"objectiveType\": \"L\",\n                \"objectiveNum\": 3,\n                \"pctProgress\": 0,\n                \"status\": \"O\",\n                \"remarks\": {\n                    \"title\": \"obj rem title 2\",\n                    \"type\": null,\n                    \"text\": \"obj rem text 2\"\n                },\n                \"startDate\": \"2023-08-26T00:00:00\",\n                \"plannedEndDate\": \"2023-08-26T00:00:00\",\n                \"actualEndDate\": null\n            },\n            {\n                \"objectiveType\": \"L\",\n                \"objectiveNum\": 4,\n                \"pctProgress\": 0,\n                \"status\": \"O\",\n                \"remarks\": {},\n                \"startDate\": \"2023-08-26T00:00:00\",\n                \"plannedEndDate\": \"2023-08-26T00:00:00\",\n                \"actualEndDate\": null\n            }\n        ],\n        \"files\": [],\n        \"auditLog\": {\n            \"createdBy\": \"MUSEE\",\n            \"createdOn\": \"2023-09-27T07:51:46\",\n            \"lastUpdatedBy\": \"MUSEE\",\n            \"lastUpdatedOn\": \"2023-09-27T07:51:46\"\n        },\n        \"calendar\": [\n            {\n                \"calendarId\": \"0653602794D04CD8E0630818000A8057\",\n                \"studentId\": \"06407EB90E0D0552E0630818000AA4A8\",\n                \"refId\": \"0653602794C84CD8E0630818000A8057\",\n                \"startDate\": \"2023-08-15T00:00:00\",\n                \"endDate\": \"2023-09-15T00:00:00\",\n                \"repeat\": \"W\",\n                \"repeatOn\": [\n                    \"1\",\n                    \"2\",\n                    \"7\"\n                ],\n                \"repeatFrequency\": 1,\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"agenda\": {\n                    \"title\": \"Meeting subject iep plan\",\n                    \"type\": null,\n                    \"text\": \"test test iep\"\n                },\n                \"location\": \"Zoom\",\n                \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\",\n                \"referenceMaterials\": [\n                    {\n                        \"title\": \"Watch this video\",\n                        \"type\": null,\n                        \"text\": \"https://youtube.com/training001\"\n                    }\n                ],\n                \"participants\": [],\n                \"events\": [\n                    {\n                        \"eventId\": \"0653602794D14CD8E0630818000A8057\",\n                        \"eventDate\": \"2023-08-15T00:00:00\",\n                        \"startHour\": 10,\n                        \"startMinute\": 0,\n                        \"durationHours\": 0,\n                        \"durationMinutes\": 30,\n                        \"cancelled\": false\n                    },\n                    {\n                        \"eventId\": \"0653602794D24CD8E0630818000A8057\",\n                        \"eventDate\": \"2023-08-20T00:00:00\",\n                        \"startHour\": 10,\n                        \"startMinute\": 0,\n                        \"durationHours\": 0,\n                        \"durationMinutes\": 30,\n                        \"cancelled\": false\n                    },\n                    {\n                        \"eventId\": \"0653602794D34CD8E0630818000A8057\",\n                        \"eventDate\": \"2023-08-21T00:00:00\",\n                        \"startHour\": 10,\n                        \"startMinute\": 0,\n                        \"durationHours\": 0,\n                        \"durationMinutes\": 30,\n                        \"cancelled\": false\n                    },\n                    {\n                        \"eventId\": \"0653602794D44CD8E0630818000A8057\",\n                        \"eventDate\": \"2023-08-22T00:00:00\",\n                        \"startHour\": 10,\n                        \"startMinute\": 0,\n                        \"durationHours\": 0,\n                        \"durationMinutes\": 30,\n                        \"cancelled\": false\n                    },\n                    {\n                        \"eventId\": \"0653602794D54CD8E0630818000A8057\",\n                        \"eventDate\": \"2023-08-27T00:00:00\",\n                        \"startHour\": 10,\n                        \"startMinute\": 0,\n                        \"durationHours\": 0,\n                        \"durationMinutes\": 30,\n                        \"cancelled\": false\n                    },\n                    {\n                        \"eventId\": \"0653602794D64CD8E0630818000A8057\",\n                        \"eventDate\": \"2023-08-28T00:00:00\",\n                        \"startHour\": 10,\n                        \"startMinute\": 0,\n                        \"durationHours\": 0,\n                        \"durationMinutes\": 30,\n                        \"cancelled\": false\n                    },\n                    {\n                        \"eventId\": \"0653602794D74CD8E0630818000A8057\",\n                        \"eventDate\": \"2023-08-29T00:00:00\",\n                        \"startHour\": 10,\n                        \"startMinute\": 0,\n                        \"durationHours\": 0,\n                        \"durationMinutes\": 30,\n                        \"cancelled\": false\n                    },\n                    {\n                        \"eventId\": \"0653602794D84CD8E0630818000A8057\",\n                        \"eventDate\": \"2023-09-03T00:00:00\",\n                        \"startHour\": 10,\n                        \"startMinute\": 0,\n                        \"durationHours\": 0,\n                        \"durationMinutes\": 30,\n                        \"cancelled\": false\n                    },\n                    {\n                        \"eventId\": \"0653602794D94CD8E0630818000A8057\",\n                        \"eventDate\": \"2023-09-04T00:00:00\",\n                        \"startHour\": 10,\n                        \"startMinute\": 0,\n                        \"durationHours\": 0,\n                        \"durationMinutes\": 30,\n                        \"cancelled\": false\n                    },\n                    {\n                        \"eventId\": \"0653602794DA4CD8E0630818000A8057\",\n                        \"eventDate\": \"2023-09-05T00:00:00\",\n                        \"startHour\": 10,\n                        \"startMinute\": 0,\n                        \"durationHours\": 0,\n                        \"durationMinutes\": 30,\n                        \"cancelled\": false\n                    },\n                    {\n                        \"eventId\": \"0653602794DB4CD8E0630818000A8057\",\n                        \"eventDate\": \"2023-09-10T00:00:00\",\n                        \"startHour\": 10,\n                        \"startMinute\": 0,\n                        \"durationHours\": 0,\n                        \"durationMinutes\": 30,\n                        \"cancelled\": false\n                    },\n                    {\n                        \"eventId\": \"0653602794DC4CD8E0630818000A8057\",\n                        \"eventDate\": \"2023-09-11T00:00:00\",\n                        \"startHour\": 10,\n                        \"startMinute\": 0,\n                        \"durationHours\": 0,\n                        \"durationMinutes\": 30,\n                        \"cancelled\": false\n                    },\n                    {\n                        \"eventId\": \"0653602794DD4CD8E0630818000A8057\",\n                        \"eventDate\": \"2023-09-12T00:00:00\",\n                        \"startHour\": 10,\n                        \"startMinute\": 0,\n                        \"durationHours\": 0,\n                        \"durationMinutes\": 30,\n                        \"cancelled\": false\n                    }\n                ],\n                \"files\": [],\n                \"auditLog\": {\n                    \"createdBy\": \"MUSEE\",\n                    \"createdOn\": \"2023-09-27T07:51:46\",\n                    \"lastUpdatedBy\": \"MUSEE\",\n                    \"lastUpdatedOn\": \"2023-09-27T07:51:46\"\n                }\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/individualisedEducationPlan/{{iepId}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f240aace0630818000a020e059cfdd55f250aace0630818000a020e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/individualisedEducationPlan/{{iepId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"individualisedEducationPlan",
+						"{{iepId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/individualisedEducationPlan/{{iepId}}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f240aace0630818000a020e059cfdd55f250aace0630818000a020e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/individualisedEducationPlan/{{iepId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"individualisedEducationPlan",
+								"{{iepId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:52:18 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "065365F3E3194CE4E0630818000A4C12"
+						},
+						{
+							"key": "ETag",
+							"value": "\"A+Wt5Xcx66uyGt7cN83QPC3PLzB3JTuZEtMrQUhdvWj5eC+abYAMowAY9CbvwshYNKyN8Jt2TVN1fB9gh52xGA==\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"058824F71EE1EA5DE0630818000A72E8\",\n    \"subject\": \"Conflict Resolution\",\n    \"category\": \"Social Emotional Learning\",\n    \"remarks\": {\n        \"title\": \"rem title1\",\n        \"type\": \"IEP Type1\",\n        \"text\": \"rem text1\"\n    },\n    \"objectives\": [\n        {\n            \"objectiveType\": \"L\",\n            \"objectiveNum\": 1,\n            \"pctProgress\": 0,\n            \"status\": \"O\",\n            \"remarks\": {},\n            \"startDate\": \"2023-08-26T00:00:00\",\n            \"plannedEndDate\": \"2023-08-26T00:00:00\",\n            \"actualEndDate\": null\n        },\n        {\n            \"objectiveType\": \"L\",\n            \"objectiveNum\": 2,\n            \"pctProgress\": 0,\n            \"status\": \"O\",\n            \"remarks\": {\n                \"title\": \"obj rem title\",\n                \"type\": null,\n                \"text\": \"obj rem text\"\n            },\n            \"startDate\": \"2023-08-26T00:00:00\",\n            \"plannedEndDate\": \"2023-08-26T00:00:00\",\n            \"actualEndDate\": null\n        },\n        {\n            \"objectiveType\": \"L\",\n            \"objectiveNum\": 3,\n            \"pctProgress\": 0,\n            \"status\": \"O\",\n            \"remarks\": {\n                \"title\": \"obj rem title 2\",\n                \"type\": null,\n                \"text\": \"obj rem text 2\"\n            },\n            \"startDate\": \"2023-08-26T00:00:00\",\n            \"plannedEndDate\": \"2023-08-26T00:00:00\",\n            \"actualEndDate\": null\n        },\n        {\n            \"objectiveType\": \"L\",\n            \"objectiveNum\": 4,\n            \"pctProgress\": 0,\n            \"status\": \"O\",\n            \"remarks\": {},\n            \"startDate\": \"2023-08-26T00:00:00\",\n            \"plannedEndDate\": \"2023-08-26T00:00:00\",\n            \"actualEndDate\": null\n        }\n    ],\n    \"files\": [],\n    \"auditLog\": {\n        \"createdBy\": \"MUSEE\",\n        \"createdOn\": \"2023-09-27T07:51:46\",\n        \"lastUpdatedBy\": \"MUSEE\",\n        \"lastUpdatedOn\": \"2023-09-27T07:51:46\"\n    },\n    \"calendar\": [\n        {\n            \"calendarId\": \"0653602794D04CD8E0630818000A8057\",\n            \"studentId\": \"06407EB90E0D0552E0630818000AA4A8\",\n            \"refId\": \"0653602794C84CD8E0630818000A8057\",\n            \"startDate\": \"2023-08-15T00:00:00\",\n            \"endDate\": \"2023-09-15T00:00:00\",\n            \"repeat\": \"W\",\n            \"repeatOn\": [\n                \"1\",\n                \"2\",\n                \"7\"\n            ],\n            \"repeatFrequency\": 1,\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"agenda\": {\n                \"title\": \"Meeting subject iep plan\",\n                \"type\": null,\n                \"text\": \"test test iep\"\n            },\n            \"location\": \"Zoom\",\n            \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\",\n            \"referenceMaterials\": [\n                {\n                    \"title\": \"Watch this video\",\n                    \"type\": null,\n                    \"text\": \"https://youtube.com/training001\"\n                }\n            ],\n            \"participants\": [],\n            \"events\": [\n                {\n                    \"eventId\": \"0653602794D14CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-08-15T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794D24CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-08-20T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794D34CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-08-21T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794D44CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-08-22T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794D54CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-08-27T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794D64CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-08-28T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794D74CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-08-29T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794D84CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-09-03T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794D94CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-09-04T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794DA4CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-09-05T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794DB4CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-09-10T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794DC4CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-09-11T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794DD4CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-09-12T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                }\n            ],\n            \"files\": [],\n            \"auditLog\": {\n                \"createdBy\": \"MUSEE\",\n                \"createdOn\": \"2023-09-27T07:51:46\",\n                \"lastUpdatedBy\": \"MUSEE\",\n                \"lastUpdatedOn\": \"2023-09-27T07:51:46\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/individualisedEducationPlan/{{iepId}}",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfde86c860bd6e0630818000a9a2e059cfde86c870bd6e0630818000a9a2e"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"remarks\": {\n    \"title\": \"rem title1\",\n    \"text\": \"rem text1\",\n    \"type\": \"IEP Type1\"\n  },\n  \"objectives\": [\n    {\n      \"objectiveType\": \"L\",\n      \"objectiveNum\": 1,\n      \"pctProgress\": 0,\n      \"status\": \"O\",\n      \"startDate\": \"2023-08-26T00:00:00\",\n      \"plannedEndDate\": \"2023-08-26T00:00:00\",\n      \"actualEndDate\": null\n    },\n    {\n      \"objectiveType\": \"L\",\n      \"objectiveNum\": 2,\n      \"pctProgress\": 0,\n      \"status\": \"O\",\n      \"remarks\": {\n         \"title\": \"obj rem title\",\n         \"text\": \"obj rem text\"\n      },\n      \"startDate\": \"2023-08-26T00:00:00\",\n      \"plannedEndDate\": \"2023-08-26T00:00:00\",\n      \"actualEndDate\": null\n    },\n    {\n      \"objectiveType\": \"L\",\n      \"status\": \"O\",\n      \"remarks\": {\n         \"title\": \"obj rem title 2\",\n         \"text\": \"obj rem text 2\"\n      },\n      \"pctProgress\": 0,\n      \"startDate\": \"2023-08-26\",\n      \"plannedEndDate\": \"2023-08-26\",\n      \"actualEndDate\": null,\n      \"objectiveNum\": 3\n    },\n    {\n      \"objectiveType\": \"L\",\n      \"status\": \"O\",\n      \"pctProgress\": 0,\n      \"startDate\": \"2023-08-26\",\n      \"plannedEndDate\": \"2023-08-26\",\n      \"actualEndDate\": null,\n      \"objectiveNum\": 4\n    }\n  ],\n  \"calendar\": [\n      {\n    \"startDate\": \"2023-08-15\",\n    \"endDate\": \"2023-09-15\",\n    \"repeat\" : \"W\",\n    \"repeatOn\": [\"1\",\"2\",\"7\"],\n    \"startHour\": 10,\n    \"durationMinutes\": 30,\n    \"location\": \"Zoom\",\n    \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\",\n    \"agenda\": {\n      \"title\": \"Meeting subject iep plan\",\n      \"text\": \"test test iep\"\n    },\n    \"referenceMaterials\": [\n      {\n        \"title\": \"Watch this video\",\n        \"text\": \"https://youtube.com/training001\"\n      }\n    ]\n}\n  ]\n}"
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/individualisedEducationPlan/{{iepId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"individualisedEducationPlan",
+						"{{iepId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/individualisedEducationPlan/{{iepId}}",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfde86c860bd6e0630818000a9a2e059cfde86c870bd6e0630818000a9a2e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"remarks\": {\n    \"title\": \"rem title1\",\n    \"text\": \"rem text1\",\n    \"type\": \"IEP Type1\"\n  },\n  \"objectives\": [\n    {\n      \"objectiveType\": \"L\",\n      \"objectiveNum\": 1,\n      \"pctProgress\": 0,\n      \"status\": \"O\",\n      \"startDate\": \"2023-08-26T00:00:00\",\n      \"plannedEndDate\": \"2023-08-26T00:00:00\",\n      \"actualEndDate\": null\n    },\n    {\n      \"objectiveType\": \"L\",\n      \"objectiveNum\": 2,\n      \"pctProgress\": 0,\n      \"status\": \"O\",\n      \"remarks\": {\n         \"title\": \"obj rem title\",\n         \"text\": \"obj rem text\"\n      },\n      \"startDate\": \"2023-08-26T00:00:00\",\n      \"plannedEndDate\": \"2023-08-26T00:00:00\",\n      \"actualEndDate\": null\n    },\n    {\n      \"objectiveType\": \"L\",\n      \"status\": \"O\",\n      \"remarks\": {\n         \"title\": \"obj rem title 2\",\n         \"text\": \"obj rem text 2\"\n      },\n      \"pctProgress\": 0,\n      \"startDate\": \"2023-08-26\",\n      \"plannedEndDate\": \"2023-08-26\",\n      \"actualEndDate\": null,\n      \"objectiveNum\": 3\n    },\n    {\n      \"objectiveType\": \"L\",\n      \"status\": \"O\",\n      \"pctProgress\": 0,\n      \"startDate\": \"2023-08-26\",\n      \"plannedEndDate\": \"2023-08-26\",\n      \"actualEndDate\": null,\n      \"objectiveNum\": 4\n    }\n  ],\n  \"calendar\": [\n      {\n    \"startDate\": \"2023-08-15\",\n    \"endDate\": \"2023-09-15\",\n    \"repeat\" : \"W\",\n    \"repeatOn\": [\"1\",\"2\",\"7\"],\n    \"startHour\": 10,\n    \"durationMinutes\": 30,\n    \"location\": \"Zoom\",\n    \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\",\n    \"agenda\": {\n      \"title\": \"Meeting subject iep plan\",\n      \"text\": \"test test iep\"\n    },\n    \"referenceMaterials\": [\n      {\n        \"title\": \"Watch this video\",\n        \"text\": \"https://youtube.com/training001\"\n      }\n    ]\n}\n  ]\n}"
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/individualisedEducationPlan/{{iepId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"individualisedEducationPlan",
+								"{{iepId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:51:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "0653602794C74CD8E0630818000A8057"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"058824F71EE1EA5DE0630818000A72E8\",\n    \"subject\": \"Conflict Resolution\",\n    \"category\": \"Social Emotional Learning\",\n    \"remarks\": {\n        \"title\": \"rem title1\",\n        \"type\": \"IEP Type1\",\n        \"text\": \"rem text1\"\n    },\n    \"objectives\": [\n        {\n            \"objectiveType\": \"L\",\n            \"objectiveNum\": 1,\n            \"pctProgress\": 0,\n            \"status\": \"O\",\n            \"remarks\": {},\n            \"startDate\": \"2023-08-26T00:00:00\",\n            \"plannedEndDate\": \"2023-08-26T00:00:00\",\n            \"actualEndDate\": null\n        },\n        {\n            \"objectiveType\": \"L\",\n            \"objectiveNum\": 2,\n            \"pctProgress\": 0,\n            \"status\": \"O\",\n            \"remarks\": {\n                \"title\": \"obj rem title\",\n                \"type\": null,\n                \"text\": \"obj rem text\"\n            },\n            \"startDate\": \"2023-08-26T00:00:00\",\n            \"plannedEndDate\": \"2023-08-26T00:00:00\",\n            \"actualEndDate\": null\n        },\n        {\n            \"objectiveType\": \"L\",\n            \"objectiveNum\": 3,\n            \"pctProgress\": 0,\n            \"status\": \"O\",\n            \"remarks\": {\n                \"title\": \"obj rem title 2\",\n                \"type\": null,\n                \"text\": \"obj rem text 2\"\n            },\n            \"startDate\": \"2023-08-26T00:00:00\",\n            \"plannedEndDate\": \"2023-08-26T00:00:00\",\n            \"actualEndDate\": null\n        },\n        {\n            \"objectiveType\": \"L\",\n            \"objectiveNum\": 4,\n            \"pctProgress\": 0,\n            \"status\": \"O\",\n            \"remarks\": {},\n            \"startDate\": \"2023-08-26T00:00:00\",\n            \"plannedEndDate\": \"2023-08-26T00:00:00\",\n            \"actualEndDate\": null\n        }\n    ],\n    \"files\": [],\n    \"auditLog\": {\n        \"createdBy\": \"MUSEE\",\n        \"createdOn\": \"2023-09-27T07:51:46\",\n        \"lastUpdatedBy\": \"MUSEE\",\n        \"lastUpdatedOn\": \"2023-09-27T07:51:46\"\n    },\n    \"calendar\": [\n        {\n            \"calendarId\": \"0653602794D04CD8E0630818000A8057\",\n            \"studentId\": \"06407EB90E0D0552E0630818000AA4A8\",\n            \"refId\": \"0653602794C84CD8E0630818000A8057\",\n            \"startDate\": \"2023-08-15T00:00:00\",\n            \"endDate\": \"2023-09-15T00:00:00\",\n            \"repeat\": \"W\",\n            \"repeatOn\": [\n                \"1\",\n                \"2\",\n                \"7\"\n            ],\n            \"repeatFrequency\": 1,\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"agenda\": {\n                \"title\": \"Meeting subject iep plan\",\n                \"type\": null,\n                \"text\": \"test test iep\"\n            },\n            \"location\": \"Zoom\",\n            \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\",\n            \"referenceMaterials\": [\n                {\n                    \"title\": \"Watch this video\",\n                    \"type\": null,\n                    \"text\": \"https://youtube.com/training001\"\n                }\n            ],\n            \"participants\": [],\n            \"events\": [\n                {\n                    \"eventId\": \"0653602794D14CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-08-15T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794D24CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-08-20T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794D34CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-08-21T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794D44CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-08-22T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794D54CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-08-27T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794D64CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-08-28T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794D74CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-08-29T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794D84CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-09-03T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794D94CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-09-04T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794DA4CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-09-05T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794DB4CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-09-10T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794DC4CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-09-11T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                },\n                {\n                    \"eventId\": \"0653602794DD4CD8E0630818000A8057\",\n                    \"eventDate\": \"2023-09-12T00:00:00\",\n                    \"startHour\": 10,\n                    \"startMinute\": 0,\n                    \"durationHours\": 0,\n                    \"durationMinutes\": 30,\n                    \"cancelled\": false\n                }\n            ],\n            \"files\": [],\n            \"auditLog\": {\n                \"createdBy\": \"MUSEE\",\n                \"createdOn\": \"2023-09-27T07:51:46\",\n                \"lastUpdatedBy\": \"MUSEE\",\n                \"lastUpdatedOn\": \"2023-09-27T07:51:46\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/individualisedEducationPlan/{{iepId}}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfde86c830bd6e0630818000a9a2e059cfde86c840bd6e0630818000a9a2e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/individualisedEducationPlan/{{iepId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"individualisedEducationPlan",
+						"{{iepId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "checkListId",
+			"value": "F34DA26A34086169E0530918000ADE57",
+			"type": "string"
+		},
+		{
+			"key": "iepId",
+			"value": "058824F71EE1EA5DE0630818000A72E8"
+		}
+	]
+}

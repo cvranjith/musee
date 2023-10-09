@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "e38d3e4e-30b1-4d18-87df-e9b65df399f5",
+		"name": "files",
+		"description": "Musee REST API for accessing / modifying Musee App student information",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4550880",
+		"_collection_link": "https://musee-api.postman.co/workspace/musee-api-workspace~a9e7eaee-32c6-4ff3-a935-378cb5a6b5ab/collection/4550880-e38d3e4e-30b1-4d18-87df-e9b65df399f5?action=share&source=collection_link&creator=4550880"
+	},
+	"item": [
+		{
+			"name": "/files/{{fileId}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL1}}/musee/files/{{fileId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"files",
+						"{{fileId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/files/new",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "file_type",
+						"value": "image/png"
+					},
+					{
+						"key": "file_name",
+						"value": "ava.png"
+					},
+					{
+						"key": "Content-Type",
+						"value": "image/jpeg"
+					},
+					{
+						"key": "ref_id",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "55MBA-2Fq/Screenshot 2023-10-03 at 10.01.57 AM.png"
+					}
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/files/new",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"files",
+						"new"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/files/new",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "file_type",
+								"value": "image/png"
+							},
+							{
+								"key": "file_name",
+								"value": "ethan.png"
+							},
+							{
+								"key": "Content-Type",
+								"value": "image/jpeg"
+							},
+							{
+								"key": "ref_id",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "EbqHixHkL/Screenshot 2023-09-19 at 3.10.41 PM.png"
+							}
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/files/new",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"files",
+								"new"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:48:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\"fileId\":\"0653602794C14CD8E0630818000A8057\",\"refId\":null,\"fileName\":\"ethan.png\",\"contentType\":\"image/png\",\"auditLog\":{\"createdBy\":\"MUSEE\",\"createdOn\":\"2023-09-27T07:48:41\",\"lastUpdatedBy\":\"MUSEE\",\"lastUpdatedOn\":\"2023-09-27T07:48:41\"}}\n"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "fileId",
+			"value": "05B1CE44B57E54F0E0630818000A95CD",
+			"type": "string"
+		}
+	]
+}

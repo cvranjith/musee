@@ -1,0 +1,402 @@
+{
+	"info": {
+		"_postman_id": "7d5a1179-812c-4da2-b1d6-990dfd30bf63",
+		"name": "specialEducatorsCheckLists",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4550880",
+		"_collection_link": "https://musee-api.postman.co/workspace/musee-api-workspace~a9e7eaee-32c6-4ff3-a935-378cb5a6b5ab/collection/4550880-7d5a1179-812c-4da2-b1d6-990dfd30bf63?action=share&source=collection_link&creator=4550880"
+	},
+	"item": [
+		{
+			"name": "/student/{{studentId}}/specialEducatorsCheckLists",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfde86c7d0bd6e0630818000a9a2e059cfde86c7e0bd6e0630818000a9a2e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/specialEducatorsCheckLists",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"specialEducatorsCheckLists"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/specialEducatorsCheckLists",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfde86c7d0bd6e0630818000a9a2e059cfde86c7e0bd6e0630818000a9a2e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/specialEducatorsCheckLists",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"specialEducatorsCheckLists"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 09:00:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "06546B1502BB4C61E0630818000AC176"
+						},
+						{
+							"key": "ETag",
+							"value": "\"RwqWLcqXXIXi5sGjJh78haATdwy/wS8df5FMVJLFKOpZ6k7Vi9HgEXw2WynSbbRrcQCUAxq59TOTlpURwsPtsQ==\""
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"F34DFB09A07222E1E0530918000AFF82\",\n        \"checkListName\": \"Special Educator Checklist 1\",\n        \"ord\": 1,\n        \"remarks\": {\n            \"title\": \"new\",\n            \"type\": null,\n            \"text\": \"text text\"\n        },\n        \"files\": [],\n        \"auditLog\": {\n            \"createdBy\": \"MUSEE\",\n            \"createdOn\": \"2023-09-27T05:23:36\",\n            \"lastUpdatedBy\": \"MUSEE\",\n            \"lastUpdatedOn\": \"2023-09-27T05:26:22\"\n        },\n        \"checkLists\": [\n            {\n                \"itemId\": \"F34DFB09A07322E1E0530918000AFF82\",\n                \"ord\": 1,\n                \"text\": \"Present Level Of Performance (PLOP)\",\n                \"checked\": true,\n                \"remarks\": {\n                    \"title\": \"new\",\n                    \"type\": null,\n                    \"text\": \"item text\"\n                },\n                \"files\": [],\n                \"auditLog\": {\n                    \"createdBy\": \"MUSEE\",\n                    \"createdOn\": \"2023-09-27T05:25:26\",\n                    \"lastUpdatedBy\": \"MUSEE\",\n                    \"lastUpdatedOn\": \"2023-09-27T05:26:22\"\n                }\n            },\n            {\n                \"itemId\": \"F34DFB09A07422E1E0530918000AFF82\",\n                \"ord\": 2,\n                \"text\": \"Attention Span\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"F34DFB09A07522E1E0530918000AFF82\",\n                \"ord\": 3,\n                \"text\": \"Sitting Tolerance\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C8E47801CD827E0630818000A3161\",\n                \"ord\": null,\n                \"text\": \"Fine Motor\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C8E47801DD827E0630818000A3161\",\n                \"ord\": null,\n                \"text\": \"Gross Motor\",\n                \"checked\": false\n            },\n            {\n                \"itemId\": \"023C8E47801ED827E0630818000A3161\",\n                \"ord\": null,\n                \"text\": \"Speech & Communication\",\n                \"checked\": false\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/specialEducatorsCheckLists/{{checkListId}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f1e0aace0630818000a020e059cfdd55f1f0aace0630818000a020e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/specialEducatorsCheckLists/{{checkListId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"specialEducatorsCheckLists",
+						"{{checkListId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/specialEducatorsCheckLists/{{checkListId}}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f1e0aace0630818000a020e059cfdd55f1f0aace0630818000a020e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/specialEducatorsCheckLists/{{checkListId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"specialEducatorsCheckLists",
+								"{{checkListId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 09:00:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "065463B1BE13117CE0630818000A73A6"
+						},
+						{
+							"key": "ETag",
+							"value": "\"koOjgvelQL4xOhhMXcwev8vsYkICCVwDBfTvIeqlDMnpneLyK0IzFhUShsaZuxndA6Ur8TpKjOr3yD1xTDoAkA==\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"F34DFB09A07222E1E0530918000AFF82\",\n    \"checkListName\": \"Special Educator Checklist 1\",\n    \"ord\": 1,\n    \"remarks\": {\n        \"title\": \"new\",\n        \"type\": null,\n        \"text\": \"text text\"\n    },\n    \"files\": [],\n    \"auditLog\": {\n        \"createdBy\": \"MUSEE\",\n        \"createdOn\": \"2023-09-27T05:23:36\",\n        \"lastUpdatedBy\": \"MUSEE\",\n        \"lastUpdatedOn\": \"2023-09-27T05:26:22\"\n    },\n    \"checkLists\": [\n        {\n            \"itemId\": \"F34DFB09A07322E1E0530918000AFF82\",\n            \"ord\": 1,\n            \"text\": \"Present Level Of Performance (PLOP)\",\n            \"checked\": true,\n            \"remarks\": {\n                \"title\": \"new\",\n                \"type\": null,\n                \"text\": \"item text\"\n            },\n            \"files\": [],\n            \"auditLog\": {\n                \"createdBy\": \"MUSEE\",\n                \"createdOn\": \"2023-09-27T05:25:26\",\n                \"lastUpdatedBy\": \"MUSEE\",\n                \"lastUpdatedOn\": \"2023-09-27T05:26:22\"\n            }\n        },\n        {\n            \"itemId\": \"F34DFB09A07422E1E0530918000AFF82\",\n            \"ord\": 2,\n            \"text\": \"Attention Span\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"F34DFB09A07522E1E0530918000AFF82\",\n            \"ord\": 3,\n            \"text\": \"Sitting Tolerance\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C8E47801CD827E0630818000A3161\",\n            \"ord\": null,\n            \"text\": \"Fine Motor\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C8E47801DD827E0630818000A3161\",\n            \"ord\": null,\n            \"text\": \"Gross Motor\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C8E47801ED827E0630818000A3161\",\n            \"ord\": null,\n            \"text\": \"Speech & Communication\",\n            \"checked\": false\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/specialEducatorsCheckLists/{{checkListId}}",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfde86c800bd6e0630818000a9a2e059cfde86c810bd6e0630818000a9a2e"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"remarks\": {\n        \"title\": \"Special Educators \",\n        \"type\": null,\n        \"text\": \"special\"\n    },\n    \"checkLists\": [\n        {\n            \"itemId\": \"F34DFB09A07322E1E0530918000AFF82\",\n            \"checked\": true\n        },\n        {\n            \"itemId\": \"F34DFB09A07422E1E0530918000AFF82\",\n            \"checked\": false\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/specialEducatorsCheckLists/{{checkListId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"specialEducatorsCheckLists",
+						"{{checkListId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/specialEducatorsCheckLists/{{checkListId}}",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfde86c800bd6e0630818000a9a2e059cfde86c810bd6e0630818000a9a2e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"remarks\": {\n        \"title\": \"Special Educators \",\n        \"type\": null,\n        \"text\": \"special\"\n    },\n    \"checkLists\": [\n        {\n            \"itemId\": \"F34DFB09A07322E1E0530918000AFF82\",\n            \"checked\": true\n        },\n        {\n            \"itemId\": \"F34DFB09A07422E1E0530918000AFF82\",\n            \"checked\": false\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/specialEducatorsCheckLists/{{checkListId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"specialEducatorsCheckLists",
+								"{{checkListId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 09:02:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "065463B1BE14117CE0630818000A73A6"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"F34DFB09A07222E1E0530918000AFF82\",\n    \"checkListName\": \"Special Educator Checklist 1\",\n    \"ord\": 1,\n    \"remarks\": {\n        \"title\": \"Special Educators \",\n        \"type\": null,\n        \"text\": \"special\"\n    },\n    \"files\": [],\n    \"auditLog\": {\n        \"createdBy\": \"MUSEE\",\n        \"createdOn\": \"2023-09-27T05:23:36\",\n        \"lastUpdatedBy\": \"MUSEE\",\n        \"lastUpdatedOn\": \"2023-09-27T09:02:33\"\n    },\n    \"checkLists\": [\n        {\n            \"itemId\": \"F34DFB09A07322E1E0530918000AFF82\",\n            \"ord\": 1,\n            \"text\": \"Present Level Of Performance (PLOP)\",\n            \"checked\": true,\n            \"remarks\": {\n                \"title\": \"new\",\n                \"type\": null,\n                \"text\": \"item text\"\n            },\n            \"files\": [],\n            \"auditLog\": {\n                \"createdBy\": \"MUSEE\",\n                \"createdOn\": \"2023-09-27T05:25:26\",\n                \"lastUpdatedBy\": \"MUSEE\",\n                \"lastUpdatedOn\": \"2023-09-27T09:02:33\"\n            }\n        },\n        {\n            \"itemId\": \"F34DFB09A07422E1E0530918000AFF82\",\n            \"ord\": 2,\n            \"text\": \"Attention Span\",\n            \"checked\": false,\n            \"remarks\": {},\n            \"files\": [],\n            \"auditLog\": {\n                \"createdBy\": \"MUSEE\",\n                \"createdOn\": \"2023-09-27T09:02:33\",\n                \"lastUpdatedBy\": \"MUSEE\",\n                \"lastUpdatedOn\": \"2023-09-27T09:02:33\"\n            }\n        },\n        {\n            \"itemId\": \"F34DFB09A07522E1E0530918000AFF82\",\n            \"ord\": 3,\n            \"text\": \"Sitting Tolerance\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C8E47801CD827E0630818000A3161\",\n            \"ord\": null,\n            \"text\": \"Fine Motor\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C8E47801DD827E0630818000A3161\",\n            \"ord\": null,\n            \"text\": \"Gross Motor\",\n            \"checked\": false\n        },\n        {\n            \"itemId\": \"023C8E47801ED827E0630818000A3161\",\n            \"ord\": null,\n            \"text\": \"Speech & Communication\",\n            \"checked\": false\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/specialEducatorsCheckLists/{{checkListId}}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfddd544d0ac1e0630818000ab00f059cfddd544e0ac1e0630818000ab00f"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/specialEducatorsCheckLists/{{checkListId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"specialEducatorsCheckLists",
+						"{{checkListId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/specialEducatorsCheckLists/{{checkListId}}",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfddd544d0ac1e0630818000ab00f059cfddd544e0ac1e0630818000ab00f"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/specialEducatorsCheckLists/{{checkListId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"specialEducatorsCheckLists",
+								"{{checkListId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 09:03:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "checkListId",
+			"value": "F34DFB09A07222E1E0530918000AFF82",
+			"type": "string"
+		}
+	]
+}

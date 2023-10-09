@@ -1,0 +1,1063 @@
+{
+	"info": {
+		"_postman_id": "c9c4d64e-4140-4743-a856-e9aa25951b4f",
+		"name": "calendar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4550880",
+		"_collection_link": "https://musee-api.postman.co/workspace/musee-api-workspace~a9e7eaee-32c6-4ff3-a935-378cb5a6b5ab/collection/4550880-c9c4d64e-4140-4743-a856-e9aa25951b4f?action=share&source=collection_link&creator=4550880"
+	},
+	"item": [
+		{
+			"name": "/calendar?fromDate={{YYYY-MM-DD}}&toDate={{YYYY-MM-DD}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfde86ca10bd6e0630818000a9a2e059cfde86ca20bd6e0630818000a9a2e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/calendar?fromDate=2020-01-30&toDate=2024-01-30",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"calendar"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "2020-01-30"
+						},
+						{
+							"key": "toDate",
+							"value": "2024-01-30"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/calendar?fromDate={{YYYY-MM-DD}}&toDate={{YYYY-MM-DD}}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfde86ca10bd6e0630818000a9a2e059cfde86ca20bd6e0630818000a9a2e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/calendar?fromDate=2020-01-30&toDate=2024-01-30",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"calendar"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2020-01-30"
+								},
+								{
+									"key": "toDate",
+									"value": "2024-01-30"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:29:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "0653273E71E39572E0630818000A5F25"
+						},
+						{
+							"key": "ETag",
+							"value": "\"UeiIXY3k6z7ATkwj3pfdPAhP7NB8xctjQwUVGt9BRXPjEebasxLP4Sv8EEDxgaBt3dChwVeriQEaKEDKuGBetA==\""
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"calendarId\": \"05EA3D367BD9956BE0630818000AA9A9\",\n        \"studentId\": \"F10F72C1EDA2A3B3E0530918000A6ACA\",\n        \"refId\": null,\n        \"startDate\": \"2023-08-15T00:00:00\",\n        \"endDate\": \"2023-09-15T00:00:00\",\n        \"repeat\": \"W\",\n        \"repeatOn\": [\n            \"1\",\n            \"2\",\n            \"7\"\n        ],\n        \"repeatFrequency\": 1,\n        \"startHour\": 10,\n        \"startMinute\": 0,\n        \"durationHours\": 0,\n        \"durationMinutes\": 30,\n        \"agenda\": {\n            \"title\": \"Meeting subject 1\",\n            \"type\": null,\n            \"text\": \"test\"\n        },\n        \"location\": \"Zoom\",\n        \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\",\n        \"referenceMaterials\": [\n            {\n                \"title\": \"Watch this video\",\n                \"type\": null,\n                \"text\": \"https://youtube.com/training001\"\n            },\n            {\n                \"title\": \"Reference document\",\n                \"type\": null,\n                \"text\": \"https://docs.google.com/abcd\"\n            }\n        ],\n        \"participants\": [\n            {\n                \"participantId\": \"cv.ranjith@gmail.com\",\n                \"required\": true\n            }\n        ],\n        \"events\": [\n            {\n                \"eventId\": \"0607CBE081BAECE4E0630818000A8580\",\n                \"eventDate\": \"2023-08-15T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081BBECE4E0630818000A8580\",\n                \"eventDate\": \"2023-08-20T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081BCECE4E0630818000A8580\",\n                \"eventDate\": \"2023-08-21T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081BDECE4E0630818000A8580\",\n                \"eventDate\": \"2023-08-22T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081BEECE4E0630818000A8580\",\n                \"eventDate\": \"2023-08-27T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081BFECE4E0630818000A8580\",\n                \"eventDate\": \"2023-08-28T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081C0ECE4E0630818000A8580\",\n                \"eventDate\": \"2023-08-29T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081C1ECE4E0630818000A8580\",\n                \"eventDate\": \"2023-09-03T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081C2ECE4E0630818000A8580\",\n                \"eventDate\": \"2023-09-04T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081C3ECE4E0630818000A8580\",\n                \"eventDate\": \"2023-09-05T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081C4ECE4E0630818000A8580\",\n                \"eventDate\": \"2023-09-10T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081C5ECE4E0630818000A8580\",\n                \"eventDate\": \"2023-09-11T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081C6ECE4E0630818000A8580\",\n                \"eventDate\": \"2023-09-12T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            }\n        ],\n        \"files\": [],\n        \"auditLog\": {\n            \"createdBy\": \"MUSEE\",\n            \"createdOn\": \"2023-09-22T02:26:19\",\n            \"lastUpdatedBy\": \"MUSEE\",\n            \"lastUpdatedOn\": \"2023-09-23T13:35:44\"\n        }\n    },\n    {\n        \"calendarId\": \"0607C0E0DA04F125E0630818000A52C2\",\n        \"studentId\": \"F10F72C1EDA2A3B3E0530918000A6ACA\",\n        \"refId\": null,\n        \"startDate\": \"2023-08-16T00:00:00\",\n        \"endDate\": \"2023-12-11T00:00:00\",\n        \"repeat\": \"M\",\n        \"repeatOn\": [\n            \"1\",\n            \"2\"\n        ],\n        \"repeatFrequency\": 1,\n        \"startHour\": 10,\n        \"startMinute\": 0,\n        \"durationHours\": 0,\n        \"durationMinutes\": 30,\n        \"agenda\": {\n            \"title\": \"Meeting subject 3\",\n            \"type\": null,\n            \"text\": \"test\"\n        },\n        \"location\": \"Zoom\",\n        \"conferenceLink\": \"https://my.zoom.us/my/cv?pwd=qqqq\",\n        \"referenceMaterials\": [\n            {\n                \"title\": \"Watch this video\",\n                \"type\": null,\n                \"text\": \"https://youtube.com/training001\"\n            },\n            {\n                \"title\": \"Reference document\",\n                \"type\": null,\n                \"text\": \"https://docs.google.com/abcd2\"\n            }\n        ],\n        \"participants\": [\n            {\n                \"participantId\": \"uncle Sam\",\n                \"required\": true\n            }\n        ],\n        \"events\": [\n            {\n                \"eventId\": \"0607C0E0DA06F125E0630818000A52C2\",\n                \"eventDate\": \"2023-09-01T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607C0E0DA07F125E0630818000A52C2\",\n                \"eventDate\": \"2023-09-02T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607C0E0DA08F125E0630818000A52C2\",\n                \"eventDate\": \"2023-10-01T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607C0E0DA09F125E0630818000A52C2\",\n                \"eventDate\": \"2023-10-02T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607C0E0DA0AF125E0630818000A52C2\",\n                \"eventDate\": \"2023-11-01T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607C0E0DA0BF125E0630818000A52C2\",\n                \"eventDate\": \"2023-11-02T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607C0E0DA0CF125E0630818000A52C2\",\n                \"eventDate\": \"2023-12-01T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607C0E0DA0DF125E0630818000A52C2\",\n                \"eventDate\": \"2023-12-02T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            }\n        ],\n        \"files\": [],\n        \"auditLog\": {\n            \"createdBy\": \"MUSEE\",\n            \"createdOn\": \"2023-09-23T13:36:29\",\n            \"lastUpdatedBy\": \"MUSEE\",\n            \"lastUpdatedOn\": \"2023-09-23T13:36:29\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/calendar?year={{YYYY}}&month={{MM}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f4b0aace0630818000a020e059cfdd55f4c0aace0630818000a020e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/calendar?year={{YYYY}}&month={{MM}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"calendar"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "{{YYYY}}"
+						},
+						{
+							"key": "month",
+							"value": "{{MM}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/calendar?year={{YYYY}}&month={{MM}}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f4b0aace0630818000a020e059cfdd55f4c0aace0630818000a020e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/calendar?year={{YYYY}}&month={{MM}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"calendar"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "{{YYYY}}"
+								},
+								{
+									"key": "month",
+									"value": "{{MM}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:30:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "0653272CCC139B4BE0630818000A35B1"
+						},
+						{
+							"key": "ETag",
+							"value": "\"ZIiuURcqQA8t5Uuwv9uG2W2avRrsjBVJ7H0unEG7XBaJstGSzzTWRkJFKmDITfu8SauuOzxLc1yKzC2ciQ2YOg==\""
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"calendarId\": \"05EA3D367BD9956BE0630818000AA9A9\",\n        \"studentId\": \"F10F72C1EDA2A3B3E0530918000A6ACA\",\n        \"refId\": null,\n        \"startDate\": \"2023-08-15T00:00:00\",\n        \"endDate\": \"2023-09-15T00:00:00\",\n        \"repeat\": \"W\",\n        \"repeatOn\": [\n            \"1\",\n            \"2\",\n            \"7\"\n        ],\n        \"repeatFrequency\": 1,\n        \"startHour\": 10,\n        \"startMinute\": 0,\n        \"durationHours\": 0,\n        \"durationMinutes\": 30,\n        \"agenda\": {\n            \"title\": \"Meeting subject 1\",\n            \"type\": null,\n            \"text\": \"test\"\n        },\n        \"location\": \"Zoom\",\n        \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\",\n        \"referenceMaterials\": [\n            {\n                \"title\": \"Watch this video\",\n                \"type\": null,\n                \"text\": \"https://youtube.com/training001\"\n            },\n            {\n                \"title\": \"Reference document\",\n                \"type\": null,\n                \"text\": \"https://docs.google.com/abcd\"\n            }\n        ],\n        \"participants\": [\n            {\n                \"participantId\": \"cv.ranjith@gmail.com\",\n                \"required\": true\n            }\n        ],\n        \"events\": [\n            {\n                \"eventId\": \"0607CBE081BAECE4E0630818000A8580\",\n                \"eventDate\": \"2023-08-15T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081BBECE4E0630818000A8580\",\n                \"eventDate\": \"2023-08-20T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081BCECE4E0630818000A8580\",\n                \"eventDate\": \"2023-08-21T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081BDECE4E0630818000A8580\",\n                \"eventDate\": \"2023-08-22T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081BEECE4E0630818000A8580\",\n                \"eventDate\": \"2023-08-27T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081BFECE4E0630818000A8580\",\n                \"eventDate\": \"2023-08-28T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081C0ECE4E0630818000A8580\",\n                \"eventDate\": \"2023-08-29T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081C1ECE4E0630818000A8580\",\n                \"eventDate\": \"2023-09-03T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081C2ECE4E0630818000A8580\",\n                \"eventDate\": \"2023-09-04T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081C3ECE4E0630818000A8580\",\n                \"eventDate\": \"2023-09-05T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081C4ECE4E0630818000A8580\",\n                \"eventDate\": \"2023-09-10T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081C5ECE4E0630818000A8580\",\n                \"eventDate\": \"2023-09-11T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            },\n            {\n                \"eventId\": \"0607CBE081C6ECE4E0630818000A8580\",\n                \"eventDate\": \"2023-09-12T00:00:00\",\n                \"startHour\": 10,\n                \"startMinute\": 0,\n                \"durationHours\": 0,\n                \"durationMinutes\": 30,\n                \"cancelled\": false\n            }\n        ],\n        \"files\": [],\n        \"auditLog\": {\n            \"createdBy\": \"MUSEE\",\n            \"createdOn\": \"2023-09-22T02:26:19\",\n            \"lastUpdatedBy\": \"MUSEE\",\n            \"lastUpdatedOn\": \"2023-09-23T13:35:44\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/calendar?calendarId={{calendarId}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f4b0aace0630818000a020e059cfdd55f4c0aace0630818000a020e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/calendar?calendarId={{calendarId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"calendar"
+					],
+					"query": [
+						{
+							"key": "calendarId",
+							"value": "{{calendarId}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/calendar?calendarId={{calendarId}}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f4b0aace0630818000a020e059cfdd55f4c0aace0630818000a020e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/calendar?calendarId={{calendarId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"calendar"
+							],
+							"query": [
+								{
+									"key": "calendarId",
+									"value": "{{calendarId}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:31:16 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "06532D367267956BE0630818000ABF91"
+						},
+						{
+							"key": "ETag",
+							"value": "\"aiFEM6KFy24/zaQFj5ylg9SBvlBXukOFHZHtprpKB3VMQ1bLxnizLWpUs1xi6opOhMEd22vf7uL2XrkciikHkw==\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"calendarId\": \"05EA3D367BD9956BE0630818000AA9A9\",\n    \"studentId\": \"F10F72C1EDA2A3B3E0530918000A6ACA\",\n    \"refId\": null,\n    \"startDate\": \"2023-08-15T00:00:00\",\n    \"endDate\": \"2023-09-15T00:00:00\",\n    \"repeat\": \"W\",\n    \"repeatOn\": [\n        \"1\",\n        \"2\",\n        \"7\"\n    ],\n    \"repeatFrequency\": 1,\n    \"startHour\": 10,\n    \"startMinute\": 0,\n    \"durationHours\": 0,\n    \"durationMinutes\": 30,\n    \"agenda\": {\n        \"title\": \"Meeting subject 1\",\n        \"type\": null,\n        \"text\": \"test\"\n    },\n    \"location\": \"Zoom\",\n    \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\",\n    \"referenceMaterials\": [\n        {\n            \"title\": \"Watch this video\",\n            \"type\": null,\n            \"text\": \"https://youtube.com/training001\"\n        },\n        {\n            \"title\": \"Reference document\",\n            \"type\": null,\n            \"text\": \"https://docs.google.com/abcd\"\n        }\n    ],\n    \"participants\": [\n        {\n            \"participantId\": \"cv.ranjith@gmail.com\",\n            \"required\": true\n        }\n    ],\n    \"events\": [\n        {\n            \"eventId\": \"0607CBE081BAECE4E0630818000A8580\",\n            \"eventDate\": \"2023-08-15T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0607CBE081BBECE4E0630818000A8580\",\n            \"eventDate\": \"2023-08-20T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0607CBE081BCECE4E0630818000A8580\",\n            \"eventDate\": \"2023-08-21T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0607CBE081BDECE4E0630818000A8580\",\n            \"eventDate\": \"2023-08-22T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0607CBE081BEECE4E0630818000A8580\",\n            \"eventDate\": \"2023-08-27T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0607CBE081BFECE4E0630818000A8580\",\n            \"eventDate\": \"2023-08-28T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0607CBE081C0ECE4E0630818000A8580\",\n            \"eventDate\": \"2023-08-29T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0607CBE081C1ECE4E0630818000A8580\",\n            \"eventDate\": \"2023-09-03T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0607CBE081C2ECE4E0630818000A8580\",\n            \"eventDate\": \"2023-09-04T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0607CBE081C3ECE4E0630818000A8580\",\n            \"eventDate\": \"2023-09-05T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0607CBE081C4ECE4E0630818000A8580\",\n            \"eventDate\": \"2023-09-10T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0607CBE081C5ECE4E0630818000A8580\",\n            \"eventDate\": \"2023-09-11T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0607CBE081C6ECE4E0630818000A8580\",\n            \"eventDate\": \"2023-09-12T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        }\n    ],\n    \"files\": [],\n    \"auditLog\": {\n        \"createdBy\": \"MUSEE\",\n        \"createdOn\": \"2023-09-22T02:26:19\",\n        \"lastUpdatedBy\": \"MUSEE\",\n        \"lastUpdatedOn\": \"2023-09-23T13:35:44\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/calendarEvents?year={{YYYY}}&month={{MM}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f4b0aace0630818000a020e059cfdd55f4c0aace0630818000a020e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/calendarEvents?year=2023&month=9",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"calendarEvents"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2023"
+						},
+						{
+							"key": "month",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/calendarEvents?year={{YYYY}}&month={{MM}}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f4b0aace0630818000a020e059cfdd55f4c0aace0630818000a020e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/calendarEvents?year=2023&month=9",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"calendarEvents"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2023"
+								},
+								{
+									"key": "month",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:31:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "06532D367269956BE0630818000ABF91"
+						},
+						{
+							"key": "ETag",
+							"value": "\"ug57pj5nRryh/Z0UADCYhlMhhEVoCf9HRopgc22E6INzzJjeOZrQ1BYaTipg28zAXtRvNYpaohbrnd5fOq4t8w==\""
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"eventId\": \"0607C0E0DA06F125E0630818000A52C2\",\n        \"eventDate\": \"2023-09-01T00:00:00\",\n        \"startHour\": 10,\n        \"startMinute\": 0,\n        \"durationHours\": 0,\n        \"durationMinutes\": 30,\n        \"cancelled\": false,\n        \"calendarId\": \"0607C0E0DA04F125E0630818000A52C2\",\n        \"refId\": null,\n        \"studentId\": \"F10F72C1EDA2A3B3E0530918000A6ACA\",\n        \"agenda\": {\n            \"title\": \"Meeting subject 3\",\n            \"type\": null,\n            \"text\": \"test\"\n        },\n        \"location\": \"Zoom\",\n        \"conferenceLink\": \"https://my.zoom.us/my/cv?pwd=qqqq\"\n    },\n    {\n        \"eventId\": \"0607C0E0DA07F125E0630818000A52C2\",\n        \"eventDate\": \"2023-09-02T00:00:00\",\n        \"startHour\": 10,\n        \"startMinute\": 0,\n        \"durationHours\": 0,\n        \"durationMinutes\": 30,\n        \"cancelled\": false,\n        \"calendarId\": \"0607C0E0DA04F125E0630818000A52C2\",\n        \"refId\": null,\n        \"studentId\": \"F10F72C1EDA2A3B3E0530918000A6ACA\",\n        \"agenda\": {\n            \"title\": \"Meeting subject 3\",\n            \"type\": null,\n            \"text\": \"test\"\n        },\n        \"location\": \"Zoom\",\n        \"conferenceLink\": \"https://my.zoom.us/my/cv?pwd=qqqq\"\n    },\n    {\n        \"eventId\": \"0607CBE081C1ECE4E0630818000A8580\",\n        \"eventDate\": \"2023-09-03T00:00:00\",\n        \"startHour\": 10,\n        \"startMinute\": 0,\n        \"durationHours\": 0,\n        \"durationMinutes\": 30,\n        \"cancelled\": false,\n        \"calendarId\": \"05EA3D367BD9956BE0630818000AA9A9\",\n        \"refId\": null,\n        \"studentId\": \"F10F72C1EDA2A3B3E0530918000A6ACA\",\n        \"agenda\": {\n            \"title\": \"Meeting subject 1\",\n            \"type\": null,\n            \"text\": \"test\"\n        },\n        \"location\": \"Zoom\",\n        \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\"\n    },\n    {\n        \"eventId\": \"0607CBE081C2ECE4E0630818000A8580\",\n        \"eventDate\": \"2023-09-04T00:00:00\",\n        \"startHour\": 10,\n        \"startMinute\": 0,\n        \"durationHours\": 0,\n        \"durationMinutes\": 30,\n        \"cancelled\": false,\n        \"calendarId\": \"05EA3D367BD9956BE0630818000AA9A9\",\n        \"refId\": null,\n        \"studentId\": \"F10F72C1EDA2A3B3E0530918000A6ACA\",\n        \"agenda\": {\n            \"title\": \"Meeting subject 1\",\n            \"type\": null,\n            \"text\": \"test\"\n        },\n        \"location\": \"Zoom\",\n        \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\"\n    },\n    {\n        \"eventId\": \"0607CBE081C3ECE4E0630818000A8580\",\n        \"eventDate\": \"2023-09-05T00:00:00\",\n        \"startHour\": 10,\n        \"startMinute\": 0,\n        \"durationHours\": 0,\n        \"durationMinutes\": 30,\n        \"cancelled\": false,\n        \"calendarId\": \"05EA3D367BD9956BE0630818000AA9A9\",\n        \"refId\": null,\n        \"studentId\": \"F10F72C1EDA2A3B3E0530918000A6ACA\",\n        \"agenda\": {\n            \"title\": \"Meeting subject 1\",\n            \"type\": null,\n            \"text\": \"test\"\n        },\n        \"location\": \"Zoom\",\n        \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\"\n    },\n    {\n        \"eventId\": \"0607CBE081C4ECE4E0630818000A8580\",\n        \"eventDate\": \"2023-09-10T00:00:00\",\n        \"startHour\": 10,\n        \"startMinute\": 0,\n        \"durationHours\": 0,\n        \"durationMinutes\": 30,\n        \"cancelled\": false,\n        \"calendarId\": \"05EA3D367BD9956BE0630818000AA9A9\",\n        \"refId\": null,\n        \"studentId\": \"F10F72C1EDA2A3B3E0530918000A6ACA\",\n        \"agenda\": {\n            \"title\": \"Meeting subject 1\",\n            \"type\": null,\n            \"text\": \"test\"\n        },\n        \"location\": \"Zoom\",\n        \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\"\n    },\n    {\n        \"eventId\": \"0607CBE081C5ECE4E0630818000A8580\",\n        \"eventDate\": \"2023-09-11T00:00:00\",\n        \"startHour\": 10,\n        \"startMinute\": 0,\n        \"durationHours\": 0,\n        \"durationMinutes\": 30,\n        \"cancelled\": false,\n        \"calendarId\": \"05EA3D367BD9956BE0630818000AA9A9\",\n        \"refId\": null,\n        \"studentId\": \"F10F72C1EDA2A3B3E0530918000A6ACA\",\n        \"agenda\": {\n            \"title\": \"Meeting subject 1\",\n            \"type\": null,\n            \"text\": \"test\"\n        },\n        \"location\": \"Zoom\",\n        \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\"\n    },\n    {\n        \"eventId\": \"0607CBE081C6ECE4E0630818000A8580\",\n        \"eventDate\": \"2023-09-12T00:00:00\",\n        \"startHour\": 10,\n        \"startMinute\": 0,\n        \"durationHours\": 0,\n        \"durationMinutes\": 30,\n        \"cancelled\": false,\n        \"calendarId\": \"05EA3D367BD9956BE0630818000AA9A9\",\n        \"refId\": null,\n        \"studentId\": \"F10F72C1EDA2A3B3E0530918000A6ACA\",\n        \"agenda\": {\n            \"title\": \"Meeting subject 1\",\n            \"type\": null,\n            \"text\": \"test\"\n        },\n        \"location\": \"Zoom\",\n        \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/calendarEvents?year={{YYYY}}&month={{MM}}&studentId={{studentId}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f4b0aace0630818000a020e059cfdd55f4c0aace0630818000a020e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/calendarEvents?year={{YYYY}}&month={{MM}}&studentId={{studentId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"calendarEvents"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "{{YYYY}}"
+						},
+						{
+							"key": "month",
+							"value": "{{MM}}"
+						},
+						{
+							"key": "studentId",
+							"value": "{{studentId}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/calendarEvents?year={{YYYY}}&month={{MM}}&studentId={{studentId}}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f4b0aace0630818000a020e059cfdd55f4c0aace0630818000a020e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/calendarEvents?year={{YYYY}}&month={{MM}}&studentId={{studentId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"calendarEvents"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "{{YYYY}}"
+								},
+								{
+									"key": "month",
+									"value": "{{MM}}"
+								},
+								{
+									"key": "studentId",
+									"value": "{{studentId}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:32:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "06532D36726A956BE0630818000ABF91"
+						},
+						{
+							"key": "ETag",
+							"value": "\"aCCeqMV1HKNOcV+unEv32RopzQgtTEvau8iC67l/P/OmcYhjI/EHZ3K75y2/gGmCFOw/pFoXkvbamW9ce8vYxg==\""
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/calendar/new",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfde86c9b0bd6e0630818000a9a2e059cfde86c9c0bd6e0630818000a9a2e"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\": \"2023-08-16\",\n    \"endDate\": \"2023-12-11\",\n    \"repeat\" : \"M\",\n    \"repeatOn\": [\"1\",\"2\"],\n    \"startHour\": 10,\n    \"durationMinutes\": 30,\n    \"location\": \"Zoom\",\n    \"conferenceLink\": \"https://my.zoom.us/my/cv?pwd=qqqq\",\n    \"agenda\": {\n      \"title\": \"Meeting subject 3\",\n      \"text\": \"test\"\n    },\n    \"referenceMaterials\": [\n      {\n        \"title\": \"Watch this video\",\n        \"text\": \"https://youtube.com/training001\"\n      },\n      {\n        \"title\": \"Reference document\",\n        \"text\": \"https://docs.google.com/abcd2\"\n      }\n    ],\n    \"participants\": [\n      {\n        \"participantId\": \"uncle Sam\",\n        \"required\": true\n      }\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/calendar/new",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"calendar",
+						"new"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/calendar/new",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfde86c9b0bd6e0630818000a9a2e059cfde86c9c0bd6e0630818000a9a2e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startDate\": \"2023-08-16\",\n    \"endDate\": \"2023-12-11\",\n    \"repeat\" : \"M\",\n    \"repeatOn\": [\"1\",\"2\"],\n    \"startHour\": 10,\n    \"durationMinutes\": 30,\n    \"location\": \"Zoom\",\n    \"conferenceLink\": \"https://my.zoom.us/my/cv?pwd=qqqq\",\n    \"agenda\": {\n      \"title\": \"Meeting subject 3\",\n      \"text\": \"test\"\n    },\n    \"referenceMaterials\": [\n      {\n        \"title\": \"Watch this video\",\n        \"text\": \"https://youtube.com/training001\"\n      },\n      {\n        \"title\": \"Reference document\",\n        \"text\": \"https://docs.google.com/abcd2\"\n      }\n    ],\n    \"participants\": [\n      {\n        \"participantId\": \"uncle Sam\",\n        \"required\": true\n      }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/calendar/new",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"calendar",
+								"new"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:32:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "0653272CCC149B4BE0630818000A35B1"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"calendarId\": \"0653272CCC159B4BE0630818000A35B1\",\n    \"studentId\": \"06407EB90E0D0552E0630818000AA4A8\",\n    \"refId\": null,\n    \"startDate\": \"2023-08-16T00:00:00\",\n    \"endDate\": \"2023-12-11T00:00:00\",\n    \"repeat\": \"M\",\n    \"repeatOn\": [\n        \"1\",\n        \"2\"\n    ],\n    \"repeatFrequency\": 1,\n    \"startHour\": 10,\n    \"startMinute\": 0,\n    \"durationHours\": 0,\n    \"durationMinutes\": 30,\n    \"agenda\": {\n        \"title\": \"Meeting subject 3\",\n        \"type\": null,\n        \"text\": \"test\"\n    },\n    \"location\": \"Zoom\",\n    \"conferenceLink\": \"https://my.zoom.us/my/cv?pwd=qqqq\",\n    \"referenceMaterials\": [\n        {\n            \"title\": \"Watch this video\",\n            \"type\": null,\n            \"text\": \"https://youtube.com/training001\"\n        },\n        {\n            \"title\": \"Reference document\",\n            \"type\": null,\n            \"text\": \"https://docs.google.com/abcd2\"\n        }\n    ],\n    \"participants\": [\n        {\n            \"participantId\": \"uncle Sam\",\n            \"required\": true\n        }\n    ],\n    \"events\": [\n        {\n            \"eventId\": \"0653272CCC179B4BE0630818000A35B1\",\n            \"eventDate\": \"2023-09-01T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0653272CCC189B4BE0630818000A35B1\",\n            \"eventDate\": \"2023-09-02T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0653272CCC199B4BE0630818000A35B1\",\n            \"eventDate\": \"2023-10-01T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0653272CCC1A9B4BE0630818000A35B1\",\n            \"eventDate\": \"2023-10-02T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0653272CCC1B9B4BE0630818000A35B1\",\n            \"eventDate\": \"2023-11-01T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0653272CCC1C9B4BE0630818000A35B1\",\n            \"eventDate\": \"2023-11-02T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0653272CCC1D9B4BE0630818000A35B1\",\n            \"eventDate\": \"2023-12-01T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"0653272CCC1E9B4BE0630818000A35B1\",\n            \"eventDate\": \"2023-12-02T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        }\n    ],\n    \"files\": [],\n    \"auditLog\": {\n        \"createdBy\": \"MUSEE\",\n        \"createdOn\": \"2023-09-27T07:32:49\",\n        \"lastUpdatedBy\": \"MUSEE\",\n        \"lastUpdatedOn\": \"2023-09-27T07:32:49\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/calendar/{{calendarId}}",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfde86c9b0bd6e0630818000a9a2e059cfde86c9c0bd6e0630818000a9a2e"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\": \"2023-08-15\",\n    \"endDate\": \"2023-09-15\",\n    \"repeat\" : \"W\",\n    \"repeatOn\": [\"1\",\"2\",\"7\"],\n    \"startHour\": 10,\n    \"durationMinutes\": 30,\n    \"location\": \"Zoom\",\n    \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\",\n    \"agenda\": {\n      \"title\": \"Meeting subject 1\",\n      \"text\": \"test\"\n    },\n    \"referenceMaterials\": [\n      {\n        \"title\": \"Watch this video\",\n        \"text\": \"https://youtube.com/training001\"\n      },\n      {\n        \"title\": \"Reference document\",\n        \"text\": \"https://docs.google.com/abcd\"\n      }\n    ],\n    \"participants\": [\n      {\n        \"participantId\": \"cv.ranjith@gmail.com\",\n        \"required\": true\n      }\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/calendar/{{calendarId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"calendar",
+						"{{calendarId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/calendar/{{calendarId}}",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfde86c9b0bd6e0630818000a9a2e059cfde86c9c0bd6e0630818000a9a2e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startDate\": \"2023-08-15\",\n    \"endDate\": \"2023-09-15\",\n    \"repeat\" : \"W\",\n    \"repeatOn\": [\"1\",\"2\",\"7\"],\n    \"startHour\": 10,\n    \"durationMinutes\": 30,\n    \"location\": \"Zoom\",\n    \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\",\n    \"agenda\": {\n      \"title\": \"Meeting subject 1\",\n      \"text\": \"test\"\n    },\n    \"referenceMaterials\": [\n      {\n        \"title\": \"Watch this video\",\n        \"text\": \"https://youtube.com/training001\"\n      },\n      {\n        \"title\": \"Reference document\",\n        \"text\": \"https://docs.google.com/abcd\"\n      }\n    ],\n    \"participants\": [\n      {\n        \"participantId\": \"cv.ranjith@gmail.com\",\n        \"required\": true\n      }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/calendar/{{calendarId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"calendar",
+								"{{calendarId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:33:42 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "06532D36726B956BE0630818000ABF91"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"calendarId\": \"0653272CCC159B4BE0630818000A35B1\",\n    \"studentId\": \"06407EB90E0D0552E0630818000AA4A8\",\n    \"refId\": null,\n    \"startDate\": \"2023-08-15T00:00:00\",\n    \"endDate\": \"2023-09-15T00:00:00\",\n    \"repeat\": \"W\",\n    \"repeatOn\": [\n        \"1\",\n        \"2\",\n        \"7\"\n    ],\n    \"repeatFrequency\": 1,\n    \"startHour\": 10,\n    \"startMinute\": 0,\n    \"durationHours\": 0,\n    \"durationMinutes\": 30,\n    \"agenda\": {\n        \"title\": \"Meeting subject 1\",\n        \"type\": null,\n        \"text\": \"test\"\n    },\n    \"location\": \"Zoom\",\n    \"conferenceLink\": \"https://my.zoom.us/my/ranjith?pwd=qqqq\",\n    \"referenceMaterials\": [\n        {\n            \"title\": \"Watch this video\",\n            \"type\": null,\n            \"text\": \"https://youtube.com/training001\"\n        },\n        {\n            \"title\": \"Reference document\",\n            \"type\": null,\n            \"text\": \"https://docs.google.com/abcd\"\n        }\n    ],\n    \"participants\": [\n        {\n            \"participantId\": \"cv.ranjith@gmail.com\",\n            \"required\": true\n        }\n    ],\n    \"events\": [\n        {\n            \"eventId\": \"06532D36726D956BE0630818000ABF91\",\n            \"eventDate\": \"2023-08-15T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"06532D36726E956BE0630818000ABF91\",\n            \"eventDate\": \"2023-08-20T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"06532D36726F956BE0630818000ABF91\",\n            \"eventDate\": \"2023-08-21T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"06532D367270956BE0630818000ABF91\",\n            \"eventDate\": \"2023-08-22T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"06532D367271956BE0630818000ABF91\",\n            \"eventDate\": \"2023-08-27T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"06532D367272956BE0630818000ABF91\",\n            \"eventDate\": \"2023-08-28T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"06532D367273956BE0630818000ABF91\",\n            \"eventDate\": \"2023-08-29T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"06532D367274956BE0630818000ABF91\",\n            \"eventDate\": \"2023-09-03T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"06532D367275956BE0630818000ABF91\",\n            \"eventDate\": \"2023-09-04T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"06532D367276956BE0630818000ABF91\",\n            \"eventDate\": \"2023-09-05T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"06532D367277956BE0630818000ABF91\",\n            \"eventDate\": \"2023-09-10T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"06532D367278956BE0630818000ABF91\",\n            \"eventDate\": \"2023-09-11T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        },\n        {\n            \"eventId\": \"06532D367279956BE0630818000ABF91\",\n            \"eventDate\": \"2023-09-12T00:00:00\",\n            \"startHour\": 10,\n            \"startMinute\": 0,\n            \"durationHours\": 0,\n            \"durationMinutes\": 30,\n            \"cancelled\": false\n        }\n    ],\n    \"files\": [],\n    \"auditLog\": {\n        \"createdBy\": \"MUSEE\",\n        \"createdOn\": \"2023-09-27T07:32:49\",\n        \"lastUpdatedBy\": \"MUSEE\",\n        \"lastUpdatedOn\": \"2023-09-27T07:33:42\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/student/{{studentId}}/calendar/{{calendarId}}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f450aace0630818000a020e059cfdd55f460aace0630818000a020e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/calendar/{{calendarId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"student",
+						"{{studentId}}",
+						"calendar",
+						"{{calendarId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/student/{{studentId}}/calendar/{{calendarId}}",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f450aace0630818000a020e059cfdd55f460aace0630818000a020e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/student/{{studentId}}/calendar/{{calendarId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"student",
+								"{{studentId}}",
+								"calendar",
+								"{{calendarId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:34:02 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "/calendarEvents/{{eventId}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f4b0aace0630818000a020e059cfdd55f4c0aace0630818000a020e"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/calendarEvents/{{eventId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"calendarEvents",
+						"{{eventId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/calendarEvents/{{eventId}}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f4b0aace0630818000a020e059cfdd55f4c0aace0630818000a020e"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/calendarEvents/{{eventId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"calendarEvents",
+								"{{eventId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:35:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "0653273E71E69572E0630818000A5F25"
+						},
+						{
+							"key": "ETag",
+							"value": "\"ZAk9M6O5P9uY7zwc7Xs5BDgB1Kep62gSiH3BRSDbbTMz6H+/IBd9QMswoQtTsBHndyEAUHC2qOad/SvBC/hJsw==\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"eventId\": \"06532D367290956BE0630818000ABF91\",\n    \"eventDate\": \"2023-08-15T00:00:00\",\n    \"startHour\": 10,\n    \"startMinute\": 0,\n    \"durationHours\": 0,\n    \"durationMinutes\": 30,\n    \"cancelled\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "/calendarEvents/{{eventId}}",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 059cfdd55f4b0aace0630818000a020e059cfdd55f4c0aace0630818000a020e"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"eventDate\": \"2023-08-15T00:00:00\",\n    \"startHour\": 10,\n    \"startMinute\": 0,\n    \"durationHours\": 0,\n    \"durationMinutes\": 60,\n    \"cancelled\": false\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL1}}/musee/api/calendarEvents/{{eventId}}",
+					"host": [
+						"{{baseURL1}}"
+					],
+					"path": [
+						"musee",
+						"api",
+						"calendarEvents",
+						"{{eventId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/calendarEvents/{{eventId}}",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 059cfdd55f4b0aace0630818000a020e059cfdd55f4c0aace0630818000a020e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"eventDate\": \"2023-08-15T00:00:00\",\n    \"startHour\": 10,\n    \"startMinute\": 0,\n    \"durationHours\": 0,\n    \"durationMinutes\": 60,\n    \"cancelled\": false\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL1}}/musee/api/calendarEvents/{{eventId}}",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"musee",
+								"api",
+								"calendarEvents",
+								"{{eventId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 27 Sep 2023 07:35:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "requestId",
+							"value": "06532D3672A2956BE0630818000ABF91"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"eventId\": \"06532D367290956BE0630818000ABF91\",\n    \"eventDate\": \"2023-08-15T00:00:00\",\n    \"startHour\": 10,\n    \"startMinute\": 0,\n    \"durationHours\": 0,\n    \"durationMinutes\": 60,\n    \"cancelled\": false\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "clientSecret",
+				"value": "FFA46ACCEB16E156E0530818000AE7ED",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "MUSEE",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": " https://ge5ab4c27238ef2-w9v127dijw1wzyib.adb.ap-seoul-1.oraclecloudapps.com/ords/musee/oauth/get-token",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "ords-token",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "calendarId",
+			"value": "0653272CCC159B4BE0630818000A35B1",
+			"type": "string"
+		},
+		{
+			"key": "eventId",
+			"value": "06532D367290956BE0630818000ABF91"
+		},
+		{
+			"key": "YYYY",
+			"value": "2023"
+		},
+		{
+			"key": "MM",
+			"value": "8"
+		}
+	]
+}

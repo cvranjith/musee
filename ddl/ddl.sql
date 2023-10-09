@@ -1,14 +1,23 @@
+CREATE TABLE "API_LOG" 
+   (	"ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"USER_ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"START_TS" TIMESTAMP (6), 
+	"REQ" VARCHAR2(4000) COLLATE "USING_NLS_COMP", 
+	"STAT" NUMBER, 
+	"ERR" VARCHAR2(4000) COLLATE "USING_NLS_COMP", 
+	"END_TS" TIMESTAMP (6), 
+	"RES" VARCHAR2(32000) COLLATE "USING_NLS_COMP", 
+	"API" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"F1" VARCHAR2(4000) COLLATE "USING_NLS_COMP", 
+	"F2" VARCHAR2(4000) COLLATE "USING_NLS_COMP", 
+	"F3" VARCHAR2(4000) COLLATE "USING_NLS_COMP", 
+	"METH" VARCHAR2(20) COLLATE "USING_NLS_COMP", 
+	"QUERY_PARAMS" VARCHAR2(4000) COLLATE "USING_NLS_COMP", 
+	 PRIMARY KEY ("ID")
+  USING INDEX  ENABLE
+   )  DEFAULT COLLATION "USING_NLS_COMP" ;
 
-
-    Schema
-    Object Type
-    Object Name
-    Script
-
-Script
-
-
-  CREATE TABLE "TB_COUNSELOR_OBSERVATIONS" 
+  CREATE TABLE "TB_COUNSELOR_OBSERVATIONS_NA" 
    (	"ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
 	"STUDENT_ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
 	"TYPE" VARCHAR2(1) COLLATE "USING_NLS_COMP", 
@@ -41,11 +50,12 @@ Script
 	"REF_ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
 	"TITLE" VARCHAR2(2000) COLLATE "USING_NLS_COMP", 
 	"REMARKS" VARCHAR2(32000) COLLATE "USING_NLS_COMP", 
+	"REMARKS_TYPE" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
 	 PRIMARY KEY ("ID")
   USING INDEX  ENABLE
    )  DEFAULT COLLATION "USING_NLS_COMP" ;
 
-  CREATE TABLE "TB_STUDENTS" 
+  CREATE TABLE "TB_STUDENTS_NA" 
    (	"ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
 	"STUDENT_ID" NUMBER, 
 	"STUDENT_NAME" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
@@ -82,27 +92,16 @@ Script
 	"DOCUMENT_MIME" VARCHAR2(200) COLLATE "USING_NLS_COMP"
    )  DEFAULT COLLATION "USING_NLS_COMP" ;
 
-  CREATE TABLE "API_LOG" 
-   (	"ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
-	"USER_ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
-	"START_TS" TIMESTAMP (6), 
-	"REQ" VARCHAR2(4000) COLLATE "USING_NLS_COMP", 
-	"STAT" NUMBER, 
-	"ERR" VARCHAR2(4000) COLLATE "USING_NLS_COMP", 
-	"END_TS" TIMESTAMP (6), 
-	"RES" VARCHAR2(4000) COLLATE "USING_NLS_COMP", 
-	"API" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
-	"F1" VARCHAR2(4000) COLLATE "USING_NLS_COMP", 
-	"F2" VARCHAR2(4000) COLLATE "USING_NLS_COMP", 
-	"F3" VARCHAR2(4000) COLLATE "USING_NLS_COMP", 
-	"METH" VARCHAR2(20) COLLATE "USING_NLS_COMP", 
-	 PRIMARY KEY ("ID")
-  USING INDEX  ENABLE
-   )  DEFAULT COLLATION "USING_NLS_COMP" ;
-
   CREATE TABLE "DBG_LOGS" 
    (	"TS" TIMESTAMP (6), 
 	"TXT" VARCHAR2(2000) COLLATE "USING_NLS_COMP"
+   )  DEFAULT COLLATION "USING_NLS_COMP" ;
+
+  CREATE TABLE "TB_ADDL_INFO" 
+   (	"ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"REF_ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	 PRIMARY KEY ("ID")
+  USING INDEX  ENABLE
    )  DEFAULT COLLATION "USING_NLS_COMP" ;
 
   CREATE TABLE "TB_AUDIT_LOG" 
@@ -119,6 +118,13 @@ Script
    (	"ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
 	"TYPE" VARCHAR2(20) COLLATE "USING_NLS_COMP", 
 	"NAME" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"VAL" VARCHAR2(4000) COLLATE "USING_NLS_COMP"
+   )  DEFAULT COLLATION "USING_NLS_COMP" ;
+
+  CREATE TABLE "TB_LOOKUP_NA" 
+   (	"ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"TYPE" VARCHAR2(20) COLLATE "USING_NLS_COMP", 
+	"NAME" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
 	"VAL" VARCHAR2(200) COLLATE "USING_NLS_COMP"
    )  DEFAULT COLLATION "USING_NLS_COMP" ;
 
@@ -126,6 +132,69 @@ Script
    (	"ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
 	"ROLE_ID" VARCHAR2(20) COLLATE "USING_NLS_COMP", 
 	"ROLE_DESCRIPTION" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	 PRIMARY KEY ("ID")
+  USING INDEX  ENABLE
+   )  DEFAULT COLLATION "USING_NLS_COMP" ;
+
+  CREATE TABLE "TB_STUDENTS" 
+   (	"ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"STUDENT_ID" NUMBER, 
+	"STUDENT_NAME" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"PARENT_NAME" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"STUDENT_ADDRESS" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"CLASS" VARCHAR2(20) COLLATE "USING_NLS_COMP", 
+	"DIVISION" VARCHAR2(20) COLLATE "USING_NLS_COMP", 
+	"STUDENT_SINCE" DATE, 
+	"CLASS_TEACHER" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"SPECIAL_INSTRUCTOR" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"DOB" DATE, 
+	"PHOTO_ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"CONSULAR" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"DOCTOR" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"AGENCY" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"SPECIAL_EDUCATOR" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"THERAPIST" VARCHAR2(200) COLLATE "USING_NLS_COMP"
+   )  DEFAULT COLLATION "USING_NLS_COMP" ;
+
+  CREATE TABLE "TB_STUDENT_CALENDAR" 
+   (	"ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"STUDENT_ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"LOCATION" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"CONFERENCE_LINK" VARCHAR2(2000) COLLATE "USING_NLS_COMP", 
+	"REF_ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"START_DATE" DATE, 
+	"END_DATE" DATE, 
+	"REPEAT" VARCHAR2(1) COLLATE "USING_NLS_COMP", 
+	"REPEAT_FREQUENCY" NUMBER, 
+	"REPEAT_ON" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"START_HR" NUMBER, 
+	"START_MIN" NUMBER, 
+	"DURATION_HR" NUMBER, 
+	"DURATION_MIN" NUMBER, 
+	"USER_ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	 PRIMARY KEY ("ID")
+  USING INDEX  ENABLE
+   )  DEFAULT COLLATION "USING_NLS_COMP" ;
+
+  CREATE TABLE "TB_STUDENT_CALENDAR_EVENTS" 
+   (	"ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"CALENDAR_ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"DT" DATE, 
+	"CANCEL" VARCHAR2(1) COLLATE "USING_NLS_COMP", 
+	"START_HR" NUMBER, 
+	"START_MIN" NUMBER, 
+	"DURATION_HR" NUMBER, 
+	"DURATION_MIN" NUMBER, 
+	 PRIMARY KEY ("ID")
+  USING INDEX  ENABLE
+   )  DEFAULT COLLATION "USING_NLS_COMP" ;
+
+  CREATE TABLE "TB_STUDENT_CALENDAR_PARTICIPANTS" 
+   (	"ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"CALENDAR_ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"PARTICIPANT_ID" VARCHAR2(200) COLLATE "USING_NLS_COMP", 
+	"REQUIRED" VARCHAR2(1) COLLATE "USING_NLS_COMP", 
+	"ORD" NUMBER, 
 	 PRIMARY KEY ("ID")
   USING INDEX  ENABLE
    )  DEFAULT COLLATION "USING_NLS_COMP" ;
@@ -208,12 +277,15 @@ Script
   USING INDEX  ENABLE
    )  DEFAULT COLLATION "USING_NLS_COMP" ;
 
-  CREATE INDEX "IND_TB_COUNSELOR_OBSERVATIONS" ON "TB_COUNSELOR_OBSERVATIONS" ("STUDENT_ID", "TYPE") 
+  CREATE INDEX "IND_ADDL_INFO" ON "TB_ADDL_INFO" ("REF_ID") 
+  ;
+
+  CREATE INDEX "IND_TB_COUNSELOR_OBSERVATIONS" ON "TB_COUNSELOR_OBSERVATIONS_NA" ("STUDENT_ID", "TYPE") 
   ;
 
   CREATE OR REPLACE EDITIONABLE TRIGGER "TRG_TB_COUNSELOR_OBSERVATIONS" 
 BEFORE INSERT OR UPDATE
-   ON WKSP_MUSEE.tb_counselor_observations
+   ON "WKSP_MUSEE"."TB_COUNSELOR_OBSERVATIONS_NA"
    FOR EACH ROW
 DECLARE
 BEGIN
@@ -286,20 +358,21 @@ BEGIN
   then
     :new.id := SYS_GUID;
   end if;
-  if :new.created_by is null
-  then
-      :new.created_by := v('APP_USER');
-  end if;
-  if :new.created_on is null
-  then
-      :new.created_on := sysdate;
-  end if;
-  :new.last_updated_by := v('APP_USER');
-  :new.last_updated_on := sysdate;
 END;
-
 /
 ALTER TRIGGER "TRG_TB_STUDENTS" ENABLE;
+
+  CREATE INDEX "IND_TB_STUDENT_CALENDAR_ST" ON "TB_STUDENT_CALENDAR" ("STUDENT_ID") 
+  ;
+
+  CREATE INDEX "IND_TB_STUDENT_CALENDAR_USER" ON "TB_STUDENT_CALENDAR" ("USER_ID") 
+  ;
+
+  CREATE INDEX "IND_TB_STUDENT_CALENDAR_DATES_CALENDAR_ID" ON "TB_STUDENT_CALENDAR_EVENTS" ("CALENDAR_ID") 
+  ;
+
+  CREATE INDEX "IND_CAL_PARTICIPANTS_CAL_ID" ON "TB_STUDENT_CALENDAR_PARTICIPANTS" ("CALENDAR_ID") 
+  ;
 
   CREATE OR REPLACE EDITIONABLE TRIGGER "TRG_TB_CHECKLISTS" 
 BEFORE INSERT OR UPDATE
@@ -447,6 +520,323 @@ begin
     return o;
 end;
 /
+create or replace function            fn_create_a_student(
+    p_id varchar2,
+    p_obj in json_object_t
+) return json_element_t
+is
+o json_object_t := new JSON_OBJECT_t;
+r TB_STUDENTS%rowtype;
+n number;
+procedure p(p_field in varchar2, p_val in out varchar2)
+is
+begin
+    p_val := nvl(p_obj.get_string(p_field),p_val);
+end;
+procedure p(p_field in varchar2, p_val in out date)
+is
+begin
+    p_val := nvl(global.to_dt(p_obj.get_string(p_field)),p_val);
+end;
+begin
+    if p_id = tags.c_new
+    then
+        r.id := sys_guid();
+    else
+        begin
+            select *
+            into   r
+            from TB_STUDENTS
+            where id = p_id;
+        exception when others
+        then
+            global.raise_error('Invalid Student ID '||p_id);
+        end;
+        delete TB_STUDENTS where id = p_id;
+    end if;
+    p(tags.studentId,r.student_id);
+    p(tags.studentname,r.student_name);
+    p(tags.class,r.class);
+    p(tags.division,r.division);
+    p(tags.dob,r.dob);
+    p(tags.classTeacher,r.class_teacher);
+    p(tags.specialinstructor,r.special_instructor);
+    p(tags.parentname,r.parent_name);
+    p(tags.consular,r.consular);
+    p(tags.doctor,r.doctor);
+    p(tags.agency,r.agency);
+    p(tags.specialeducator,r.special_educator);
+    p(tags.therapist,r.therapist);
+    p(tags.studentSince,r.student_Since);
+    p(tags.photoid,r.photo_id);
+    for j in (select 1 from TB_STUDENTS where student_id = r.student_id and rownum=1)
+    loop
+        global.RAISE_ERROR('Student Id '||r.student_id|| ' already exists');
+    end loop;
+    if r.photo_id is not null
+    then
+        begin
+            select 1 into n from tb_files where id = r.photo_id or ref_id = r.photo_id and rownum=1;
+        exception when others
+        then
+            global.RAISE_ERROR('Invalid Photo Id '||r.photo_id );
+        end;
+    end if;
+    insert into tb_students values r;
+    return fn_get_a_student(r.id,true);
+end;
+/
+create or replace function            fn_create_student_calendar
+(
+p_student_id in varchar2,
+p_cal_id in varchar2,
+p_ref_id in varchar2,
+p_req in JSON_ELEMENT_T
+) return JSON_ELEMENT_T
+is
+o JSON_OBJECT_t := new JSON_OBJECT_t;
+a JSON_ARRAY_t := new JSON_ARRAY_T;
+e JSON_ELEMENT_T;
+r tb_student_calendar%rowtype;
+res json_object_t := new json_object_t;
+l_chk number;
+pa  JSON_ARRAY_t := new JSON_ARRAY_T;
+po JSON_OBJECT_t := new JSON_OBJECT_t;
+pe JSON_ELEMENT_T;
+pr TB_STUDENT_CALENDAR_PARTICIPANTS%rowtype;
+l_id varchar2(200);
+qids json_object_t := new json_object_t;
+rp varchar2(32000);
+rpa  json_array_t;
+rpn number;
+parti boolean := false;
+base_dt date;
+ldt date;
+procedure ins_dt (p_dt in date)
+is
+    dt TB_STUDENT_CALENDAR_EVENTS%rowtype;
+begin
+    if p_dt >= r.start_date and p_dt <= nvl(r.end_date,p_dt)
+    then
+        dt.id := sys_guid();
+        dt.calendar_id := r.id;
+        dt.dt := trunc(p_dt);
+        dt.cancel := 'N';
+        dt.start_hr := r.start_hr;
+        dt.start_min := r.start_min;
+        dt.duration_hr := r.duration_hr;
+        dt.duration_min := r.duration_min;
+        delete TB_STUDENT_CALENDAR_EVENTS where calendar_id = r.id and dt = dt.dt;
+        insert into TB_STUDENT_CALENDAR_EVENTS values dt;
+    end if;
+end;
+begin
+   if (p_req.is_object) then
+    o := TREAT (p_req as json_object_t);
+    a.append(o);
+  elsif (p_req.is_array) then
+    a := TREAT (p_req as json_array_t);
+  end if;
+
+  if p_ref_id is not null then
+  for i in (select student_id,id from tb_student_calendar where ref_id = p_ref_id)
+  loop
+      PR_DELETE_STUDENT_CALENDAR(i.student_id,i.id);
+  end loop;
+  end if;
+  for i in 0 .. (a.get_size - 1) loop
+    e := a.get(i);
+    o := TREAT (e as json_object_t);
+    r := null;
+    if o.get_string(tags.repeat) not in ('N','D','W','M','Y')
+    then
+        global.raise_error('Invalid repeat '||o.get_string(tags.repeat));
+    end if;
+
+    r.repeat := o.get_string(tags.repeat);
+    r.repeat_frequency := nvl(o.get_string(tags.repeatFrequency),1);
+    r.start_date := global.to_dt(o.get_string(tags.startDate));
+    r.end_date := global.to_dt(o.get_string(tags.endDate));
+    r.ref_id := nvl(p_ref_id,o.get_string(tags.refId));
+    if r.start_date is null
+    then
+        global.raise_error('Invalid Start Date '||o.get_string(tags.startDate));
+    end if;
+    if r.start_date > r.end_date
+    then
+        global.raise_error('End Date < Start Date '||r.start_date||':'||r.end_date);
+    end if;
+    if r.repeat != 'N' and r.end_date is null
+    then
+        global.raise_error('Invalid End Date');
+    end if;
+    begin
+        rpa := TREAT (o.get(tags.repeatOn) as json_array_t);
+    exception when others
+    then
+        rpa := new json_array_t;
+    end;
+    if rpa is not null
+    and rpa.get_size > 0
+    then
+        for rpi in 0 .. (rpa.get_size - 1) loop
+            begin
+                rpn := rpa.get_string(rpi);
+            exception
+                when others
+                then
+                    global.raise_error('Invalid value repeatOn '||rpa.get_string(rpi));
+            end;
+            if      (r.repeat in ('N','D') and rpn is not null)
+                or  (r.repeat = 'W' and rpn not between 1 and 7)
+                or  (r.repeat = 'M' and rpn not between 1 and 31)
+                or  (r.repeat = 'Y' and rpn not between 1 and 366)
+                or  (rpn != trunc(rpn))
+            then
+                global.raise_error('Invalid value repeatOn '||rpa.get_string(rpi)|| ' for repeat type '||r.repeat);
+            end if;
+        end loop;
+        r.repeat_on := rpa.to_string();
+    elsif r.repeat in ('W','M','Y')
+    then
+        global.raise_error('repeatOn is mandatory');
+    end if;
+    if r.repeat = 'N' and r.end_date != r.start_date
+    then
+        global.raise_error('Invalid End Date');
+    end if;
+    r.start_hr := o.get_string(tags.startHour);
+    r.start_min := nvl(o.get_string(tags.startMinute),0);
+    r.duration_hr := nvl(o.get_string(tags.durationHours),0);
+    r.duration_min := nvl(o.get_string(tags.durationMinutes),0);
+
+    if r.start_hr not between 0 and 24 or r.start_hr!=trunc(r.start_hr) or r.start_hr is null 
+    then 
+        global.raise_error('Invalid startHour '||r.start_hr);
+    end if;
+    if r.start_min not between 0 and 60 or r.start_min!=trunc(r.start_min) or r.start_min is null 
+    then 
+        global.raise_error('Invalid startMinute '||r.start_min);
+    end if;
+    if r.duration_hr + r.duration_min  <= 0
+    then
+        global.raise_error('Invalid Duration');
+    end if;
+
+    r.conference_Link := o.get_string(tags.conferenceLink);
+    r.location := o.get_string(tags.location);
+    l_id := p_cal_id;
+    if nvl(l_id,tags.c_new) = tags.c_new
+    then
+        r.id := sys_guid();
+    else
+        r.id := l_id;
+        delete tb_student_calendar where id = r.id;
+    end if;
+    r.student_id := p_student_id;
+    r.user_id := global.user_id;
+    insert into tb_student_calendar values r;
+    if o.has(tags.participants)
+    then
+        pa := treat ((o.get(tags.participants)) as json_array_t);
+        delete TB_STUDENT_CALENDAR_PARTICIPANTS where calendar_id = r.id;
+        for j in 0 .. (pa.get_size - 1) loop
+            pe := pa.get(j);
+            po := TREAT (pe as json_object_t);
+            pr := null;
+            pr.id := sys_guid();
+            pr.calendar_id := r.id;
+            pr.participant_id := po.get_string(tags.participantId);
+            pr.required := case when po.get_boolean(tags.required) then 'Y' else 'N' end;
+            pr.ord := j;
+            insert into TB_STUDENT_CALENDAR_PARTICIPANTS values pr;
+        end loop;
+    end if;
+    delete TB_STUDENT_CALENDAR_EVENTS where calendar_id = r.id;
+    base_dt := r.start_date;
+    if nvl(r.repeat,'N') in ('N')
+    then
+        ins_dt(base_dt);
+    elsif nvl(r.repeat,'N') = 'D'
+    then
+        for dd in 1..200
+        loop
+            ins_dt(base_dt);
+            base_dt := base_dt+nvl(r.repeat_frequency,1);
+            if base_dt > r.end_date
+            then
+                exit;
+            end if;
+        end loop;
+    elsif nvl(r.repeat,'N') in ('W','M','Y')
+    then
+        base_dt := case when r.repeat = 'M' then trunc(base_dt,'MM')
+            when r.repeat ='W' then trunc(base_dt,'IW')
+            else trunc(base_dt,r.repeat) end;
+        for dd in 1..200
+        loop
+            if rpa is not null
+            and rpa.get_size > 0
+            then
+                for rpi in 0 .. (rpa.get_size - 1) loop
+                    if r.repeat in ('W','M','Y')
+                    then
+                        begin
+                            rpn := rpa.get_string(rpi);
+                        exception
+                            when others
+                            then
+                                global.raise_error('Invalid value repeatOn '||rpa.get_string(rpi));
+                        end;
+                        ldt := base_dt+rpn-1;
+                        if r.repeat in ('M') and trunc(ldt,'MM') != trunc(base_dt,'MM')
+                        then
+                            ldt := last_day(base_dt);
+                        end if;
+                        ins_dt(ldt);
+                    end if;
+                end loop;
+            end if;
+            if r.repeat = 'W'
+            then
+                base_dt := base_dt+(r.repeat_frequency*7);
+            elsif r.repeat = 'M'
+            then
+                base_dt := add_months(base_dt,r.repeat_frequency);
+            elsif r.repeat = 'Y'
+            then
+                base_dt := add_months(base_dt,r.repeat_frequency*12);
+            end if;
+            if base_dt > r.end_date then
+                exit;
+            end if;
+            base_dt := case when r.repeat = 'M' then trunc(base_dt,'MM')
+            when r.repeat ='W' then trunc(base_dt,'IW')
+            else trunc(base_dt,r.repeat) end;
+        end loop;
+    end if;
+    if o.has(tags.referenceMaterials)
+    then
+        pr_create_addl_info(r.id, treat ((o.get(tags.referenceMaterials)) as json_array_t));
+    end if;
+    if o.has(tags.agenda)
+    then
+        pr_update_remarks(r.id, treat ((o.get(tags.agenda)) as json_object_t));
+    end if;
+    if o.has(tags.files) then 
+        pr_update_file(r.id, treat ((o.get(tags.files)) as json_array_t));
+    end if;
+    pr_audit_log(r.id);
+  end loop;
+  qids.put(tags.id,r.id);
+  if p_ref_id is null
+  then
+    return fn_get_student_calendar(p_student_id,qids);
+  else
+    return new json_array_t;
+  end if;
+end;
+/
 create or replace function            fn_create_student_checklist
 (
 p_student_id in varchar2,
@@ -472,10 +862,6 @@ begin
   r.checklist_id := p_checklist_id;
   r.student_id := p_student_id;
   --r.remarks := o.get_string(tags.remarks);
-  if o.has(tags.files)
-  then 
-    pr_update_file(p_checklist_id, treat ((o.get(tags.files)) as json_array_t));
-  end if;
   update tb_student_checklists set student_id = p_student_id --set remarks = r.remarks
   where  student_id = p_student_id
   and    checklist_id = p_checklist_id
@@ -488,6 +874,10 @@ begin
   if o.has(tags.remarks)
   then
     pr_update_remarks(r.id, treat ((o.get(tags.remarks)) as json_object_t));
+  end if;
+  if o.has(tags.files)
+  then 
+    pr_update_file(r.id, treat ((o.get(tags.files)) as json_array_t));
   end if;
   pr_audit_log(r.id);
   begin
@@ -521,7 +911,7 @@ begin
         --ri.created_on := sysdate;
         insert into tb_student_checklist_items values ri;
     end if;
-    if o.has(tags.remarks)
+    if o1.has(tags.remarks)
     then
         pr_update_remarks(ri.id, treat ((o1.get(tags.remarks)) as json_object_t));
     end if;
@@ -548,6 +938,7 @@ e JSON_ELEMENT_T;
 r TB_STUDENT_IEP%rowtype;
 res json_object_t := new json_object_t;
 l_chk number;
+calc json_element_t;
 begin
    if (p_req.is_object) then
     o := TREAT (p_req as json_object_t);
@@ -592,6 +983,9 @@ begin
     end if;
     if o.has(tags.files) then 
         pr_update_file(r.id, treat ((o.get(tags.files)) as json_array_t));
+    end if;
+    if o.has(tags.calendar) then
+        calc := fn_create_student_calendar(p_student_id, tags.c_new, r.id, treat (o.get(tags.calendar) as json_array_t));
     end if;
   end loop;
   return fn_get_student_iep(p_student_id,p_iep_id);
@@ -665,15 +1059,30 @@ begin
   return fn_get_student_notes(p_student_id,r.id,p_notes_type);
 end;
 /
+create or replace function            fn_get_addl_info
+(
+    p_ref_id in varchar2
+) return json_array_t
+is
+a json_array_t := new json_array_t;
+begin
+    for i in (select * from TB_ADDL_INFO where ref_id = p_ref_id)
+    loop
+        a.append(fn_get_remarks(i.id));
+    end loop;
+    return a;
+end;
+/
 create or replace function            fn_get_a_student(
-    p_id varchar2
+    p_id varchar2,
+    p_basic in boolean := false
 ) return json_element_t
 is
 o json_object_t := new JSON_OBJECT_t;
 begin
     for i in 
     (
-        select * from TB_STUDENTS
+        select a.* from TB_STUDENTS a
         where id = p_id
     )
     loop
@@ -683,24 +1092,61 @@ begin
         o.put(tags.class,i.class);
         o.put(tags.division,i.division);
         o.put(tags.dob,i.dob);
-
         o.put(tags.classTeacher,i.class_teacher);
         o.put(tags.specialInstructor,i.special_instructor);
         o.put(tags.parentName,i.parent_name);
+        o.put(tags.consular,i.consular);
+        o.put(tags.doctor,i.doctor);
+        o.put(tags.agency,i.agency);
+        o.put(tags.specialeducator,i.special_educator);
+        o.put(tags.therapist,i.therapist);
         o.put(tags.studentSince,i.student_since);
-        --o.put(tags.createdOn,i.created_on);
-        --o.put(tags.createdBy,i.created_by);
-        --o.put(tags.lastUpdatedBy,i.last_updated_by);
-        --o.put(tags.lastUpdatedOn,i.last_updated_on);
+        o.put(tags.photoId,i.photo_id);
+        if not p_basic then
         o.put(tags.teachersCheckLists,fn_get_student_checklists(p_id,'T',null));
         o.put(tags.specialEducatorsCheckLists,fn_get_student_checklists(p_id,'S',null));
         o.put(tags.counselorsCheckLists,fn_get_student_checklists(p_id,'C',null));
+        o.put(tags.parentsCheckLists,fn_get_student_checklists(p_id,'P',null));
         o.put(tags.individualisedEducationPlan,fn_get_student_iep(p_id));
         o.put(tags.notes,fn_get_student_notes(p_id,null,'N'));
         o.put(tags.observations,fn_get_student_notes(p_id,null,'O'));
         o.put(tags.swot,fn_get_student_notes(p_id,null,'S'));
         o.put(tags.photo,fn_get_files(i.photo_id));
         o.put(tags.auditLog, fn_audit_log(i.id));
+        end if;
+    end loop;
+    return o;
+end;
+/
+create or replace function            fn_get_a_student_calendar_event(p_event_id in varchar2, p_full in boolean := false) return json_object_t
+is
+o json_object_t := new json_object_t;
+c tb_student_calendar%rowtype;
+begin
+    for i in (select * from tb_student_calendar_events where id=p_event_id)
+    loop
+        if p_full then
+            for j in (select * from tb_student_calendar where id = i.calendar_id)
+            loop
+                c := j;
+            end loop;
+        end if;
+        o.put(tags.eventId,i.id);
+        o.put(tags.eventdate,i.dt);
+        o.put(tags.startHour,i.start_hr);
+        o.put(tags.startMinute,i.start_min);
+        o.put(tags.durationHours,i.duration_hr);
+        o.put(tags.durationMinutes,i.duration_min);
+        o.put(tags.cancelled,(i.cancel='Y'));
+        if p_full then
+            o.put(tags.calendarId,c.id);
+            o.put(tags.refId, c.ref_id);
+            o.put(tags.studentId,c.student_id);
+            o.put(tags.agenda,fn_get_remarks(c.id));
+            o.put(tags.location,c.location);
+            o.put(tags.conferenceLink,c.conference_link);
+            --o.put(tags.studentInformation, fn_get_a_student(c.student_id,true));
+        end if;
     end loop;
     return o;
 end;
@@ -716,12 +1162,14 @@ da json_array_t := new json_array_t;
 tcl varchar2(200) := tags.teachersCheckLists;
 ssl varchar2(200) := tags.specialEducatorsCheckLists;
 ccl varchar2(200) := tags.counselorsCheckLists;
+pcl varchar2(200) := tags.parentsCheckLists;
 begin
     for i in 
     (
         select *
         from TM_CHECKLISTS 
-        where lower(section) = decode(lower(p_section),'all', lower(section), lower(tcl),'t',lower(ssl),'s',lower(ccl),'c',p_section)
+        where lower(section) = decode(lower(p_section),'all', lower(section), 
+            lower(tcl),'t',lower(ssl),'s',lower(ccl),'c',lower(pcl),'p',p_section)
         and (p_checklist_id is null or id = p_checklist_id)
         and ((lower(p_section) = 'iep' and lower(section) = 'iep') 
         or (lower(p_section) != 'iep' and lower(section) != 'iep'))
@@ -790,30 +1238,34 @@ begin
     for i in (select * from tb_remarks where ref_id = p_ref_id)
     loop
         o.put(tags.title,i.title);
+        o.put(tags.c_type,i.remarks_type);
         o.put(tags.text,i.remarks);
+
     end loop;
     return o;
 end;
 /
 create or replace function            fn_get_students(
-    p_pagenum in number,
-    p_num_rows in number,
-    p_query in varchar2,
-    p_user in varchar2 
+    --p_pagenum in number,
+    --p_num_rows in number,
+    p_query in json_object_t
+    --p_user in varchar2 
 ) return json_element_t
 is
 l_res varchar2(32000);
 a json_array_t := new json_array_t;
-o json_object_t := new JSON_OBJECT_t;
-l_pagenum number := nvl(p_pagenum,1);
-l_num_rows number := nvl(p_num_rows,50);
+l_pagenum number ; --:= nvl(p_pagenum,1);
+l_num_rows number ; --:= nvl(p_num_rows,50);
 q json_object_t;
 r tb_students%rowtype;
 qry varchar2(32000);
 begin
     if p_query is not null then
     BEGIN
-        q := json_object_t.parse(p_query);
+        --q := json_object_t.parse(p_query);
+        q := p_query;
+        l_pagenum := q.get_string(tags.pagenum);
+        l_num_rows := q.get_string(tags.numrows);
         r.id := upper(q.get_string(tags.id));
         r.student_id := upper(q.get_string(tags.studentId));
         r.student_name := upper(q.get_string(tags.studentName));
@@ -830,9 +1282,11 @@ begin
             null;
     end;
     end if;
+    l_pagenum := nvl(l_pagenum,1);
+    l_num_rows := nvl(l_num_rows,50);
     for i in 
     (
-        select * from
+        select id from
         (
         select qq.*, ROW_NUMBER() OVER(ORDER BY 1) ORD_RN  from
         (
@@ -860,19 +1314,191 @@ begin
      where ord_rn between (l_num_rows * (l_pagenum-1) +1) and ( l_num_rows * (l_pagenum-1) +l_num_rows )
     )
     loop
-        o := new JSON_OBJECT_t;
-        o.put(tags.id,i.id);
-        o.put(tags.studentId,i.student_id);
-        o.put(tags.studentName,i.student_name);
-        o.put(tags.class,i.class);
-        o.put(tags.division,i.division);
-        o.put(tags.dob,i.dob);
-        o.put(tags.classTeacher,i.class_teacher);
-        o.put(tags.specialInstructor,i.special_instructor);
-        --o.put('studentSince',i.student_since);
-        a.append(o);
+        a.append(fn_get_a_student(i.id,true));
     end loop;
     return a;
+end;
+/
+create or replace function            fn_get_student_calendar
+(
+    p_student_id in varchar2,
+    p_query_obj  in json_object_t
+) return json_element_t is
+    a json_array_t := new json_array_t;
+    o json_object_t;
+    l_id varchar2(2000);
+    pa json_array_t;
+    po json_object_t;
+    l_ids json_array_t := new json_array_t;
+    s_id varchar2(2000);
+    y number;
+    m number;
+    f date;
+    t date;
+    da json_array_t;
+    rf_id varchar2(200);
+    st_id varchar2(2000);
+begin
+    st_id := nvl(p_student_id,p_query_obj.get_string(tags.studentId));
+    if p_query_obj.has(tags.id)
+    then
+        s_id := p_query_obj.get_string(tags.id);
+        l_ids.append(s_id);
+    elsif p_query_obj.has(tags.calendarId)
+    then
+        s_id :=  p_query_obj.get_string(tags.calendarId);
+        l_ids.append(s_id);
+    elsif p_query_obj.has(tags.refId)
+    then
+        rf_id := p_query_obj.get_string(tags.refId);
+        for i in (select id from TB_STUDENT_CALENDAR a
+        where student_id = nvl(st_id, a.student_id)
+        and ref_id = rf_id
+        )
+        loop
+            l_ids.append(i.id);
+        end loop;
+    else
+        y := p_query_obj.get_string(tags.year);
+        m := p_query_obj.get_string(tags.month);
+        f := global.to_dt(p_query_obj.get_string(tags.fromdate));
+        t := global.to_dt(p_query_obj.get_string(tags.todate));
+        if f is null and (y is not null and m is not null)
+        then
+            f := to_date('01'||lpad(m,2,'0')||lpad(y,4,'0'),'DDMMYYYY');
+        end if;
+        if t is null and (y is not null and m is not null)
+        then
+            t := last_day(f);
+        end if;
+        for i in (select id from TB_STUDENT_CALENDAR a
+        where student_id = nvl(st_id, a.student_id)
+        and a.id in (select c.calendar_id
+        from TB_STUDENT_CALENDAR_EVENTS c
+        where c.dt between f and t)
+        order by start_date
+        )
+        loop
+            l_ids.append(i.id);
+        end loop;
+    end if;
+    if l_ids is not null
+    then
+      for i in 0 .. (l_ids.get_size - 1) loop
+        l_id := l_ids.get_string(i);
+        for j in 
+        (
+            select * from TB_STUDENT_CALENDAR 
+            where id = l_id
+            and user_id = global.user_id
+        )
+        LOOP
+            o := new json_object_t;
+            o.put(tags.calendarId,j.id);
+            --o.put(tags.kind,j.kind);
+            o.put(tags.studentId, j.student_id);
+            o.put(tags.refId,j.ref_id);
+            o.put(tags.startDate,j.start_date);
+            o.put(tags.endDate,j.end_date);
+            o.put(tags.repeat,j.repeat);
+            if j.repeat not in ('D','N')
+            then
+                begin
+                    o.put(tags.repeatOn,json_array_t.parse(j.repeat_on));
+                exception when others
+                then
+                    o.put(tags.repeatOn,new json_array_t);
+                end;
+                o.put(tags.repeatFrequency,j.repeat_Frequency);
+            end if;
+            o.put(tags.startHour,j.start_hr);
+            o.put(tags.startMinute,j.start_min);
+            o.put(tags.durationHours,j.duration_hr);
+            o.put(tags.durationMinutes,j.duration_min);
+            o.put(tags.agenda,fn_get_remarks(j.id));
+            o.put(tags.location,j.location);
+            o.put(tags.conferenceLink,j.conference_link);
+            pa := new json_array_t;
+            for k in (select * from TB_STUDENT_CALENDAR_PARTICIPANTS where calendar_id = j.id order by ord)
+            loop
+                po := new JSON_OBJECT_t;
+                po.put(tags.participantId,k.participant_Id);
+                po.put(tags.required, (k.required='Y'));
+                pa.append(po);
+            end loop;
+            da := new json_array_t;
+            for k in 
+                (
+                select * from TB_STUDENT_CALENDAR_EVENTS
+                where calendar_id=j.id
+                order by dt
+                )
+            loop
+                da.append(fn_get_a_student_calendar_event(k.id));
+            end loop;
+            o.put(tags.referenceMaterials, fn_get_addl_info(j.id));
+            o.put(tags.participants,pa);
+            o.put(tags.events,da);
+            o.put(tags.files,fn_get_files(j.id));
+            o.put(tags.auditLog, fn_audit_log(j.id));
+            a.append(o);
+        end loop;
+      end loop;
+      end if;
+      if s_id is not null
+      then
+          return o;
+      else
+       return a;
+      end if;
+end;
+/
+create or replace function            fn_get_student_calendar_events
+(
+    p_query_obj  in json_object_t
+) return json_element_t is
+    a json_array_t := new json_array_t;
+    o json_object_t;
+    y number;
+    m number;
+    f date;
+    t date;
+    st_id varchar2(2000);
+begin
+        y := p_query_obj.get_string(tags.year);
+        m := p_query_obj.get_string(tags.month);
+        f := global.to_dt(p_query_obj.get_string(tags.fromdate));
+        t := global.to_dt(p_query_obj.get_string(tags.todate));
+        if f is null and (y is not null and m is not null)
+        then
+            f := to_date('01'||lpad(m,2,'0')||lpad(y,4,'0'),'DDMMYYYY');
+        end if;
+        if t is null and f is not null
+        then
+            t := last_day(f);
+        end if;
+        st_id := p_query_obj.get_string(tags.studentId);
+        if lower(st_id) = 'all'
+        then
+            st_id := null;
+        end if;
+        a := new json_array_t;
+        for i in
+            (
+                select  a.id
+                from    TB_STUDENT_CALENDAR_EVENTS a,
+                        TB_STUDENT_CALENDAR b
+                where a.calendar_id = b.id
+                and   b.student_id = nvl(st_id,b.student_id)
+                and   b.user_id = global.user_id
+                and nvl(a.cancel,'N') != 'Y'
+                and dt between f and t
+                order by a.dt
+            )
+        loop
+            a.append(fn_get_a_student_calendar_event(i.id,true));
+        end loop;
+        return a;
 end;
 /
 create or replace function            fn_get_student_checklists
@@ -884,8 +1510,26 @@ create or replace function            fn_get_student_checklists
     a1 json_array_t := new json_array_t;
     o2 json_object_t := new JSON_OBJECT_t;
     --remarks tb_remarks%rowtype;
+    r tb_student_checklists%rowtype;
+    --b boolean;
 begin
+    /*
+    for j in
+    (
+        select * from TM_CHECKLISTS b
+        where section in ('T','S','P','C')
+        and b.id not in (select a.CHECKLIST_ID from tb_student_checklists a 
+        where a.student_id = p_student_id)
+    )
+    loop
+        r.id := sys_guid();
+        r.student_id := p_student_id;
+        r.checklist_id := j.id;
+        insert into tb_student_checklists values r;
+    end loop;
+    */
     for j in (
+        /*
         select b.checklist_name, b.ord, a.*
         from tb_student_checklists a,
         tm_checklists b
@@ -893,25 +1537,33 @@ begin
         and b.section= p_section 
         and b.id = nvl(p_checklist_id,b.id)
         and a.student_id = p_student_id
-        order by b.ord)
+        order by b.ord
+        */
+        select  b.*
+        from    tm_checklists b
+        where   section= p_section
+        order by b.ord
+        )
     loop
         o1 := new JSON_OBJECT_t;
-        o1.put(tags.id,j.checklist_id);
+        o1.put(tags.id, j.id);--j.checklist_id);
         o1.put(tags.checkListname,j.checklist_name);
         o1.put(tags.ord,j.ord);
-        o1.put(tags.remarks,fn_get_remarks(j.id));
-
-        --o1.put(tags.docId,j.doc_id);
-        --o1.put(tags.remarks,j.remarks);
-
-        --o1.put(tags.createdby,j.created_by);
-        --o1.put(tags.createdOn,j.created_on);
-        --o1.put(tags.lastUpdatedby,j.last_updated_by);
-        --o1.put(tags.lastUpdatedOn,j.last_updated_on);
-        o1.put(tags.files,fn_get_files(j.checklist_id));
-        o1.put(tags.auditLog, fn_audit_log(j.id));
+        --b := false;
+        for k in (
+            select * from tb_student_checklists a
+            where a.student_id = p_student_id
+            and a.checklist_id = j.id
+            )
+        loop
+            o1.put(tags.remarks,fn_get_remarks(k.id));
+            o1.put(tags.files,fn_get_files(k.id));
+            o1.put(tags.auditLog, fn_audit_log(k.id));
+            --b := true;
+        end loop;
+        --if not b then o1.put(tags.auditLog,new json_object_t); end if;
         a1 := new json_array_t;
-        for k in (select * from TM_CHECKLIST_DETAILS where checklist_id = j.checklist_id order by ord)
+        for k in (select * from TM_CHECKLIST_DETAILS where checklist_id = j.id order by ord)
         loop
             o2 := new JSON_OBJECT_t;
             o2.put(tags.itemId,k.id);
@@ -923,15 +1575,6 @@ begin
             loop
                 o2.put(tags.checked, l.checked = 'Y' );
                 o2.put(tags.remarks,fn_get_remarks(l.id));
-
-                --o2.put(tags.createdby,l.created_by);
-                --o2.put(tags.createdOn,l.created_on);
-                --o2.put(tags.lastUpdatedby,l.last_updated_by);
-                --o2.put(tags.lastUpdatedOn,l.last_updated_on);
-                --remarks := fn_get_remarks(l.id); 
-                --o2.put(tags.title, remarks.title);
-                --o2.put(tags.remarks, remarks.remarks);
-                --o2.put(tags.files, )
                 o2.put(tags.files,fn_get_files(l.id));
                 o2.put(tags.auditLog, fn_audit_log(l.id));
                 exit;
@@ -948,16 +1591,18 @@ begin
     end if;
 end;
 /
-create or replace function            fn_get_student_iep(p_id in varchar2, p_plan_id in varchar2 :=null)
+create or replace function            fn_get_student_iep(p_student_id in varchar2, p_plan_id in varchar2 :=null)
 return json_element_t
 is
 io JSON_OBJECT_t := new JSON_OBJECT_t;
 iep JSON_ARRAY_t := new JSON_ARRAY_T;
 obj JSON_OBJECT_t := new JSON_OBJECT_t;
 aobj JSON_ARRAY_t := new JSON_ARRAY_T;
+qids JSON_OBJECT_t := new json_object_t;
 begin
-    for j in (select * from TB_STUDENT_IEP where student_id = p_id 
+    for j in (select * from TB_STUDENT_IEP where student_id = p_student_id 
     and iep_id = nvl(p_plan_id,iep_id)
+    order by iep_id
     )
     loop
         io := new JSON_OBJECT_t;
@@ -1001,6 +1646,10 @@ begin
         --io.put(tags.lastUpdatedOn,j.last_updated_on);
         io.put(tags.files,fn_get_files(j.id));
         io.put(tags.auditLog, fn_audit_log(j.id));
+
+        qids.put(tags.refid,j.id);
+        io.put(tags.calendar, fn_get_student_calendar(p_student_id,qids));
+
         iep.append(io);
     end loop;
     if p_plan_id is null then
@@ -1047,6 +1696,30 @@ begin
     end if;
 end;
 /
+create or replace function            fn_get_tuples 
+( p_type in varchar2,
+ p_tuple in varchar2 := null
+)
+return json_array_t
+is
+a json_array_t := new json_array_t;
+o json_object_t;
+begin
+    for i in (
+        select * from tb_lookup
+        where type = p_type
+        and (p_tuple is null or lower(name) = lower(p_tuple))
+        order by name
+    )
+    loop
+        o := new json_object_t;
+        o.put('name',i.name);
+        o.put('value',i.val);
+        a.append(o);
+    end loop;
+    return a;
+end;
+/
 create or replace function            fn_get_user(p_user_id in varchar2) return json_element_t
 is
 --l_res varchar2(32000);
@@ -1078,6 +1751,79 @@ begin
         o.put(tags.roles,a);
     end loop;
     return o;
+end;
+/
+create or replace function fn_send_email
+(
+p_obj in json_object_t
+)
+return json_object_t
+is
+  l_resp          CLOB;
+  l_url           VARCHAR2(4000) := 'https://api.elasticemail.com/v2/email/send';
+  l_apikey        VARCHAR2(4000) := '9CFBEA3DDEEAD9C4493B4AB1D946C83DE53639E13BAE9C9F33468830403F98E4C458753E534DC8929DC2025EEC157D89';
+  l_from          VARCHAR2(4000) := 'musee_app@outlook.com';
+  l_fromName      VARCHAR2(4000) := 'Musee Notification';
+  l_to            VARCHAR2(4000) := 'cv.ranjith@gmail.com';
+  l_isTransactional VARCHAR2(4000) := 'true';
+  l_req_body      CLOB;
+  o json_object_t := new json_object_t;
+BEGIN
+  l_req_body :=
+    'apikey=' || UTL_URL.ESCAPE(l_apikey) || '&' ||
+    'from=' || UTL_URL.ESCAPE(l_from) || '&' ||
+    'fromName=' || UTL_URL.ESCAPE(l_fromName) || '&' ||
+    'to=' || UTL_URL.ESCAPE(p_obj.get_string('to')) || '&' ||
+    'subject=' || UTL_URL.ESCAPE(p_obj.get_string('subject')) || '&' ||
+    'bodyText=' || UTL_URL.ESCAPE(p_obj.get_string('bodyText')) || '&' ||
+    'bodyHtml=' || UTL_URL.ESCAPE(p_obj.get_string('bodyHtml')) || '&' ||
+    'isTransactional=' || UTL_URL.ESCAPE(l_isTransactional);
+  apex_web_service.g_request_headers(1).name := 'Content-Type';
+  apex_web_service.g_request_headers(1).value := 'application/x-www-form-urlencoded';
+  l_resp := apex_web_service.make_rest_request(
+    p_url => l_url,
+    p_http_method => 'POST',
+    p_body => l_req_body
+  );
+  --htp.prn(l_resp);
+   o := json_object_t.parse(l_resp);
+   return o;
+EXCEPTION
+  WHEN OTHERS THEN
+    --DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
+    o.put('resp',l_resp);
+    o.put('err',sqlerrm);
+    return o;
+END;
+/
+create or replace function            fn_update_student_calendar_event
+(
+    p_event_id in varchar2,
+    p_obj in json_object_t
+) return json_object_t
+is
+r tb_student_calendar_events%rowtype;
+begin
+    r.id := p_event_id;
+    r.dt := global.to_dt(p_obj.get_string(tags.eventDate));
+    r.cancel := case when p_obj.get_boolean(tags.cancelled) then 'Y' else 'N' end;
+    r.start_hr := p_obj.get_string(tags.startHour);
+    r.start_min := p_obj.get_string(tags.startMinute);
+    r.duration_hr := p_obj.get_string(tags.durationHours);
+    r.duration_min := p_obj.get_string(tags.durationMinutes);
+    update  tb_student_calendar_events
+    set     dt=nvl(r.dt,dt),
+            cancel = nvl(r.cancel,cancel),
+            start_hr = nvl(r.start_hr,start_hr),
+            start_min = nvl(r.start_min,start_min),
+            duration_hr = nvl(r.duration_hr,duration_hr),
+            duration_min = nvl(r.duration_min,duration_min)
+    where   id = r.id;
+    if sql%rowcount !=1
+    then
+        global.raise_error('Invalid Event Id '||p_event_id);
+    end if;
+    return fn_get_a_student_calendar_event(p_event_id,false);
 end;
 /
 create or replace function            get_user_from_token return varchar2
@@ -1164,6 +1910,32 @@ end;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  CREATE INDEX "IND_ADDL_INFO" ON "TB_ADDL_INFO" ("REF_ID") 
+  ;
+
+  CREATE INDEX "IND_CAL_PARTICIPANTS_CAL_ID" ON "TB_STUDENT_CALENDAR_PARTICIPANTS" ("CALENDAR_ID") 
+  ;
+
   CREATE INDEX "IND_FILES" ON "TB_FILES" ("REF_ID") 
   ;
 
@@ -1173,13 +1945,22 @@ end;
   CREATE UNIQUE INDEX "IND_STUDENT_CHECKLISTS" ON "TB_STUDENT_CHECKLIST_ITEMS" ("STUDENT_ID", "CHECKLIST_ID") 
   ;
 
-  CREATE INDEX "IND_TB_COUNSELOR_OBSERVATIONS" ON "TB_COUNSELOR_OBSERVATIONS" ("STUDENT_ID", "TYPE") 
+  CREATE INDEX "IND_TB_COUNSELOR_OBSERVATIONS" ON "TB_COUNSELOR_OBSERVATIONS_NA" ("STUDENT_ID", "TYPE") 
   ;
 
   CREATE UNIQUE INDEX "IND_TB_ROLES" ON "TB_ROLES" ("ROLE_ID") 
   ;
 
   CREATE UNIQUE INDEX "IND_TB_STUDENTS" ON "TB_STUDENTS" ("STUDENT_ID") 
+  ;
+
+  CREATE INDEX "IND_TB_STUDENT_CALENDAR_DATES_CALENDAR_ID" ON "TB_STUDENT_CALENDAR_EVENTS" ("CALENDAR_ID") 
+  ;
+
+  CREATE INDEX "IND_TB_STUDENT_CALENDAR_ST" ON "TB_STUDENT_CALENDAR" ("STUDENT_ID") 
+  ;
+
+  CREATE INDEX "IND_TB_STUDENT_CALENDAR_USER" ON "TB_STUDENT_CALENDAR" ("USER_ID") 
   ;
 
   CREATE INDEX "IND_TB_STUDENT_IEP_OBJECTIVES" ON "TB_STUDENT_IEP_OBJECTIVES" ("PLAN_ID") 
@@ -1194,7 +1975,7 @@ end;
   CREATE UNIQUE INDEX "SYS_C0035634" ON "TB_USERS" ("ID") 
   ;
 
-  CREATE UNIQUE INDEX "SYS_C0035685" ON "TB_COUNSELOR_OBSERVATIONS" ("ID") 
+  CREATE UNIQUE INDEX "SYS_C0035685" ON "TB_COUNSELOR_OBSERVATIONS_NA" ("ID") 
   ;
 
   CREATE UNIQUE INDEX "SYS_C0041440" ON "TOKENS" ("TOKEN") 
@@ -1220,6 +2001,36 @@ end;
 
   CREATE UNIQUE INDEX "SYS_C0042540" ON "TB_REMARKS" ("ID") 
   ;
+
+  CREATE UNIQUE INDEX "SYS_C0042706" ON "TB_STUDENT_CALENDAR" ("ID") 
+  ;
+
+  CREATE UNIQUE INDEX "SYS_C0042707" ON "TB_STUDENT_CALENDAR_PARTICIPANTS" ("ID") 
+  ;
+
+  CREATE UNIQUE INDEX "SYS_C0042708" ON "TB_ADDL_INFO" ("ID") 
+  ;
+
+  CREATE UNIQUE INDEX "SYS_C0042797" ON "TB_STUDENT_CALENDAR_EVENTS" ("ID") 
+  ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1269,6 +2080,7 @@ is
 teachersCheckLists          varchar2(200) := 'teachersCheckLists';
 specialEducatorsCheckLists  varchar2(200) := 'specialEducatorsCheckLists';
 counselorsCheckLists        varchar2(200) := 'counselorsCheckLists';
+parentsCheckLists            varchar2(200) := 'parentsCheckLists';
 checkListName               varchar2(200) := 'checkListName';
 ord                         varchar2(200) := 'ord';
 id                          varchar2(200) := 'id';
@@ -1327,11 +2139,95 @@ roles                    varchar2(200) := 'roles';
 observations                    varchar2(200) := 'observations';
 swot                    varchar2(200) := 'swot';
 photo                    varchar2(200) := 'photo';
-query                    varchar2(200) := 'query';
---createdBy                    varchar2(200) := 'createdBy';
---createdBy                    varchar2(200) := 'createdBy';
+query                     varchar2(200) := 'query';
+refId                     varchar2(200) := 'refId';
+calendar                  varchar2(200) := 'calendar';
+kind                      varchar2(200) := 'kind';
+c_new                     varchar2(200) := 'new';
+startTime                 varchar2(200) := 'startTime';
+endTime                   varchar2(200) := 'endTime';
+participants              varchar2(200) := 'participants';
+participantId             varchar2(200) := 'participantId';
+required                  varchar2(200) := 'required';
+location                  varchar2(200) := 'location';
+conferenceLink            varchar2(200) := 'conferenceLink';
+agenda                    varchar2(200) := 'agenda';
+additionalInfo            varchar2(200) := 'additionalInfo';
+referenceMaterials        varchar2(200) := 'referenceMaterials';
+year        varchar2(200) := 'year';
+month       varchar2(200) := 'month';
+fromDate    varchar2(200) := 'fromDate';
+toDate      varchar2(200) := 'toDate';
+basicInfo   varchar2(200) := 'basicInfo';
+c_type varchar2(200) := 'type';
+--startDate                 varchar2(200) := 'startDate';
+endDate                  varchar2(200) := 'endDate';
+repeat                   varchar2(200) := 'repeat';
+repeatFrequency          varchar2(200) := 'repeatFrequency';
+repeatOn            varchar2(200) := 'repeatOn';
+eventDate           varchar2(200) := 'eventDate';
+events              varchar2(200) := 'events';
+cancelled           varchar2(200) := 'cancelled';
+startHour           varchar2(200) := 'startHour';
+startMinute         varchar2(200) := 'startMinute';
+durationHours       varchar2(200) := 'durationHours';
+durationMinutes     varchar2(200) := 'durationMinutes';
+calendarId          varchar2(200) := 'calendarId';
+eventId             varchar2(200) := 'eventId';
+studentInformation  varchar2(200) := 'studentInformation';
+calendarEvents      varchar2(200) := 'calendarEvents';
+pagenum             varchar2(200) := 'pagenum';
+numrows             varchar2(200) := 'numrows';
+consular            varchar2(200) := 'consular';
+doctor              varchar2(200) := 'doctor';
+agency              varchar2(200) := 'agency';
+specialEducator     varchar2(200) := 'specialEducator';
+therapist           varchar2(200) := 'therapist';
+photoId              varchar2(200) := 'photoId';
+general              varchar2(200) := 'general';
+c_get                varchar2(200) := 'get';
+c_post               varchar2(200) := 'post';
+c_delete             varchar2(200) := 'delete' ;
+c_public             varchar2(200) := 'PUBLIC';
+tuples               varchar2(200) := 'tuples';
+c_user               varchar2(200) := 'user';
+checklist            varchar2(200) := 'checklist';
+ieplist              varchar2(200) := 'ieplist';
+iep                  varchar2(200) := 'iep';
+emailNotification    varchar2(200) := 'emailNotification';
+students             varchar2(200) := 'students';
+student             varchar2(200) := 'student';
 end;
 /
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1424,12 +2320,53 @@ is
     r      api_log%rowtype;
     resp   json_element_t;
     resp_string varchar2(32000);
+    resp_clob clob;
     o json_object_t;
     tf boolean := false;
+    qry varchar2(32000);
+    n number :=0;
+    st tb_students%rowtype;
     procedure b
     is
     begin
         tf := true;
+    end;
+    function qp return json_object_t
+    is
+        o json_object_t;
+        x varchar2(32000) := owa_util.get_cgi_env('QUERY_STRING');
+    begin
+        x := rtrim(x,chr(38))||chr(38);
+        x := '{'||rtrim(replace(replace(x,'=',':"'),chr(38),'",'),',')|| '}';
+        o := json_object_t.parse(x);
+        qry := substr(x,1,400);
+        return o;
+    exception
+        when others then o := new json_object_t;
+        return o;
+    end;
+    PROCEDURE HTPPRN(PCLOB IN OUT NOCOPY CLOB) 
+    IS
+        V_TEMP VARCHAR2(32767);
+        V_CLOB CLOB := PCLOB;
+        V_AMOUNT NUMBER := 32000;
+        V_OFFSET NUMBER := 1;
+        V_LENGTH NUMBER := DBMS_LOB.GETLENGTH(PCLOB);
+        V_RESULT CLOB;
+    BEGIN
+        WHILE V_LENGTH >= V_OFFSET LOOP
+            V_TEMP:= DBMS_LOB.SUBSTR(V_CLOB, V_AMOUNT, V_OFFSET);
+            HTP.PRN(V_TEMP);
+            V_OFFSET := V_OFFSET + LENGTH(V_TEMP);
+        END LOOP;
+
+    END;
+    procedure put_mime
+    is
+    begin
+        OWA_UTIL.mime_header('application/json', FALSE);
+        HTP.p('requestId: '||r.id);
+        OWA_UTIL.http_header_close;
     end;
 begin
 begin
@@ -1443,39 +2380,90 @@ begin
     r.f3 := substr(p_filter_3,1,4000);
     r.meth := substr(p_method,1,20);
 
+    if p_api = tags.student and p_filter_2 is not null
+    then
+        r.api := r.api || '/' ||p_filter_2;
+    end if;
+
     p_stat := 200;
-    begin
-    r.user_id :=get_user_from_token;
-    exception when others then raise unauth;
-    end;
+    if not (nvl(p_api,'*') = tags.general and p_method = tags.c_get)
+    then
+        begin
+        r.user_id :=get_user_from_token;
+        exception when others then raise unauth;
+        end;
+    else
+        r.user_id := tags.c_public;
+    end if;
     savepoint sp1;
-    if p_api = 'user' and p_method = 'get'
+    if p_api = tags.general and p_method = tags.c_get
+    then
+        if p_filter_1 = tags.tuples
+        then
+            resp := fn_get_tuples(p_filter_2,p_filter_3);
+            b;
+        end if;
+    elsif p_api = tags.c_user and p_method = tags.c_get
     then
         resp := fn_get_user(p_filter_1);
         b;
-    elsif p_api='checklist' and p_method = 'get'
+    elsif p_api = tags.checklist and p_method = tags.c_get
     then
         resp := fn_get_checklist(p_filter_1,p_filter_2);
         b;
-    elsif p_api='ieplist' and p_method = 'get'
+    elsif p_api= tags.ieplist and p_method = tags.c_get
     then
-        resp := fn_get_checklist('iep',p_filter_1);
+        resp := fn_get_checklist(tags.iep,p_filter_1);
         b;
-    elsif p_api='students' and p_method = 'get'
+    elsif p_api = tags.emailNotification and p_method = tags.c_post
     then
-        resp:=fn_get_students(p_filter_1,p_filter_2,p_filter_3,r.user_id);
+        resp := fn_send_email(json_object_t.parse(p_body_text));
         b;
-    elsif p_api='student'
+    elsif p_api=tags.students and p_method = tags.c_get
     then
-        global.validate_student(p_filter_1);
-        if p_method = 'get'
+        resp:=fn_get_students(qp);
+        b;
+    elsif p_api = tags.calendar
+    then
+        resp := fn_get_student_calendar(null,qp);
+        b;
+    elsif p_api = tags.calendarEvents
+    then
+        if p_method = tags.c_get
+        then
+            if p_filter_1 is null
+            then
+                resp := fn_get_student_calendar_events(qp);
+                b;
+            else
+                resp := fn_get_a_student_calendar_event(p_filter_1);
+                b;
+            end if;
+        elsif p_method = tags.c_post
+        then
+            resp := fn_update_student_calendar_event
+                (p_filter_1,
+                json_object_t.parse(p_body_text));
+            b;
+        end if;
+    elsif p_api= tags.student
+    then
+        if not (p_method = tags.c_post and p_filter_1 = tags.c_new)
+        then
+            global.validate_student(p_filter_1);
+        end if;
+        if p_method = tags.c_get
         then
             if p_filter_2 is null
             then
-                resp := fn_get_a_student(p_filter_1);
+                resp := fn_get_a_student(p_filter_1,false);
                 b;
-            else 
-                if p_filter_2 = tags.teachersCheckLists
+            else
+                if p_filter_2 = tags.basicInfo
+                then
+                    resp := fn_get_a_student(p_filter_1,true);
+                    b;
+                elsif p_filter_2 = tags.teachersCheckLists
                 then
                     resp := fn_get_student_checklists(p_filter_1,'T',p_filter_3);
                     b;
@@ -1486,6 +2474,10 @@ begin
                 elsif p_filter_2 = tags.counselorsCheckLists
                 then
                     resp := fn_get_student_checklists(p_filter_1,'C',p_filter_3);
+                    b;
+                elsif p_filter_2 = tags.parentsCheckLists
+                then
+                    resp := fn_get_student_checklists(p_filter_1,'P',p_filter_3);
                     b;
                 elsif p_filter_2 = tags.individualisedEducationPlan
                 then
@@ -1500,32 +2492,48 @@ begin
                             else 'N' end )
                         );
                     b;
+                elsif p_filter_2 = tags.calendar
+                then
+                    resp := fn_get_student_calendar(p_filter_1,qp);
+                    b;
                 end if;
             end if;
-        elsif p_method = 'post' and p_filter_3 is not null
+        elsif p_method = tags.c_post
         then
-            if p_filter_2 in (tags.specialEducatorsCheckLists,tags.counselorsCheckLists,tags.teachersCheckLists)
+            if p_filter_2 is null
             then
-                resp := fn_create_student_checklist(p_filter_1, p_filter_3,json_element_t.parse(p_body_text));
-                b;
-            elsif p_filter_2 in (tags.notes ,tags.observations,tags.swot)
-            then
-                resp := fn_create_student_notes(p_filter_1,p_filter_3, 
-                (
-                    case  p_filter_2 when tags.observations then 'O' 
-                        when tags.swot then 'S' 
-                        else 'N'
-                    end )
-                , json_element_t.parse(p_body_text));
-                b;
-            elsif p_filter_2 = tags.individualisedEducationPlan
-            then
-                resp := fn_create_student_iep(p_filter_1,p_filter_3, json_element_t.parse(p_body_text));
+                resp := fn_create_a_student(p_filter_1, json_object_t.parse(p_body_text));
                 b;
             end if;
-        elsif p_method = 'delete' and p_filter_3 is not null
+            if p_filter_3 is not null
+            then
+                if p_filter_2 in (tags.specialEducatorsCheckLists,tags.counselorsCheckLists,tags.teachersCheckLists,tags.parentsCheckLists)
+                then
+                    resp := fn_create_student_checklist(p_filter_1, p_filter_3,json_element_t.parse(p_body_text));
+                    b;
+                elsif p_filter_2 in (tags.notes ,tags.observations,tags.swot)
+                then
+                    resp := fn_create_student_notes(p_filter_1,p_filter_3, 
+                    (
+                        case  p_filter_2 when tags.observations then 'O' 
+                            when tags.swot then 'S' 
+                            else 'N'
+                        end )
+                    , json_element_t.parse(p_body_text));
+                    b;
+                elsif p_filter_2 = tags.individualisedEducationPlan
+                then
+                    resp := fn_create_student_iep(p_filter_1,p_filter_3, json_element_t.parse(p_body_text));
+                    b;
+                elsif p_filter_2 = tags.calendar
+                then
+                    resp := fn_create_student_calendar(p_filter_1, p_filter_3, null, json_element_t.parse(p_body_text));
+                    b;
+                end if;
+            end if;
+        elsif p_method = tags.c_delete and p_filter_3 is not null
         then
-            if p_filter_2 in (tags.specialEducatorsCheckLists,tags.counselorsCheckLists,tags.teachersCheckLists)
+            if p_filter_2 in (tags.specialEducatorsCheckLists,tags.counselorsCheckLists,tags.teachersCheckLists,tags.parentsCheckLists)
             then
                 PR_DELETE_STUDENT_CHECKLIST(p_filter_1,p_filter_3);
                 b;
@@ -1536,6 +2544,10 @@ begin
             elsif p_filter_2 in (tags.notes ,tags.observations,tags.swot)
             then
                 pr_delete_student_notes(p_filter_1,p_filter_3);
+                b;
+            elsif p_filter_2 = tags.calendar
+            then
+                PR_DELETE_STUDENT_CALENDAR(p_filter_1,p_filter_3);
                 b;
             end if;
         end if;
@@ -1561,20 +2573,33 @@ exception
         rollback to sp1;
 end;
 if resp is not null then
+begin
 resp_string := resp.to_string();
+exception when others then
+    put_mime;
+    resp_clob := resp.to_clob;
+    HTPPRN(resp_clob);
+    resp_string := null;
+end;
 end if;
 if resp_string is not null then
-    r.res := substr(resp_string,1,4000);
+    put_mime;
+    r.res := substr(resp_string,1,30000);
     while resp_string is not null
     loop
         htp.prn(substr(resp_string,1,4000));
         resp_string := substr(resp_string,4001);
+        n := n+1;
+        if n > 1000 then exit; end if;
     end loop;
 end if;
 r.end_ts := systimestamp;
 r.stat := p_stat;
+r.query_params := qry; 
+if nvl(p_api,'*') != tags.general or r.err is not null
+then
 begin insert into api_log values r;end;
-null;
+end if;
 end;
 /
 create or replace procedure dbg(p_txt in varchar2) is
@@ -1641,7 +2666,7 @@ is
     l_req   varchar2(32000) := p_req;
     o json_object_t;
 begin
-    dbg('p_req '||p_req);
+    --dbg('p_req '||p_req);
     --dbg('p_grant_type '||p_grant_type);
     begin
     o := json_object_t.parse(p_req);
@@ -1654,7 +2679,7 @@ begin
     end;
     --dbms_output.put_line(o.get_string('grant_type'));
     --dbg('o==>'||o.to_string);
-    if o.get_string('grant_type') in ('client_credentials','authorization_code') --and l_auth is not NULL
+    if o.get_string('grant_type') in ('client_credentials','authorization_code','refresh_token') --and l_auth is not NULL
     then
         if o.get_string('client_id') is not null
         then
@@ -1679,6 +2704,7 @@ begin
         values (l_token,systimestamp+1/24,l_user);
         delete tokens where exp_ts < systimestamp;
         l_obj.put('access_token',l_token);
+        l_obj.put('refresh_token',lower(sys_guid));
         l_obj.put('token_type','bearer');
         l_obj.put('expires_in',3600);
         htp.p(l_obj.to_string());
@@ -1689,6 +2715,178 @@ exception
     when others
     then
         p_stat := 401;
+end;
+/
+create or replace procedure            pdf_rep
+(p_id in varchar2,p_download in varchar2)
+is
+x varchar2(32000);
+n number :=0 ;
+BEGIN
+    OWA_UTIL.mime_header('text/html', FALSE);
+    HTP.p('Access-Control-Allow-Origin: *');
+    OWA_UTIL.http_header_close;
+    for i in (select * from tb_students where id = p_id)
+    loop
+x := '<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Individualised Education Plan</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f2f2f2;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+	<meta charset="utf-8">
+	<title>
+	</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <button onclick="printReport()">Print Report</button>
+	<button onclick="convertHTMLtoPDF()">Download</button>
+	<br>
+	<div id="divID">
+    <div class="logo">
+    <img src="https://musee-app.netlify.app/logo.svg" alt="Logo">
+    </div><h1>Individualised Education Plan : '|| i.student_name ||'</h1>
+    <div class="header">
+        <table>
+            <tr>
+                <th>Student Name</th>
+                <td>'|| i.student_name ||'</td>
+                <th>DOB</th>
+                <td>' || to_char(i.dob,'DD Mon YYYY') ||'</td>
+                <th>Class</th>
+                <td>'|| i.class||'</td>
+                <th>Division</th>
+                <td>'||i.division||'</td>
+            </tr>
+        </table>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Subject</th>
+                <th>Remarks</th>
+                <th>Objective Type</th>
+				<th>Objectives</th>
+                <th>% Progress</th>
+                <th>Status</th>
+                <th>Start Date</th>
+                <th>Planned End Date</th>
+            </tr>
+        </thead>
+        <tbody id="reportBody">
+        </tbody>
+    </table>
+	</div>
+    <script>
+        // Sample JSON data (replace with your JSON data)
+        var jsonData = '||fn_get_student_iep(p_student_id=>p_id, p_plan_id=>null).to_string|| ';
+
+function formatDate(dateString) {
+    const options = { day: ''numeric'', month: ''short'', year: ''numeric'' };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+}
+
+        // Function to generate the HTML report
+        function generateReport() {
+            var reportBody = document.getElementById("reportBody");
+
+            jsonData.forEach(function (item) {
+                var row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${item.category}</td>
+                    <td>${item.subject}</td>
+                    <td>${item.remarks.text}</td>
+                    <td>${item.objectives[0].objectiveType === ''L'' ? ''Long Term'' : ''Short Term''}</td>
+					<td>${item.objectives.map(obj => obj.remarks.text).join(''<br>'')}</td>
+                    <td>${item.objectives[0].pctProgress}%</td>
+                    <td>${item.objectives[0].status === ''O'' ? ''Open'' : ''Completed''}</td>
+					<td>${formatDate(item.objectives[0].startDate)}</td>
+                    <td>${formatDate(item.objectives[0].plannedEndDate)}</td>
+                `;
+
+                reportBody.appendChild(row);
+            });
+        }
+
+        // Function to print the report
+        function printReport() {
+            generateReport();
+            window.print();
+        }
+		function convertHTMLtoPDF() {
+			const { jsPDF } = window.jspdf;
+
+			let doc = new jsPDF(''l'', ''mm'', [1500, 1400]);
+			let pdfjs = document.querySelector(''#divID'');
+
+			doc.html(pdfjs, {
+				callback: function(doc) {
+					doc.save(" ' || replace(i.student_name,' ','_') || '.pdf");
+				},
+				x: 150,
+				y: 150
+			});			
+		}	
+        // Initial call to generate the report
+        generateReport();
+        '|| 
+        case when lower(p_download) = 'true' then 'convertHTMLtoPDF();' end
+        ||'
+    </script>
+</body>
+</html>
+';
+end loop;
+    while x is not null
+    loop
+        htp.prn(substr(x,1,4000));
+        x := substr(x,4001);
+        n := n+1;
+        if n > 1000 then exit; end if;
+    end loop;
+
 end;
 /
 create or replace procedure pr_audit_log(p_id in varchar2)
@@ -1709,6 +2907,25 @@ begin
         r.created_on := sysdate;
         insert into tb_audit_log values r;
     end if;
+end;
+/
+create or replace procedure pr_create_addl_info
+(
+    p_ref_id in varchar2,
+    p_msg in json_array_t
+)
+is
+o json_object_t;
+r tb_addl_info%rowtype;
+begin
+    delete tb_addl_info where ref_id = p_ref_id;
+    for i in 0 .. (p_msg.get_size - 1) loop
+        o := TREAT (p_msg.get(i) as json_object_t);
+        r.id := sys_guid();
+        r.ref_id := p_ref_id;
+        insert into tb_addl_info values r;
+        pr_update_remarks(r.id,o);
+    end loop;
 end;
 /
 create or replace procedure            pr_create_student_iep_objectives
@@ -1746,6 +2963,22 @@ begin
              end if;
         end loop;
     end if;
+end;
+/
+create or replace procedure            PR_DELETE_STUDENT_CALENDAR
+(
+p_student_id in varchar2,
+p_calendar_id in varchar2
+) 
+is
+begin
+   delete TB_STUDENT_CALENDAR where id = p_calendar_id and student_id = p_student_id;
+   if sql%rowcount != 1
+   then 
+        global.raise_error('invalid id '||p_calendar_id);
+    end if;
+    delete TB_STUDENT_CALENDAR_PARTICIPANTS where calendar_id = p_calendar_id;
+    delete TB_STUDENT_CALENDAR_EVENTS where calendar_id = p_calendar_id;
 end;
 /
 create or replace procedure            PR_DELETE_STUDENT_CHECKLIST
@@ -1807,6 +3040,50 @@ begin
     end if;
 end;
 /
+create or replace procedure pr_send_email
+(
+    p_to in varchar2,
+    p_subject in varchar2,
+    p_body_text in varchar2,
+    p_body_html in varchar2
+)
+is
+  l_resp          CLOB;
+  l_url           VARCHAR2(4000) := 'https://api.elasticemail.com/v2/email/send';
+  l_apikey        VARCHAR2(4000) := '9CFBEA3DDEEAD9C4493B4AB1D946C83DE53639E13BAE9C9F33468830403F98E4C458753E534DC8929DC2025EEC157D89';
+  l_from          VARCHAR2(4000) := 'musee_app@outlook.com';
+  l_fromName      VARCHAR2(4000) := 'Musee Notification';
+  l_to            VARCHAR2(4000) := 'cv.ranjith@gmail.com';
+  --l_subject       VARCHAR2(4000) := 'Test Notification';
+  --l_bodyText      VARCHAR2(4000) := 'Test Notification';
+  --l_bodyHtml      VARCHAR2(4000) := '<h1>Test Notification</h1><br><p> Hi There, Have a nice day </p>';
+  l_isTransactional VARCHAR2(4000) := 'true';
+  l_req_body      CLOB;
+BEGIN
+  l_req_body :=
+    'apikey=' || UTL_URL.ESCAPE(l_apikey) || '&' ||
+    'from=' || UTL_URL.ESCAPE(l_from) || '&' ||
+    'fromName=' || UTL_URL.ESCAPE(l_fromName) || '&' ||
+    'to=' || UTL_URL.ESCAPE(p_to) || '&' ||
+    'subject=' || UTL_URL.ESCAPE(p_subject) || '&' ||
+    'bodyText=' || UTL_URL.ESCAPE(p_body_Text) || '&' ||
+    'bodyHtml=' || UTL_URL.ESCAPE(p_body_Html) || '&' ||
+    'isTransactional=' || UTL_URL.ESCAPE(l_isTransactional);
+  apex_web_service.g_request_headers(1).name := 'Content-Type';
+  apex_web_service.g_request_headers(1).value := 'application/x-www-form-urlencoded';
+  l_resp := apex_web_service.make_rest_request(
+    p_url => l_url,
+    p_http_method => 'POST',
+    p_body => l_req_body
+  );
+  --DBMS_OUTPUT.PUT_LINE(l_resp);
+  htp.prn(l_resp);
+EXCEPTION
+  WHEN OTHERS THEN
+    --DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
+    htp.prn('error '||sqlerrm);
+END;
+/
 create or replace procedure            pr_update_file
 (
 p_ref_id in varchar2,
@@ -1850,8 +3127,10 @@ r tb_remarks%rowtype;
 begin
     r.remarks := p_remarks_obj.get_string(tags.text);
     r.title := p_remarks_obj.get_string(tags.title);
+    r.remarks_type := p_remarks_obj.get_string(tags.c_type);
     r.ref_id := p_ref_id;
-    update tb_remarks set title = r.title, remarks = r.remarks
+    update tb_remarks set title = r.title, remarks = r.remarks, 
+    remarks_type = r.remarks_type
     where ref_id = r.ref_id;
     if sql%rowcount = 0
     then
@@ -1860,6 +3139,13 @@ begin
     end if;
 end;
 /
+
+
+
+
+
+
+
 
 
 
@@ -1962,6 +3248,34 @@ Rem No sequence found to generate DDL.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 create or replace TRIGGER WKSP_MUSEE.trg_tb_checklists
 BEFORE INSERT OR UPDATE
    ON "WKSP_MUSEE"."TB_STUDENT_CHECKLISTS"
@@ -1976,7 +3290,7 @@ END;
 /
 create or replace TRIGGER WKSP_MUSEE.trg_tb_counselor_observations
 BEFORE INSERT OR UPDATE
-   ON WKSP_MUSEE.tb_counselor_observations
+   ON "WKSP_MUSEE"."TB_COUNSELOR_OBSERVATIONS_NA"
    FOR EACH ROW
 DECLARE
 BEGIN
@@ -2028,16 +3342,6 @@ BEGIN
   then
     :new.id := SYS_GUID;
   end if;
-  if :new.created_by is null
-  then
-      :new.created_by := v('APP_USER');
-  end if;
-  if :new.created_on is null
-  then
-      :new.created_on := sysdate;
-  end if;
-  :new.last_updated_by := v('APP_USER');
-  :new.last_updated_on := sysdate;
 END;
 /
 create or replace TRIGGER WKSP_MUSEE.trg_tb_student_iep
@@ -2121,9 +3425,17 @@ BEGIN
 END;
 /
 
+
+  CREATE OR REPLACE FORCE EDITIONABLE VIEW "VW_IDS" ("ID", "TABLE_NAME") DEFAULT COLLATION "USING_NLS_COMP"  AS 
+  select id, 'tb_student_checklists' table_name from tb_student_checklists
+union all select id, 'tb_student_iep' from tb_student_iep
+union all select id, 'tb_student_notes' from tb_student_notes
+union all select id, 'tb_students' from tb_students
+union all select id, 'tb_student_calendar' from tb_student_calendar;
+
   CREATE OR REPLACE EDITIONABLE TRIGGER "TRG_TB_COUNSELOR_OBSERVATIONS" 
 BEFORE INSERT OR UPDATE
-   ON WKSP_MUSEE.tb_counselor_observations
+   ON "WKSP_MUSEE"."TB_COUNSELOR_OBSERVATIONS_NA"
    FOR EACH ROW
 DECLARE
 BEGIN
@@ -2184,18 +3496,7 @@ BEGIN
   then
     :new.id := SYS_GUID;
   end if;
-  if :new.created_by is null
-  then
-      :new.created_by := v('APP_USER');
-  end if;
-  if :new.created_on is null
-  then
-      :new.created_on := sysdate;
-  end if;
-  :new.last_updated_by := v('APP_USER');
-  :new.last_updated_on := sysdate;
 END;
-
 /
 ALTER TRIGGER "TRG_TB_STUDENTS" ENABLE;
 
@@ -2390,22 +3691,58 @@ Rem No database link found to generate DDL.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  CREATE UNIQUE INDEX "SYS_IL0000109072C00014$$" ON "API_LOG" (
+  ;
   CREATE UNIQUE INDEX "SYS_C0041481" ON "API_LOG" ("ID") 
+  ;
+
+  CREATE UNIQUE INDEX "SYS_C0042708" ON "TB_ADDL_INFO" ("ID") 
+  ;
+  CREATE INDEX "IND_ADDL_INFO" ON "TB_ADDL_INFO" ("REF_ID") 
   ;
 
   CREATE UNIQUE INDEX "SYS_C0042282" ON "TB_AUDIT_LOG" ("ID") 
   ;
 
-  CREATE UNIQUE INDEX "SYS_C0035685" ON "TB_COUNSELOR_OBSERVATIONS" ("ID") 
+  CREATE UNIQUE INDEX "SYS_C0035685" ON "TB_COUNSELOR_OBSERVATIONS_NA" ("ID") 
   ;
-  CREATE UNIQUE INDEX "SYS_IL0000094293C00004$$" ON "TB_COUNSELOR_OBSERVATIONS" (
+  CREATE UNIQUE INDEX "SYS_IL0000094293C00004$$" ON "TB_COUNSELOR_OBSERVATIONS_NA" (
   ;
-  CREATE INDEX "IND_TB_COUNSELOR_OBSERVATIONS" ON "TB_COUNSELOR_OBSERVATIONS" ("STUDENT_ID", "TYPE") 
+  CREATE INDEX "IND_TB_COUNSELOR_OBSERVATIONS" ON "TB_COUNSELOR_OBSERVATIONS_NA" ("STUDENT_ID", "TYPE") 
   ;
 
   CREATE OR REPLACE EDITIONABLE TRIGGER "TRG_TB_COUNSELOR_OBSERVATIONS" 
 BEFORE INSERT OR UPDATE
-   ON WKSP_MUSEE.tb_counselor_observations
+   ON "WKSP_MUSEE"."TB_COUNSELOR_OBSERVATIONS_NA"
    FOR EACH ROW
 DECLARE
 BEGIN
@@ -2475,10 +3812,6 @@ END;
 /
 ALTER TRIGGER "TRG_TB_ROLES" ENABLE;
 
-  CREATE UNIQUE INDEX "SYS_IL0000093840C00022$$" ON "TB_STUDENTS" (
-  ;
-  CREATE UNIQUE INDEX "SYS_IL0000093840C00011$$" ON "TB_STUDENTS" (
-  ;
   CREATE UNIQUE INDEX "IND_TB_STUDENTS" ON "TB_STUDENTS" ("STUDENT_ID") 
   ;
 
@@ -2492,20 +3825,31 @@ BEGIN
   then
     :new.id := SYS_GUID;
   end if;
-  if :new.created_by is null
-  then
-      :new.created_by := v('APP_USER');
-  end if;
-  if :new.created_on is null
-  then
-      :new.created_on := sysdate;
-  end if;
-  :new.last_updated_by := v('APP_USER');
-  :new.last_updated_on := sysdate;
 END;
-
 /
 ALTER TRIGGER "TRG_TB_STUDENTS" ENABLE;
+
+  CREATE UNIQUE INDEX "SYS_IL0000116949C00022$$" ON "TB_STUDENTS_NA" (
+  ;
+  CREATE UNIQUE INDEX "SYS_IL0000116949C00011$$" ON "TB_STUDENTS_NA" (
+  ;
+
+  CREATE INDEX "IND_TB_STUDENT_CALENDAR_ST" ON "TB_STUDENT_CALENDAR" ("STUDENT_ID") 
+  ;
+  CREATE INDEX "IND_TB_STUDENT_CALENDAR_USER" ON "TB_STUDENT_CALENDAR" ("USER_ID") 
+  ;
+  CREATE UNIQUE INDEX "SYS_C0042706" ON "TB_STUDENT_CALENDAR" ("ID") 
+  ;
+
+  CREATE UNIQUE INDEX "SYS_C0042797" ON "TB_STUDENT_CALENDAR_EVENTS" ("ID") 
+  ;
+  CREATE INDEX "IND_TB_STUDENT_CALENDAR_DATES_CALENDAR_ID" ON "TB_STUDENT_CALENDAR_EVENTS" ("CALENDAR_ID") 
+  ;
+
+  CREATE INDEX "IND_CAL_PARTICIPANTS_CAL_ID" ON "TB_STUDENT_CALENDAR_PARTICIPANTS" ("CALENDAR_ID") 
+  ;
+  CREATE UNIQUE INDEX "SYS_C0042707" ON "TB_STUDENT_CALENDAR_PARTICIPANTS" ("ID") 
+  ;
 
   CREATE OR REPLACE EDITIONABLE TRIGGER "TRG_TB_CHECKLISTS" 
 BEFORE INSERT OR UPDATE
@@ -2674,6 +4018,24 @@ ALTER TRIGGER "TRG_TM_CHECKLIST_DETAILS" ENABLE;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 create or replace package body            global is
 curr_student varchar2(200) := '*';
 procedure raise_error(p_err in varchar2)
@@ -2713,14 +4075,24 @@ end;
 function to_dt (p_txt in varchar2) return date
 is
 d date;
+t varchar2(2000);
 begin
     begin d := p_txt; 
     exception when others then
         begin d := to_date(p_txt,'YYYY-MM-DD"T"HH24:MI:SS'); 
+        exception when others then
             begin
                 d := to_date(p_txt,'YYYY-MM-DD');
             exception when others then
+                begin
+                    t:=p_txt;
+                    if p_txt like '%Z' then
+                        t := substr(p_txt,1,length(p_txt)-1);
+                    end if;
+                    d := to_date(to_char(TO_TIMESTAMP(t,'YYYY-MM-DD"T"HH24:MI:SS.FF'),'YYYYMMDDHH24MISS'),'YYYYMMDDHH24MISS'); 
+                 exception when others then
                 null;
+                end;
             end;
         end;
     end;
@@ -2728,4 +4100,164 @@ begin
 end;
 end;
 /
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
